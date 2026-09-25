@@ -25,7 +25,7 @@ indexing all run locally on CPU, on PostgreSQL + pgvector.
 |---|---:|---:|---:|---:|---:|
 | BM25 only | 0.458 | 0.721 | 0.773 | 0.695 | 22 ms |
 | Dense only | 0.620 | 0.887 | 0.929 | 0.889 | 66 ms |
-| Hybrid, plain RRF (the draft PRD's design) | 0.578 | 0.855 | 0.907 | 0.837 | — |
+| Hybrid, plain RRF (the draft PRD's design, with our tuned k = 10) | 0.578 | 0.855 | 0.907 | 0.837 | — |
 | **AudioSearch** | **0.660** | **0.915** | **0.966** | **0.908** | **66 ms** |
 
 A relevant moment ranks **first for 87 % of queries** and in the top 5 for **96 %**. Upstream,
@@ -165,12 +165,12 @@ held-out test split unless noted.
 | SC-7 | Word-level speaker attribution; roles | ≥ 95 %; 6/6 | **99.9 %; 6/6** | ✅ |
 | SC-8 | ASR WER vs human reference | ≤ 10 % | **4.3 %** | ✅ |
 | SC-9 | p95 search latency, 4-core CPU, no reranker | ≤ 300 ms | **66 ms** | ✅ |
-| SC-10 | CI: lint, types, unit, integration, Recall@K gate from a clean clone | green | 70 tests + 9-test quality gate pass locally; workflow in `.github/workflows/ci.yml` | ✅ ² |
+| SC-10 | CI: lint, types, unit, integration, Recall@K gate from a clean clone | green | All green on GitHub Actions ([run 36143600783](https://github.com/AniLeo-01/AudioSearch/actions/runs/36143600783)): 70 tests + 9-test quality gate | ✅ ² |
 
 ¹ The margin over dense-only is consistent across metrics but not statistically significant on 52
 queries (R@5 +0.028, p = 0.38). The margins over BM25 are (p < 0.001).
-² Validated locally against the same Postgres and pgvector setup. See the PR checks for the hosted
-run.
+² The hosted run uses a fresh Ubuntu runner, the `pgvector/pgvector:pg16` service container, and a
+cold model cache. It also reproduced the Recall@K floors on different CPU hardware.
 
 ## 6. Limitations
 
