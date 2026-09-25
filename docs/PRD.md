@@ -3,26 +3,9 @@
 | | |
 |---|---|
 | **Problem** | HackerEarth 2026, Problem Statement 1: *Effective retrieval from audio transcripts* |
-| **Document** | Product Requirements Document, v1.1 (refines the draft v0.1) |
+| **Document** | Product Requirements Document, v1.0 |
 | **Status** | Implemented; results in [EVALUATION.md](EVALUATION.md) and [SUBMISSION.md](../SUBMISSION.md) |
 | **Companion docs** | [TDD.md](TDD.md) (technical design) · [DATASET.md](DATASET.md) (golden dataset card) · [AGENT_COLLABORATION.md](AGENT_COLLABORATION.md) |
-
----
-
-## 0. What changed from the draft (v0.1 → v1.1)
-
-The draft was a sound baseline: BM25 + embeddings + RRF over transcripts, measured with Recall@K.
-This revision keeps its structure and every requirement in it, and makes four changes.
-
-| # | Change | Why |
-|---|---|---|
-| 1 | **Relevance labels are audio-time intervals**, not `segment_id`s (FR-11). | Segment IDs are an artefact of one chunking run. Change the chunk size, ASR model or diarization and every label silently points at the wrong text. Time intervals are invariant, so one golden set can compare *any* pipeline configuration fairly. |
-| 2 | **Six differentiators (§5) are first-class requirements**, each with a hypothesis and an acceptance metric. | The draft's thesis ("apply standard IR to transcripts") meets the brief, but nothing sets it apart. The differentiators exploit what is *specific* to two-speaker audio: speech-recognition errors, conversational structure, and the need to land on an exact second. |
-| 3 | **Numeric success criteria** (§9) set before the final test run, plus a held-out test split. | "Do not claim hybrid is better until measured" (draft §11.4) needs a protocol that makes the claim credible: frozen queries, dev/test split, ablations, confidence intervals and significance tests. |
-| 4 | **Production non-functional requirements** (§7): latency SLOs, idempotent ingestion, schema/model safety, observability, security, one-command deploy. | The brief asks what matters "should this system be brought to production". The product must answer that in practice, not only in prose. |
-
-Removed: the citation artefacts left by the drafting tool, and the vague "optional" labels on
-secondary goals. Every goal is now either in scope with a metric or explicitly out of scope.
 
 ---
 
@@ -64,16 +47,16 @@ things at once:
 | Anyone half-remembering | "I think the name sounded like…" | `Zubaire`, `vestibuler system` |
 | Operator | "Add recordings and keep the index correct." | `audiosearch ingest && audiosearch index` |
 
-### User stories (from the draft, kept and extended)
+### User stories
 
 * **Search.** Search an exact term and get every utterance containing it. Search conceptually and get
-  paraphrases. See file, timestamp and speaker. *New:* restrict to what the host or the guest said.
-  Recover from my own misspellings and the ASR's. Click a result and hear that moment.
+  paraphrases. See file, timestamp and speaker. Restrict to what the host or the guest said. Recover
+  from my own misspellings and the ASR's. Click a result and hear that moment.
 * **Ingestion.** Add a recording and get searchable, speaker-attributed segments automatically,
-  locally. *New:* re-running is idempotent and costs nothing if nothing changed.
+  locally. Re-running is idempotent and costs nothing if nothing changed.
 * **Evaluation.** Measure Recall@K automatically on a labelled set. Compare lexical, dense and hybrid.
-  *New:* measure every design choice (chunking, embedding model, ASR model, diarization smoothing) on
-  the same labels, and see upstream quality (WER, speaker attribution) next to retrieval quality.
+  Measure every design choice (chunking, embedding model, ASR model, diarization smoothing) on the
+  same labels, and see upstream quality (WER, speaker attribution) next to retrieval quality.
 
 ## 4. Goals and non-goals
 
@@ -99,8 +82,11 @@ things at once:
 
 ## 5. Differentiators (the novelty)
 
-Each pillar has a falsifiable hypothesis and an acceptance metric. The evaluation reports all of
-them, including any that fail.
+Standard retrieval over transcripts (BM25 + embeddings + rank fusion) meets the brief but does not set
+a system apart. The six pillars below exploit what is *specific* to two-speaker audio: speech
+recognition errors, conversational structure, and the need to land on an exact second. Each has a
+falsifiable hypothesis and an acceptance metric. The evaluation reports all of them, including any
+that fail.
 
 | ID | Pillar | Hypothesis | Acceptance metric |
 |---|---|---|---|
@@ -118,32 +104,33 @@ help, because guests tend to restate the topic, so it is off by default and kept
 
 ## 6. Functional requirements
 
-Requirements FR-01 to FR-15 are carried over from the draft; changes are marked **(changed)** or **(new)**.
-
 | ID | Requirement | Acceptance criteria |
 |---|---|---|
 | FR-01 | Golden audio corpus | 5–6 files; 8–10 min each; exactly two speakers each; no speaker in two files; redistributable licence; provenance and offsets recorded; rebuildable from source (`scripts/build_dataset.py`). |
 | FR-02 | Audio ingestion | ffprobe validation (decodable, non-empty); stable `file_id`; metadata: duration, sample rate, channels, codec, sha256, provenance. |
-| FR-03 | ASR with timestamps | Every indexed word has text and start/end times. **(changed)** Word-level timestamps, not just segments; model and parameters recorded with the output; content-addressed cache keyed by audio hash and model. |
-| FR-04 | Diarization | Every word gets a speaker label and a confidence; labels consistent within a file; method and failure modes documented. **(changed)** Measured against human transcripts. |
+| FR-03 | ASR with timestamps | Word-level timestamps: every indexed word has text and start/end times. Model and parameters recorded with the output; content-addressed cache keyed by audio hash and model. |
+| FR-04 | Diarization | Every word gets a speaker label and a confidence; labels consistent within a file; method and failure modes documented; accuracy measured against human transcripts. |
 | FR-05 | Transcript/speaker alignment | Canonical transcript = words → single-speaker utterances → turns, with timestamps mapping back to the audio. |
-| FR-06 | Retrieval chunking | Configurable windows of whole utterances with overlap. Chunk timestamps map back to the audio. **(changed)** Chunk size chosen by experiment on the dev split. |
-| FR-07 | Lexical search | Exact words and phrases retrievable. **(changed)** Real BM25 (IDF + length normalisation), not `ts_rank`. Quoted phrases are strict. |
+| FR-06 | Retrieval chunking | Configurable windows of whole utterances with overlap. Chunk timestamps map back to the audio. Chunk size chosen by experiment on the dev split. |
+| FR-07 | Lexical search | Exact words and phrases retrievable with real BM25 (IDF + length normalisation), not `ts_rank`. Quoted phrases are strict. |
 | FR-08 | Semantic search | Local embedding model; local vector index (pgvector HNSW); query and document prefixes per model family. |
-| FR-09 | Hybrid fusion | Both channels run for every query and fuse deterministically. **(changed)** IDF-coverage-weighted RRF (N2); `k`, depth and weights configurable; convex combination available for ablation. |
-| FR-10 | Result presentation | Each result has file, timestamp (moment start), speaker label, **(new)** role and name, matched text with highlights, surrounding passage, per-channel ranks ("why this result"), and a playable audio URL. |
-| FR-11 | Golden query set | **(changed)** Relevance as audio-time intervals + verbatim quotes, exhaustive per query, graded (2/1). ≥ 60 queries over ≥ 6 categories. Dev/test split. Frozen before tuning. |
-| FR-12 | Recall@K evaluation | Recall@1/3/5/10 plus MRR, nDCG@10, Precision@K, Success@K. **(new)** Bootstrap CIs, paired permutation tests, per-category breakdown. |
-| FR-13 | Retrieval ablation | Lexical-only vs dense-only vs hybrid. **(new)** Each differentiator on/off; index-time variants (chunk size, context, embedding model, ASR model). |
+| FR-09 | Hybrid fusion | Both channels run for every query and fuse deterministically with IDF-coverage-weighted RRF (N2); `k`, depth and weights configurable; convex combination available for ablation. |
+| FR-10 | Result presentation | Each result has file, timestamp (moment start), speaker label, role and name, matched text with highlights, surrounding passage, per-channel ranks ("why this result"), and a playable audio URL. |
+| FR-11 | Golden query set | Relevance as audio-time intervals + verbatim quotes, exhaustive per query, graded (2/1). ≥ 60 queries over ≥ 6 categories. Dev/test split. Frozen before tuning. |
+| FR-12 | Recall@K evaluation | Recall@1/3/5/10 plus MRR, nDCG@10, Precision@K, Success@K. Bootstrap CIs, paired permutation tests, per-category breakdown. |
+| FR-13 | Retrieval ablation | Lexical-only vs dense-only vs hybrid. Each differentiator on/off; index-time variants (chunk size, context, embedding model, ASR model). |
 | FR-14 | Reproducibility | Clone → `docker compose up` → working UI; or `make setup && make build && make eval`. Committed transcripts mean retrieval results reproduce without ASR hardware. |
 | FR-15 | Coding-agent disclosure | How the agent was directed, what it produced, and how its output was verified ([AGENT_COLLABORATION.md](AGENT_COLLABORATION.md)). |
-| FR-16 **(new)** | Sounds-like expansion | Out-of-vocabulary names and typos expand to phonetically or orthographically similar spoken terms. Common words are expanded only on strong phonetic identity. Expansions are shown to the user. |
-| FR-17 **(new)** | Role-aware search | Host/guest inferred per file with a confidence. `role:` and `speaker:` filters in both the query syntax and the API. |
-| FR-18 **(new)** | Moment localisation | Result start = best matching utterance; `match_time` = first matched word; temporal NMS removes near-duplicates. |
-| FR-19 **(new)** | Incremental, idempotent indexing | Re-indexing an unchanged file is a no-op. Add, replace or delete of one file costs O(file). BM25 statistics stay exactly consistent (tested invariant). |
-| FR-20 **(new)** | Interfaces | CLI (`audiosearch search`), HTTP API (`/api/search`, OpenAPI docs), and a web UI with synchronized transcript playback. |
+| FR-16 | Sounds-like expansion | Out-of-vocabulary names and typos expand to phonetically or orthographically similar spoken terms. Common words are expanded only on strong phonetic identity. Expansions are shown to the user. |
+| FR-17 | Role-aware search | Host/guest inferred per file with a confidence. `role:` and `speaker:` filters in both the query syntax and the API. |
+| FR-18 | Moment localisation | Result start = best matching utterance; `match_time` = first matched word; temporal NMS removes near-duplicates. |
+| FR-19 | Incremental, idempotent indexing | Re-indexing an unchanged file is a no-op. Add, replace or delete of one file costs O(file). BM25 statistics stay exactly consistent (tested invariant). |
+| FR-20 | Interfaces | CLI (`audiosearch search`), HTTP API (`/api/search`, OpenAPI docs), and a web UI with synchronized transcript playback. |
 
 ## 7. Non-functional requirements
+
+The brief asks what would matter if the system were brought to production. These requirements
+answer that in the implementation, not only in prose.
 
 | ID | Area | Requirement |
 |---|---|---|
@@ -172,7 +159,11 @@ Requirements FR-01 to FR-15 are carried over from the draft; changes are marked 
 **Offline protocol.** Queries were frozen before tuning. All tuning happened on the dev split
 (29 queries). Final numbers are reported once on the held-out test split (52 queries). A result
 *hits* a labelled moment if it is in the same file and its time span overlaps the labelled interval
-±5 s. Each labelled moment is credited once.
+±5 s. Each labelled moment is credited once. Labels are audio-time intervals rather than segment or
+chunk IDs: IDs are an artefact of one chunking run, so changing the chunk size, ASR model or
+diarization would silently point them at the wrong text. Time intervals stay valid, so one golden
+set compares *any* pipeline configuration fairly. Together with ablations, confidence intervals and
+significance tests, this protocol is what makes claims such as "hybrid beats either channel" credible.
 
 | ID | Success criterion (test split unless stated) | Target |
 |---|---|---|
@@ -208,7 +199,7 @@ If the query was expanded: *"Sounds-like: also matched 'zubaire' → 'zubair'"*.
 
 ## 11. Risks, failure modes and mitigations
 
-| Failure mode (draft §13, extended) | Mitigation in this design | Residual risk |
+| Failure mode | Mitigation in this design | Residual risk |
 |---|---|---|
 | ASR errors break exact search | Sounds-like expansion (N1); dense channel; strong ASR model | Errors that are neither phonetically nor semantically close ("cod blood") |
 | Speaker overlap | One label per word; boundary-aware smoothing | Overlapping speech is attributed to one speaker |
@@ -222,7 +213,7 @@ If the query was expanded: *"Sounds-like: also matched 'zubaire' → 'zubair'"*.
 
 ## 12. Milestones (status)
 
-| Milestone (draft §16) | Status |
+| Milestone | Status |
 |---|---|
 | M1 Dataset & audio pipeline | ✅ 6 recordings, ASR (2 models), diarization, reference transcripts |
 | M2 Unified transcript store | ✅ canonical transcript JSON, Postgres schema + migrations |

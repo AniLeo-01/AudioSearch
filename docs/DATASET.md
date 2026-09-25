@@ -102,8 +102,8 @@ answers; keywords share almost all of them).
    relevance is graded 1 (default 2).
 3. Relevance is stored as **audio-time intervals**, not segment or chunk IDs. Annotators reference
    utterance ranges in `queries.src.yaml`, and `scripts/label_helper.py` resolves them to times plus
-   verbatim quotes. The same labels can therefore score any ASR model, diarization or chunking. (The
-   draft PRD's segment-ID labels would silently break as soon as chunking changed.)
+   verbatim quotes. The same labels can therefore score any ASR model, diarization or chunking.
+   (Segment-ID labels would silently break as soon as chunking changed.)
 4. Same-file moments whose ±5 s tolerance windows overlap are merged (a uniform rule). Two mentions
    a few seconds apart are one place in the audio for a listener.
 5. Speaker-scoped queries are labelled with the **true** speaker from NASA's transcript, even where our

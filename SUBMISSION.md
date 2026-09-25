@@ -25,7 +25,7 @@ indexing all run locally on CPU, on PostgreSQL + pgvector.
 |---|---:|---:|---:|---:|---:|
 | BM25 only | 0.458 | 0.721 | 0.773 | 0.695 | 22 ms |
 | Dense only | 0.620 | 0.887 | 0.929 | 0.889 | 66 ms |
-| Hybrid, plain RRF (the draft PRD's design, with our tuned k = 10) | 0.578 | 0.855 | 0.907 | 0.837 | — |
+| Hybrid, plain RRF (standard baseline, with our tuned k = 10) | 0.578 | 0.855 | 0.907 | 0.837 | — |
 | **AudioSearch** | **0.660** | **0.915** | **0.966** | **0.908** | **66 ms** |
 
 A relevant moment ranks **first for 87 % of queries** and in the top 5 for **96 %**. Upstream,
@@ -122,7 +122,7 @@ test, and we report that negative result.
 
 **Evaluation (what we built):**
 * Relevance labelled as **audio-time intervals**, so the same labels fairly score any ASR model,
-  diarization or chunking. The draft PRD's segment-ID labels break as soon as chunking changes.
+  diarization or chunking. Segment-ID labels would break as soon as chunking changes.
 * **Seven query categories**, validated by lexical overlap.
 * Queries **frozen before tuning**, with a **dev/test split**.
 * Bootstrap **CIs** and **paired significance tests**.
