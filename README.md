@@ -121,7 +121,7 @@ docs/         PRD · TDD · EVALUATION · DATASET · AGENT_COLLABORATION
 | Document | Contents |
 |---|---|
 | [SUBMISSION.md](SUBMISSION.md) | Hackathon write-up: design, rationale, success criteria, achievement, limitations |
-| [docs/PRD.md](docs/PRD.md) | Refined product requirements (changes vs the draft, differentiators, success criteria) |
+| [docs/PRD.md](docs/PRD.md) | Product requirements: goals, differentiators, functional and non-functional requirements, success criteria |
 | [docs/TDD.md](docs/TDD.md) | Technical design: algorithms, schema, operations, scaling plan, decision log |
 | [docs/EVALUATION.md](docs/EVALUATION.md) | Methodology, full results, ablations, error analysis |
 | [docs/DATASET.md](docs/DATASET.md) | Golden dataset card and labelling protocol |
