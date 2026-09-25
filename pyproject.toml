@@ -1,0 +1,61 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "audiosearch"
+version = "1.0.0"
+description = "Conversation-aware hybrid search over two-speaker audio: find the exact moment, speaker and file."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "AudioSearch contributors" }]
+dependencies = [
+  "numpy>=1.26,<2.3",
+  "psycopg[binary,pool]>=3.2",
+  "pgvector>=0.3",
+  "pydantic>=2.9",
+  "pydantic-settings>=2.6",
+  "pyyaml>=6.0",
+  "typer>=0.13",
+  "rich>=13.9",
+  "sentence-transformers>=3.3",
+]
+
+[project.optional-dependencies]
+asr = ["faster-whisper>=1.1"]
+diarization = ["speechbrain>=1.0.2", "scikit-learn>=1.5", "scipy>=1.13", "torchaudio>=2.2"]
+api = ["fastapi>=0.115", "uvicorn[standard]>=0.32", "prometheus-client>=0.21"]
+eval = ["jiwer>=3.0", "rapidfuzz>=3.10"]
+dev = ["pytest>=8.3", "pytest-cov>=5.0", "httpx>=0.27", "ruff>=0.7", "mypy>=1.13", "types-PyYAML"]
+all = ["audiosearch[asr,diarization,api,eval,dev]"]
+
+[project.scripts]
+audiosearch = "audiosearch.cli:app"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/audiosearch"]  # non-Python files (SQL migrations, static UI) ship with the package
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra --strict-markers"
+markers = [
+  "db: requires a running PostgreSQL with pgvector (AUDIOSEARCH_DATABASE_URL)",
+  "eval: retrieval-quality regression gate over the golden query set (requires indexed corpus)",
+  "slow: loads ML models",
+]
+
+[tool.ruff]
+line-length = 110
+target-version = "py311"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM", "RUF"]
+ignore = ["RUF001", "RUF002", "RUF003", "B008"]
+
+[tool.mypy]
+python_version = "3.11"
+ignore_missing_imports = true
+warn_unused_ignores = true
+check_untyped_defs = true

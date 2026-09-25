@@ -1,0 +1,420 @@
+{
+ "file_id": "runway",
+ "source": "https://www.nasa.gov/podcasts/houston-we-have-a-podcast/runway-to-the-stars/",
+ "scope": "full episode (the audio excerpt covers only part of it)",
+ "style": "clean verbatim, human-edited by NASA",
+ "turns": [
+  {
+   "speaker": "Courtney Beasley",
+   "text": "Houston, We Have a Podcast. Welcome to the official podcast of the NASA Johnson Space Center. Episode 389, Runway to the Stars. I’m Courtney Beasley, and I will be your host today on this podcast, we bring in the experts, scientists, engineers and astronauts all to let you know what’s going on in the world of human space flight. Ellington Field is a historic airfield located just southeast of Houston, Texas and just up the road from Johnson Space Center, from its beginnings in World War I as a training ground for pilots to its role in space exploration, Ellington has seen it all, whether you’re into aviation history, military heritage or NASA’s reach beyond Earth. This episode is for you. We’re thrilled to talk to David Johnson, also known as DJ, the deputy chief for the Aircraft Operations Division. So buckle up. We’re about to take flight into the fascinating history and evolving mission of Ellington Field. Let’s fly. All right, DJ, thanks for coming on. Houston, We Have a Podcast today."
+  },
+  {
+   "speaker": "David Johnson",
+   "text": "Thanks for having me."
+  },
+  {
+   "speaker": "Courtney Beasley",
+   "text": "We’re happy to have you, and we’re excited to talk about Ellington operations today. But before we dig into that, we’d love to get to know a little bit more about you. So can you start by telling us a little bit about your background and how you first got into aviation."
+  },
+  {
+   "speaker": "David Johnson",
+   "text": "Yeah, absolutely. So I’m retired from the Air Force. Retired in 2009 I was a pilot there. And as far as how I kind of initially got into flying, my father was a pilot in the Air Force, so I was kind of always around airplanes. And I can remember seeing an F15 at an air show go straight up. And I remember watching that, thinking, I want to do that. So anyway, went through college, graduated from RPI with an engineering degree and then went into the Air Force as a pilot. Then, after I retired, my best friend from high school, Dom del Rosso, actually worked here, and he said, Hey, our pilots seem to really like it here, so you gotta consider applying. So I ended up doing that. Initially, they were not looking for pilots out at aircraft ops, so I actually got a job as an engineer on the Orion Program, and then a year and a half later, I ended up moving out to aircraft ops."
+  },
+  {
+   "speaker": "Courtney Beasley",
+   "text": "Wow. So how many years have you been with NASA Now,"
+  },
+  {
+   "speaker": "David Johnson",
+   "text": "since 2009 wonderful Yeah."
+  },
+  {
+   "speaker": "Courtney Beasley",
+   "text": "So you were that little boy who dreamed about being a pilot and grew up to be a pilot. Yeah. That is awesome. What types of roles did you have before stepping into the current position you’re in now"
+  },
+  {
+   "speaker": "David Johnson",
+   "text": "out at Ellington. I initially started out as the engineer in the aviation safety office, and then I ended up becoming a pilot. So initially I was actually in a non flying position. I ended up becoming a pilot out there. I was the I started flying T38 and then the WB57 and then also, eventually got checked out in the G5 so I fly all three of those right now. And then I went back to the safety office as the aviation safety officer, eventually the chief of that office, and then into the deputy chief of the division."
+  },
+  {
+   "speaker": "Courtney Beasley",
+   "text": "And what does your role as deputy chief for the division entail on a day to day basis?"
+  },
+  {
+   "speaker": "David Johnson",
+   "text": "Go to a lot of meetings. No, it’s basically, you know, trying to take after, you know, look after the division with the the chief and the Associate Chief. There’s a lot of different meetings that we do have to go through. Go to both to support, you know, the Flight Operations Directorate and the center, but also within our own division. If we’re going to deploy and go do a mission somewhere, we have what’s called an operational readiness review. So we review all aspects of that mission to make sure that we can accomplish that safely and effectively. If we’re going to put any kind of new equipment on our aircraft, whether it be for a science mission or whether we are modifying the aircraft itself. We have to do different engineering reviews for those. And of course, it takes division leadership in order to ultimately sign off on all that."
+  },
+  {
+   "speaker": "Courtney Beasley",
+   "text": "And it sounds like you still get to fly. A little bit too Right?"
+  },
+  {
+   "speaker": "David Johnson",
+   "text": "Absolutely."
+  },
+  {
+   "speaker": "Courtney Beasley",
+   "text": "So which aircraft do you get to fly?"
+  },
+  {
+   "speaker": "David Johnson",
+   "text": "I get to still fly all three, the T38 The WB57 and the G5 which is, it’s a really diverse group of aircraft and really a lot of fun to be able to have the opportunity to fly all three."
+  },
+  {
+   "speaker": "Courtney Beasley",
+   "text": "We’ll get into the details of all three of those a little later in the podcast. But which one is your favorite to fly?"
+  },
+  {
+   "speaker": "David Johnson",
+   "text": "Just from a pure joy of flying the T38 it is, you know, it looks like a little sports car, it flies like a little sports car, and it is, it is just a joy to fly. I had the opportunity to fly it in pilot training as well, and I loved it then, and I still love it today. And I, I really enjoy instructing as well."
+  },
+  {
+   "speaker": "Courtney Beasley",
+   "text": "I love seeing them flying over JSC, it’s really cool to see, especially with our proximity to Ellington Field. What would you say the most challenging part of managing Aircraft Operations is,"
+  },
+  {
+   "speaker": "David Johnson",
+   "text": "well, the you know, as everyone is aware, you know, the budget situation is always very, very tight around NASA. And if you take a look at our aircraft fleet, it’s an aging aircraft fleet, and so logistically supporting those aircraft within the constraints of our budget is very challenging every year."
+  },
+  {
+   "speaker": "Courtney Beasley",
+   "text": "And then what about the most rewarding part?"
+  },
+  {
+   "speaker": "David Johnson",
+   "text": "The most rewarding part, in addition to just flying the missions, because that is always great, is honestly, in the leadership position, is taking care of your people having that opportunity."
+  },
+  {
+   "speaker": "Courtney Beasley",
+   "text": "And then have there been any mentors or key influences who helped shape your career path?"
+  },
+  {
+   "speaker": "David Johnson",
+   "text": "You know, early on, like I mentioned before, my father was a pilot in the Air Force, so he was a mentor early on, especially being able to help guide me in my career there and then as I got over to NASA, yeah, there were a lot of folks that ended up influencing me. You know, one of the ones when I first got to aircraft ops was Mike Giles. He’s no longer at aircraft ops, but just was a great influence on me, and Rick hull. So those were two huge influences on me."
+  },
+  {
+   "speaker": "Courtney Beasley",
+   "text": "I want to dive a little bit into Ellington. It has such a rich history, and I think it would be fun to talk about that and let our listeners hear a little bit more about that. So can you give us an overview of when Ellington was established and what its purpose was?"
+  },
+  {
+   "speaker": "David Johnson",
+   "text": "Yeah, it really is a rich history. It was established all the way back in World War One to become a training base for pilots that were going to go over, you know, to the war. It ended up, at times, closing down for small periods, but then it was re established during World War Two, and once again, became a big training base for the Army Air Forces then. Nowadays, I think every single service, with the exception of Space Force, is represented at Ellington Field. So in addition to NASA and it in, 2015 became a space port. So it’s one of, I think, only 10 space ports in the in the US."
+  },
+  {
+   "speaker": "Courtney Beasley",
+   "text": "So how would you describe Ellington’s role today, especially in terms of NASA operations?"
+  },
+  {
+   "speaker": "David Johnson",
+   "text": "In terms of NASA operations, it really is the same initially, as when it was established back with the mercury seven astronauts, where we house our T38s to be used for our astronaut training. So in addition to that, we have our WB57’s. There. We have three of those, and we have our Gulf Stream five. We also fly the Guppy, but we don’t have a hanger big enough for it. So when we’re not flying that aircraft, we house it out at El Paso, where we have a forward operating location."
+  },
+  {
+   "speaker": "Courtney Beasley",
+   "text": "And have you done some work out at that facility as well?"
+  },
+  {
+   "speaker": "David Johnson",
+   "text": "Yeah, we tend to fly out there a fair amount, and we did a lot of operations out at the FOL in El Paso, especially during the shuttle era. Our Shuttle Training Aircraft would go out there to practice up on the wide sense missile range."
+  },
+  {
+   "speaker": "Courtney Beasley",
+   "text": "So we’ve talked about this a little bit, but can you name all of the different aircraft that are currently based out at Ellington?"
+  },
+  {
+   "speaker": "David Johnson",
+   "text": "Yeah. So again, the T38 we possess 20 T38s that are used for what we call space flight readiness training. We possess three WB57 that are used for high altitude research. We have one Gulfstream 5 aircraft that is used for our astronaut direct return missions, in addition to other scientific research, and then our Super Guppy aircraft that, like I said, is out at El Paso."
+  },
+  {
+   "speaker": "Courtney Beasley",
+   "text": "So are there any particularly rare or specialized aircraft I think of the Guppy when I think of something like that. But is that what you would consider specialized?"
+  },
+  {
+   "speaker": "David Johnson",
+   "text": "Yeah, absolutely. The Guppy is one of one. It is the only one flying in the world, so and it’s there for us to be able to carry outside space hardware. Its cross sectional area is actually the biggest of any aircraft in the world, so it can’t carry as big a payload is, say, a military C5 or C17, but it can carry very, very outsized things, like, you know, cross sections of rocket engines or space capsules, etc. In addition, our WB 57s are highly specialized. Those are the only three of those flying in the world. Yeah. So we get to do some neat things."
+  },
+  {
+   "speaker": "Courtney Beasley",
+   "text": "Can you try to put into perspective how big the Guppy is? Do you have the measurements for it? Or can you compare it to something similar in size?"
+  },
+  {
+   "speaker": "David Johnson",
+   "text": "The the Guppy is actually based on what was a Casey 97 Tanker, which was essentially, and there was a version of that that was actually an airliner at the time. So if you think kind of Boeing 707, although that’s a jet, it’s about that size, only the fuselage has been enlarged significantly, hence the Guppy name."
+  },
+  {
+   "speaker": "Courtney Beasley",
+   "text": "So do you have to have some sort of specialized pilots license to pilot an aircraft like that?"
+  },
+  {
+   "speaker": "David Johnson",
+   "text": "You don’t have to have a specialized. Pilot’s license for that in particular, in fact, it’s kind of interesting, like, say, to fly the T 38 or to fly an aircraft like the Guppy, you actually don’t have to have a pilot’s license. We are able to fly that under what we call public use. However, you have to have some very special skills in order to fly that aircraft. And that is, I do not personally fly that one, but it is easily, probably the most difficult aircraft in our fleet to fly."
+  },
+  {
+   "speaker": "Courtney Beasley",
+   "text": "I would assume. So that is so cool. And I also did not realize that that was the only one in the world, only one. How cool, right here in Houston, Texas, Ellington, sometimes. Yeah. I know you mentioned that the Guppy transports a ton of really large items, and it can even fit a spacecraft inside of it. What does that look like? Actually getting something that large inside of it? Is there a big door?"
+  },
+  {
+   "speaker": "David Johnson",
+   "text": "Yeah, there is a big door. The biggest, the entire nose of the aircraft actually swings open on a single hinge. Because of that, there’s actually wind limits for when we open up that aircraft to on load or offload the payload. But basically, after landing and parking the aircraft, they go through a process where they go ahead and open up the nose of the aircraft by again, swinging the entire cockpit area sideways, if you just kind of think about this big clamshell that just opens up to the side. They then have specialized loaders that can go ahead and lift the payload up on hydraulic jacks. And then, essentially, there’s a bunch of, you know, kind of casters and wheels that they didn’t wheel it into the aircraft, and they can pull it on board via a winch."
+  },
+  {
+   "speaker": "Courtney Beasley",
+   "text": "Oh, wow. How interesting. What about using a crane? Would you ever use a crane or something like that to get something inside of the Guppy."
+  },
+  {
+   "speaker": "David Johnson",
+   "text": "Yeah, the crane can be used to lift it up to a platform, but at some point it’s got to be rolled inside, because it’s, yeah, kind of a flat section, so you can’t lower it inside. It’s got to be pushed in through the nose. Yeah"
+  },
+  {
+   "speaker": "Courtney Beasley",
+   "text": "I assume the inside has to be pretty empty to fit something that large inside. So what does the inside look like?"
+  },
+  {
+   "speaker": "David Johnson",
+   "text": "Yeah, the inside looks just like, if you can imagine what it would be standing inside, just a bare fuselage of an aircraft, you just see a bunch of ribs and different structural things, and then the skin of the aircraft. There is nothing between that and the payload. It is just, again, the structure of the aircraft and the skin of the aircraft."
+  },
+  {
+   "speaker": "Courtney Beasley",
+   "text": "And then, how do you keep everything secure in flight?"
+  },
+  {
+   "speaker": "David Johnson",
+   "text": "There’s load masters that go through a lot of with our engineers go through a ton of analysis to go ahead and make sure that the payload is secure properly. And it’s typically secured with different types of chains. And this is the same type of process that is used on, really any cargo aircraft. It’s just kind of unique in the Guppy as far as exactly how it is secured with the different chains. But yeah, it’s kind of the same process that is most cargo aircraft."
+  },
+  {
+   "speaker": "Courtney Beasley",
+   "text": "Then when I think of something completely opposite in size, I think of the T38 I have seen it in person. It looks very snug inside for the pilot in the seat behind, and then you have that clear covering over the top. Can you kind of run us through what the T38 looks like and how it compares in size?"
+  },
+  {
+   "speaker": "David Johnson",
+   "text": "Yeah absolutely. Interestingly, you can fit 2t 38 inside the Guppy. We have done that before, but, yeah, the T38 is definitely a much smaller aircraft. Sits much lower to the ground, like you pointed out, you know, it has two clear canopies that give you just a great view of up around and all around you. But yeah, physically, just a much smaller and as you can imagine, a much more nimble aircraft. Additionally, you know, the Guppy is has four turboprop engines, so it has propellers on it, whereas, you know, the T38 has two small turbo jet engines."
+  },
+  {
+   "speaker": "Courtney Beasley",
+   "text": "Does the T38 have any cargo space?"
+  },
+  {
+   "speaker": "David Johnson",
+   "text": "No, it doesn’t look like it. Yeah. In fact, if we have to take the aircraft off station and spend the night somewhere, it’s possible to fit some small items throughout the cockpit, but we have a small pod that can be strapped on the aircraft, underneath where you can put any larger bags if you have those, because there is just not much room inside the cockpit at all, except for yourself. What"
+  },
+  {
+   "speaker": "Courtney Beasley",
+   "text": "about the WB 57 I’ve never seen that in person. Would that fit inside the Guppy?"
+  },
+  {
+   "speaker": "David Johnson",
+   "text": "Absolutely not. The WB 57 has a really long wingspan, so 122 feet and yeah, it would not fit inside the Guppy, but it’s kind of in between the T 38 and the Guppy, as far as size of aircraft, and"
+  },
+  {
+   "speaker": "Courtney Beasley",
+   "text": "does that kind of have a more of a military look than the sleek T38 look?"
+  },
+  {
+   "speaker": "David Johnson",
+   "text": "Yeah, if you know, if anybody. Listening out there. Knows what a YouTube looks like. The basic way I describe a WB 57 is it’s kind of a YouTube on steroids. It has that very long wingspan, like a U2 called the high aspect ratio wing. It almost looks like a glider. It has two engines that are in the cells, kind of about a third of the way out on the wings, and it has a tandem cockpit, kind of similar to the T 38 and again, it’s kind of the clamshell where you know you you have the plexiglass all around you that gives you a great view."
+  },
+  {
+   "speaker": "Courtney Beasley",
+   "text": "How does the maintenance and logistics work with so many different types of aircraft on site?"
+  },
+  {
+   "speaker": "David Johnson",
+   "text": "It’s a really difficult challenge. And I tell you, we have the absolute best maintainers and logisticians, I think, in the world that take care of our aircraft and ensure that we have the right parts on hand. Like I said, we have an aging fleet of aircraft. The T38s a lot of those are 60 years old. The WB57s are about the same age. The Guppy is an older aircraft as well. And again, being one of one, there’s sometimes parts that you just can’t get out there, and so we sometimes have to engineer different solutions, and we have our on site engineering staff that assist with that. And again, it’s a it’s a challenge, but everybody just it’s part of what really gives us job satisfaction out there at AOD."
+  },
+  {
+   "speaker": "Courtney Beasley",
+   "text": "So are some of those being tended to daily and checked out? Or how does the maintenance process work for all of these aircraft?"
+  },
+  {
+   "speaker": "David Johnson",
+   "text": "Yeah, aircraft maintenance, generally speaking, is divided, kind of into two separate things. There’s scheduled maintenance. And if you kind of think about your car, you know, hey, you have to change the oil, you know, every 5000 miles, or, you know, maybe once a year you have to rotate your tires. So those are the schedule type of maintenance activities that go on and and all of our aircraft have maintenance manuals that have to be followed for that scheduled maintenance. And then there’s the unscheduled maintenance. In other words, we flew it and broke it, so pilots tend to do that, so we have a staff that also takes care of that unscheduled maintenance."
+  },
+  {
+   "speaker": "Courtney Beasley",
+   "text": "I know there are probably not any typical days at Ellington, but could you walk us through a pretty typical day of what you see and what you go through on a day to day basis?"
+  },
+  {
+   "speaker": "David Johnson",
+   "text": "Yeah, absolutely so on a daily basis. You know, for my particular schedule, I might have to start out, say with a meeting on site to interact with FOD leadership, and then go back out to Ellington. And if I’m on the flying schedule that day, I’ll have an opportunity to go ahead and review the weather and the NOTAMs, the notice of Stearman for where we’re thinking about flying. I’ll then go ahead and meet up with who I’m flying with that day, if it’s an astronaut, whether it’s a pilot astronaut or what we call an RCQ rear cockpit qualified astronaut, we’ll figure out what our plan of the day is and where we want to go or what we want to accomplish during that training mission. We’ll then finish planning the mission, brief it, and then go fly, and then we come back and we debrief it, because we want to capture those lessons learned from any particular mission, if it is a single sortie that we’ve flown, that whole process might take about four hours, and then we’ll go ahead and come back and, like I said, we’ll debrief, and then I’ll have time to go ahead and catch up on email and maybe attend another meeting or two. How often,"
+  },
+  {
+   "speaker": "Courtney Beasley",
+   "text": "typically, are planes taking off out there? Or does it just depend on the day? It really?"
+  },
+  {
+   "speaker": "David Johnson",
+   "text": "Yeah, it varies widely. It generally speaking, though, we are probably flying between five and 10 sorties a day. However, you could have a day where you only fly one or two, and a lot of it depends on the schedule of the astronauts themselves, when we’re flying T 38 however, we also have our own proficiency requirements as pilots that we have to maintain. So we might be able to go out and fly one of those proficiency sorties. Additionally, after we have significant aircraft maintenance on an aircraft, we might have to go and fly what we call a functional check flight, which is really a maintenance test flight, where we then go up and check that aircraft out to make sure all the maintenance was performed and everything on the aircraft is working as required before we can turn that over to say the astronauts and go fly."
+  },
+  {
+   "speaker": "Courtney Beasley",
+   "text": "So you mentioned the astronauts flying in the T38 Why is the T38 the best, or one of the most used aircraft for astronauts to train in?"
+  },
+  {
+   "speaker": "David Johnson",
+   "text": "Great question in the high performance jet aircraft. It is just an outstanding analog to space flight that has been just proven over the decades that we’ve had the aircraft initially when the aircraft were required. You know, back in the mercury era, the astronauts were all former military test pilots, so it was a way for them to keep their flying skills sharp. As the astronaut corps expanded and the diversity of the backgrounds and the astronauts expanded, it then morphed into a platform for what we call, again, space flight readiness training and now the background of an astronaut. They could be a medical doctor, they could be a geologist. Again, this. Very, very wide range. And so it’s the opportunity for some of those folks to get comfortable feeling uncomfortable. You know, we put them in the back seat, you know, in a Nomex flight suit that doesn’t breathe very well in the middle of a Houston summer, put an oxygen mask on them, go out and pull a bunch of G’s and again, make you feel uncomfortable. And at the entire that entire time you’re having to perform as a crew member, because once they get up on the International Space Station, yeah, they may have to use some of their, say, Doctor skills or whatever, but they’re also a crew member on a spacecraft, and they have to be able to perform in a dynamic environment, and those are the types of skills that we’re trying to teach them."
+  },
+  {
+   "speaker": "Courtney Beasley",
+   "text": "Yep I can see how that would help on the back seat position. How do you think that the pilot position on a T38 helps train astronauts for Space Station missions?"
+  },
+  {
+   "speaker": "David Johnson",
+   "text": "Yeah, you know, Ann McLean said it that, you know, flying in an aircraft is no different than space flight. It’s just in a different medium. So again, those same type of skills that that hand and eye coordination, that being able to have a good cross check that we talk about is really, really important, both in space flight and you get to train to that in high performance aircraft."
+  },
+  {
+   "speaker": "Courtney Beasley",
+   "text": "Is there a certain amount of amount of hours that astronauts have to fly per year?"
+  },
+  {
+   "speaker": "David Johnson",
+   "text": "Yeah, for the pilot astronauts, the goal for them is to fly 180 hours a year, and the minimum is to fly 100 hours a year. For the rear cockpit qualified astronauts, their goal is to fly 120 hours a year, with 80 hours being the minimum."
+  },
+  {
+   "speaker": "Courtney Beasley",
+   "text": "Wow, that’s really cool. Yeah, that’s really fun."
+  },
+  {
+   "speaker": "David Johnson",
+   "text": "It’s really fun. But, you know, astronaut schedules are really, really packed. They’re really busy, and so it’s again, they have to carve out time to make sure they can come out to Ellington and meet those requirements. And then I assume"
+  },
+  {
+   "speaker": "Courtney Beasley",
+   "text": "weather can play into that. So maybe sometimes they have a fight scheduled that has to be canceled or rescheduled. So, yeah, absolutely difficult. Yeah,"
+  },
+  {
+   "speaker": "David Johnson",
+   "text": "Yeah the weather in Houston can be dynamic."
+  },
+  {
+   "speaker": "Courtney Beasley",
+   "text": "What would you say Ellington’s role is in supporting NASA’s missions? One of the most public facing things, I think, of our crews departing and returning from Ellington after and before a mission."
+  },
+  {
+   "speaker": "David Johnson",
+   "text": "Yeah, that. And quite honestly, that is one of my favorite missions that we get to perform in the G5 is returning our crews that have been up on the Space Station for six plus months, and bring them back home to Houston to their families. You know, we just had the opportunity to do that with crew nine. And then just this past Sunday, we got to bring Don Pettit at home, so I was on the Kazakhstan leg for that mission. So I got to fly from Kazakhstan to to the UK, and then we swap crews, and that crew then brings them the rest of the way home, and again, a really rewarding mission to bring our astronauts back home with their families after they’ve been up in space."
+  },
+  {
+   "speaker": "Courtney Beasley",
+   "text": "It certainly is. We’ve talked a little bit about the WB57 but I want to go ahead and dive into that. Can you tell us more about what this plane exactly is used for?"
+  },
+  {
+   "speaker": "David Johnson",
+   "text": "Yeah, it’s used for high altitude research within the agency, and we use, we have both NASA customers and also external customers that come to us and say, Hey, we have a payload that we’d like you to fly because of its unique ability to get high altitude. And by high altitude, I mean 60,000 plus feet. So there’s not a lot of airplanes that can get up there. And the WB is really unique in the sense that it can carry a pretty heavy payload, much heavier than, say, a u2 that’s used in the Air Force. Additionally, we have a two person crew, so we have a dedicated, what we call Sensor Equipment Operator SEO, that sits in the back seat. So when you’re flying developmental type payloads, we have a dedicated person that can that can operate that payload. And yeah, so again, we use it for launch, imaging of rockets, of recovery, imaging of capsules, especially to study the parachute architecture, everybody is interested in what the parachutes have done, especially the interactions between the parachutes, because it seems like it’s part art, part science on how all that works. So in addition to, like I said, just a bunch of science things that we do with the aircraft,"
+  },
+  {
+   "speaker": "Courtney Beasley",
+   "text": "A really cool aspect of the WB 57 which we touched on a little bit, is the fact that people can send experiments up on that. What kinds of groups get to do something like that."
+  },
+  {
+   "speaker": "David Johnson",
+   "text": "Yeah, there’s, because of its high altitude capabilities, there’s a lot of scientific experiments that go on the aircraft. We recently completed a saber scientific campaign, and in that we had 18 different experiments that were on the aircraft, payloads that the engineers had developed, a lot of it dedicated to atmospheric research. So.."
+  },
+  {
+   "speaker": "Courtney Beasley",
+   "text": "What is the benefit to bringing those experiments up that high? What do you do with that altitude?"
+  },
+  {
+   "speaker": "David Johnson",
+   "text": "Yeah, a lot of them, in fact, there’s, there’s one payload in in particular that it wasn’t part of the saber campaign, but it’s, they’re called cosmic dust collectors, and they are exactly what they sound like. They’re there to collect cosmic dust. And anytime we fly above 50,000 feet, that customer says, “Hey, could you put the cosmic dust collectors on?” And a lot of times, it’s just an additional payload that we carry. And they’re there to just collect cosmic dust. And apparently we we catch a fair amount of it."
+  },
+  {
+   "speaker": "Courtney Beasley",
+   "text": "If there’s someone who wants to submit to send something up, how do you do that?"
+  },
+  {
+   "speaker": "David Johnson",
+   "text": "We have what we call a payload data package. And so if they first contact us, and we have a website out there, if they just Google WB57 I’m sure it’ll direct them to it. And then we have a payload data package that we basically send to the customer, and it has interface requirements on it. You know, hey, what type of power requirements does your payload require? What type of heating or cooling requirements does it need? And we then, once we receive that information, we assign an engineer, and they will work with that customer to go ahead and refine the interface with the aircraft and integrate it. If a payload has flown on any type of aircraft before. That helps a lot in the process, because we can take a bunch of the engineering knowledge from that, but there’s a lot of unique things flying high altitude. So sometimes we’ll have customers come to us and say, Well, yeah, this has flown on an aircraft before. Okay, well, what kind of parameters? Well, yeah, it flew on, you know, say, a Cessna net 5000 feet. Oh, okay, well, we’re gonna have some more engineering work to probably do on that to get it to 60,000 feet."
+  },
+  {
+   "speaker": "Courtney Beasley",
+   "text": "you mentioned 60,000 feet for the WB57 to put things into perspective, what altitude does a commercial flight fly at?"
+  },
+  {
+   "speaker": "David Johnson",
+   "text": "Most of your commercial flights fly in the mid 30,000s, up to the low 40,000 so you’re significantly above those. It’s always interesting. When we’re flying over commercial traffic, we’ll end up having you because we can hear him on air traffic control saying, hey, there was an aircraft that just went above us, really high. What is that aircraft? And the controller has to look on his strip to say, Oh, it’s a WB57 not sure what that is."
+  },
+  {
+   "speaker": "Courtney Beasley",
+   "text": "How does it feel to be that high up when you’re in the plane? It or does it feel no different?"
+  },
+  {
+   "speaker": "David Johnson",
+   "text": "Honestly, it doesn’t feel any different. However, if we go above 50,000 feet, we have to wear a full pressure suit, okay? And so then that feels just a little bit different, just because it’s more restrictive. So again, it’s it’s like a space suit, a version. In fact, the version that we fly is very similar to the suits that we use during the space shuttle era."
+  },
+  {
+   "speaker": "Courtney Beasley",
+   "text": "I know the WB 57 played a big role in the Eclipse. What is the plane’s role during World. Events like that?"
+  },
+  {
+   "speaker": "David Johnson",
+   "text": "yeah, you know, for the Eclipse, we had just had the Starlink modification, so we were now able to stream video in high definition from the aircraft. Prior to that, we could record in high definition, but we could only stream in low definition. So being able to broadcast what the crew is seen to the world is, you know, really, you know, just a great thing to be able to do. Yeah,"
+  },
+  {
+   "speaker": "Courtney Beasley",
+   "text": "that is so cool. Are there other high profile events that it’s been used for recently, or will be in the future?"
+  },
+  {
+   "speaker": "David Johnson",
+   "text": "Yeah, there’s a number of things. Again, we if you remember the the from two mission that was a private astronaut mission that flew on a SpaceX Dragon capsule. We got to image that off of the west coast. So like I said, we typically image just about every crewed space flight mission that returns back to Earth."
+  },
+  {
+   "speaker": "Courtney Beasley",
+   "text": "so we often see T38 flying over here at JSC. And when you’re at KSC for launches and sometimes even landings, you can see a T38 flying by. We often don’t see the WB57 but you’re you’re capturing photographs of launches at that time. What do those photos look like? In how do those photos differ when you see them? Can you tell that they’re up really high? Or do you typically zoom? Or what does that look like?"
+  },
+  {
+   "speaker": "David Johnson",
+   "text": "Yeah, so the imagery that we typically capture with the WB 57 we have a payload in the nose. It’s in this ball turret, which allows us to look, you know, both down and up, which is great for imaging launches and for capsules that are coming back, because they they initially look like they’re coming down almost vertically as they begin to decelerate and go towards the splashdown location. So that payload has both a visible camera and an infrared camera, so we can capture, like I said, both visible and infrared and both are valuable from an engineering perspective, in addition to the public affairs perspective when we’re live streaming that most of the Dragon recoveries that you see on TV, you will end up seeing imagery from the WB57 so and it will typically have some data off to the side showing what altitude the aircraft is at and what the latitude and longitude of where the cameras. So if you ever see images like that, it is probably coming from the WB57."
+  },
+  {
+   "speaker": "Courtney Beasley",
+   "text": "Really neat. Yeah, so you’ve seen a lot of action out here at Ellington. Do you have a most memorable moment that you could share?"
+  },
+  {
+   "speaker": "David Johnson",
+   "text": "Wow, there’s a lot of them, I think, and share a few. Okay, well, I’ll tell you, like I said, every time we get to bring our astronauts home in the G5 that is always a memorable event for me, and being able to see them get welcomed home by their families and by all their friends that are out there. And then the other one I would probably mention was I was fortunate enough to be able to image the Artemis one launch in the WB57 and then also its landing. And the Artemis one launch was absolutely spectacular. You know, NASA’s most powerful rocket ever. It was at night. It was not a very good night in the weather, and to see this massive rocket come through the clouds, I immediately knew I had the absolute best seat in the world to witness that. And it was really, really something"
+  },
+  {
+   "speaker": "Courtney Beasley",
+   "text": "that is really cool. When you guys do those flights for launches, do you typically bring a photographer up with you?"
+  },
+  {
+   "speaker": "David Johnson",
+   "text": "Yeah, we have our sensor equipment operator in the back, and unfortunately, they’re kind of heads down, having to drive the camera that is actually kind of on this ball turn in the nose, so they’re really having to concentrate. And as long as I’ve gotten the aircraft at the right place at the right time, I then get to look out the window and watch"
+  },
+  {
+   "speaker": "Courtney Beasley",
+   "text": "So cool. What do you hope the next chapter at Ellington looks like?"
+  },
+  {
+   "speaker": "David Johnson",
+   "text": "Well, I tell you, I think our training for the astronauts is going to change in the Artemis generation, much like in the Apollo era. We need some type of vertical, decent landing training to practice that ability to land on the moon, because it’s it’s much more like helicopter training. We believe we are going to have helicopters out at Ellington very shortly. We’re going through the approval process right now, and that next chapter at Ellington is going to be really exciting. I mentioned earlier that, hey, our fleet of aircraft is aging, our T38 are aging. The Air Force has already identified a replacement for that aircraft. We will end up having to look at replacing our T38 as well, whether it’s with the Air Force’s solution or something else. It’s going to be really, really exciting to see new aircraft on the ramp out at Ellington."
+  },
+  {
+   "speaker": "Courtney Beasley",
+   "text": "So a pilot who flies a T38 Can you just translate that over into a helicopter? Or is it a totally different set of skills?"
+  },
+  {
+   "speaker": "David Johnson",
+   "text": "That is a very different set of skills, and we will end up having different pilots come in that will train the astronauts that are specialized helicopter instructor pilots."
+  },
+  {
+   "speaker": "Courtney Beasley",
+   "text": "How cool. I can’t wait to see what that’ll look like. Yeah, me too. So as a pilot, it seems like you’ve lived out your dream. What advice would you give someone out there dreaming of a job like yours?"
+  },
+  {
+   "speaker": "David Johnson",
+   "text": "Really simple. Never give up. When I was in college, I was in the ROTC training program. The Air Force wasn’t looking for pilots at the time. However, I persisted and was able to eventually get a pilot slot, go to pilot training and get my chase my dream there I mentioned earlier, you know, when I retired from the Air Force and came to NASA. My goal was to become a pilot out at AOD, but it wasn’t initially available, but I kept at it, and again, never give up, and now your dreams can actually come true."
+  },
+  {
+   "speaker": "Courtney Beasley",
+   "text": "Incredible. Well, DJ, this was such a fun one. Thanks for coming on. Houston, we have a podcast, and thank you for all of your contributions to NASA’s mission."
+  },
+  {
+   "speaker": "David Johnson",
+   "text": "Thank you very much. It was a pleasure being here."
+  },
+  {
+   "speaker": "Courtney Beasley",
+   "text": "Thanks for sticking around. You can check out the latest from around the agency nasa.gov and more about Ellington Field at nasa.gov/johnson/ellington-field , our full collection of episodes and all of the other wonderful NASA Podcasts can be found at nasa.gov/podcasts . On social media we are on the NASA Johnson Space Center pages of Facebook , X , and Instagram . If you have any questions for us or suggestions for future episodes, email us at nasa-houstonpodcast@mail.nasa.gov This interview was recorded on April, 25 2025. Our producer is Dane Turner. Audio engineers are Will Flato and Daniel Tohill. And our social media is managed by Dominique Crespo. Houston We Have a Podcast was created and is supervised by Gary Jordan. Special thanks to Raegan Scharfetter and Chelsey Ballarte for helping us plan and set up these interviews. And of course, thanks again to DJ for taking the time to come on the show. Give us a rating and feedback on whatever platform you’re listening to us on and tell us what you think of our podcast. We’ll be back next week."
+  }
+ ]
+}

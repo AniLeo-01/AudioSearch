@@ -1,0 +1,188 @@
+{
+ "file_id": "ai_at_nasa",
+ "source": "https://www.nasa.gov/podcasts/nasa-podcasts/ai-at-nasa/",
+ "scope": "full episode (the audio excerpt covers only part of it)",
+ "style": "clean verbatim, human-edited by NASA",
+ "turns": [
+  {
+   "speaker": "Nilufar Ramji",
+   "text": "Houston We Have a Podcast. Welcome to the official podcast of the NASA Johnson Space Center, Episode 424: AI at NASA. I’m Nilufar Ramji, and I’ll be your host today. On this podcast we bring in the experts: scientists, engineers, and astronauts, all to let you know what’s going on in the world of human spaceflight and more. Artificial Intelligence, or AI, continues to be a hot topic across several industries and communities of practice. As humanity continues to innovate, the technology follows. And for decades, and even centuries, that evolution has brought us to the next big leap- computing systems that can perform complex tasks normally done by humans, as it relates to human reasoning, decision making, and creation of content. At NASA, AI helps support missions and research projects, analyzes data to reveal trends and patterns, and develop systems capable of supporting spacecraft autonomously. With safety and security as a top priority, NASA researchers and scientists have been leveraging artificial intelligence for decades. Most recently, they are looking at emerging AI and how it can best serve missions. What this could mean is sifting through satellite imagery, developing technology for autonomous vehicles, and searching for planets outside of our solar system using our deep space telescopes to name some examples. The question remains though, how can NASA continue to adopt these emerging methodologies and work with industry to ensure that advancement continues safely and securely? Joining me today, we have Kevin Murphy, NASA’s Acting Chief Data and AI Officer to tell us about what that landscape looks like. Let’s get started. Kevin, thank you so much for joining us on Houston We Have a Podcast. Before we go ahead and get started, can you tell us a little bit about yourself and what you do here at NASA?"
+  },
+  {
+   "speaker": "Kevin Murphy",
+   "text": "Sure. Thanks. Really happy to be here and on the podcast. I have a couple of jobs currently, just like a lot of people across NASA, and really happy to do all of them. It’s really, really interesting work. My primary job right now is, I’m the Chief Science Data Officer for the Science Mission Directorate, and that job allows me to look across all of the wonderful scientific information that we have and try to use advanced techniques to understand that gold mine of scientific information. I’m also the Acting Chief AI officer and the Chief Data Officer for the agency, which has given me a really interesting perspective on not only how we use modern data science and AI techniques for our scientific data, but how that applies across engineering, how it applies the business processes, and how that applies just generally for our mission for discovery."
+  },
+  {
+   "speaker": "Nilufar Ramji",
+   "text": "So if you could break it down for us, in your own words, can you explain artificial intelligence to us and then take it a step further by explaining why it’s important for us to understand this as an agency."
+  },
+  {
+   "speaker": "Kevin Murphy",
+   "text": "Sure, artificial intelligence is typically used as a pretty broad term. It means a lot of different things, depending on you know who you’re talking to, but at its basis, artificial intelligence is software that learns patterns from examples instead of following rules written by hand, like you don’t have expert logic, right? You feed it a lot of inputs. You give it text or images or sensor data, and it builds a mathematical model of what those patterns look like, so it can recognize or generate something that fits those models, right? So the intelligence isn’t reasoning or understanding. It’s a very sophisticated pattern of machine learning, things at scale. And there are a number of different types of artificial intelligence, because people are kind of experiencing it today in in one, one realm, which is basically through large language models. But if you go back to the 80s and 90s, we had expert systems where, like, you hand coded all of the rules by hand. And like, let’s say the machine or software went outside of those controls, it would sometimes misbehave or not do what you expect it to do. We kind of transitioned into machine learning models, deep learning models and finally, we’re kind of using these things called transformer architectures, which really power large language models today. And that’s what a lot of people, I think, are thinking about AI but, but we certainly have used a lot of those different AI. Techniques throughout the years at NASA. So you know, we need to use those techniques, because NASA generates enormous amount of information, but, but not only that, we have some of the hardest problems in the world to solve, right? How do we go explore a distant planet or, how do we develop systems to be resilient on the moon, keep astronauts safe yeah, we need to take a lot of that information together. We need to look for patterns that would be difficult to do through teams of people, even, and use that information to make decisions more quickly and more comprehensively."
+  },
+  {
+   "speaker": "Nilufar Ramji",
+   "text": "This is very helpful for me as well. Artificial Intelligence is like the buzzword that you hear everywhere, but you also hear some other terminology as well. So in addition to AI, we hear machine learning, we hear deep learning. So educate me a little bit. How are these different? And then how do they kind of come together and make what we know as AI?"
+  },
+  {
+   "speaker": "Kevin Murphy",
+   "text": "So again, AI is a really large umbrella term for a lot of different types of techniques. Deep Learning and machine learning are two of those techniques that have, you know, slightly different mechanisms. So you know, traditionally, if you’re looking at machine learning or deep learning, you need large amounts of training data sets to help develop those models. Those models are then good for the specific application that you created them for. And as we’ve kind of transitioned into the transformer architecture, which supports large language models and also other kind of visual processing models, what we’ve seen is that you can feed a substantial amount of information into these neural networks, they learn from patterns that they recognize, and then you can use them for a whole bunch of downstream tasks. So like, a good example that we use in science is when you used to create, like, a deep learning model to look for things like forest fires or burn scars, that model could only be used for understanding how burn scars looked in specific types of imagery. As we apply these more modern techniques to the data that we obtain, we can not only look for burn scars, but we can look for agriculture, we can look for buildings, we can look for other things that that same single AI model can predict."
+  },
+  {
+   "speaker": "Nilufar Ramji",
+   "text": "The agency has been an early adopter of some of these language models of AI in general. So tell us, in the context of NASA, how we’ve been using this technology more recently, and how have we been doing so with governance and protections in mind."
+  },
+  {
+   "speaker": "Kevin Murphy",
+   "text": "So you know, we have a lot of people throughout the agency doing a lot of activity with AI, and I think when we talk about AI, we have to be specific in terms of the technologies people are using right. Deep learning, machine learning is much different than some of these generative AI capabilities like the LLMs. When we did our analysis of the use cases, which are submitted to us each year by people across the agency, we saw over 600 specific examples of people using AI in prototype activities. And it’s really important that people are out there using these because they can make them more productive, and it can make them have better insights into the vast amounts of engineering and scientific and other types of data that we have. When we think about how to evaluate those over 600 use cases, we kind of put them into a couple of different bins. Right? One bin is hey, these are exploratory activities for research purposes, and they should be able to do what they need to do, right? They should be able to experience working with the technologies and then using those technologies to solve the problems that they need. Where, where we kind of pay a lot more attention is when we’re using these technologies in ways that have kind of a material impact on resources, safety, or, you know, some significant decisions and you know, when we see those types of use cases, we do have some additional kind of tests that we ask people to do to make sure that that they’re using those those technologies correctly. So you can think of it as a sliding scale where, you know, they’re really researchy or prototype things that don’t have large impacts are free to do what they need to do, but as you kind of get to a situation where you can have kind of rights impacting, safety impacting, or large other types of implications, we have more rigorous testing."
+  },
+  {
+   "speaker": "Nilufar Ramji",
+   "text": "That makes a lot of sense. I have some follow up questions. So first and foremost, these use cases that NASA submits, are there other federal agencies that do something similar? Are you aware of anything that’s kind of goes outside of NASA, and are we learning as a federal government as a whole on how we’re using AI safely and responsibly?"
+  },
+  {
+   "speaker": "Kevin Murphy",
+   "text": "Absolutely. So it’s required that we submit use cases annually, and we’ve been doing that and other government agencies have the same types of responsibilities. There is a council of AI officers from every major agency that meets monthly, and we share not only the use cases but best practices for procurement and costs and safe and secure use of these tools as they come around. Now, obviously, if you’ve been watching the news or using any of your computer tools or software, you’ve probably seen quite a lot of new AI capabilities rolling out. So we often have a lot to discuss every month and about how that’s impacting our agencies."
+  },
+  {
+   "speaker": "Nilufar Ramji",
+   "text": "Yeah, it’s very fascinating to be on the outside of these working groups and these planning meetings where we are seeing the application of these tools. And it’s been really helpful to, you know, help refine things that I’m doing in my day to day tasks, sometimes speeding things up. So I really, I really appreciate, I’m an early adopter of AI, so I really appreciate all of the inputs and work that this team has done. At NASA, here we have a NASA AI strategic working group as well. So you we talked a little bit about at a federal level, what we’re doing with other agencies and how that’s kind of going about. Tell us about what we’re doing here at NASA. How does that break out as the broader 10 centers across the country?"
+  },
+  {
+   "speaker": "Kevin Murphy",
+   "text": "So every center is doing something with AI today in all sorts of different ways. We’ve been doing it for a long time in some areas and in some communities are really using it for the first time and becoming familiar with it. The AI strategic working group is a community of people that can rely on one another to help chart that path forward, so that we can share those best practices among the centers we can identify common problems or issues and address those as necessary."
+  },
+  {
+   "speaker": "Nilufar Ramji",
+   "text": "Yeah, these communities of practice definitely help us be more successful. So as this working group has evolved over the last few years, or even then the last six months, can you talk about any concerns or issues or things that came about that we’ve learned from?"
+  },
+  {
+   "speaker": "Kevin Murphy",
+   "text": "I think we are still looking across the agency to identify how we can work commonly, on a lot of the big problems that we have, right? So when we talk about AI and we talk about good data management practices in general, which feed good AI, we need to have consistent patterns across the agency so that we don’t recreate solutions or create silos. So those are some of the types of things that we’re addressing now within that group."
+  },
+  {
+   "speaker": "Nilufar Ramji",
+   "text": "So over the last few years in particular, we’ve seen the agency publish several stories on how we’ve adopted AI and the examples that I can remember, off the top of my head, include autonomous systems on Mars, impacts to natural disasters, and air traffic management. So can you tell us a little bit about these successes and any additional applications that may have come about as a result of them?"
+  },
+  {
+   "speaker": "Kevin Murphy",
+   "text": "There are quite a few different examples of AI really speeding up the discovery of like exoplanets. For instance, within EXO Miner, where we use data from the Kepler and test space telescopes to find new exoplanets, processing these, these amazing amounts of information faster than ever before. And I think as you, as you look at some of the survey telescopes that are that are coming up, for instance, Nancy Grace Roman, which was just, you know, prepared for shipment, We’re going to be able to use the same techniques to process that vast amount of information, to find incredibly new discoveries as well, in terms of, like, autonomous operations on Mars, you know, I think that was, was really a big step forward for us. In terms of how We used to do, kind of the route planning for the Mars Rovers, that was a pretty intensive process, which limited the number of kilometers that rover, or any rover, could operate over the course of the year. So by having more intelligent capabilities on on Perseverance, that autonomy allows it to kind of avoid obstacles and do route planning in situ, so now it can drive hundreds of meters by itself. When I went out to JPL, like they, they were explaining all of this stuff to me. So I don’t know if you’ve been to JPL and see gone to their Mars building, or whatever it is,"
+  },
+  {
+   "speaker": "Nilufar Ramji",
+   "text": "I haven’t."
+  },
+  {
+   "speaker": "Kevin Murphy",
+   "text": "They’ve got this great picture of the longest traverses by rovers in the history of mankind, right? And they had this, this really interesting one, which was like, I was like, Well, how did they do that in the 70s? But apparently, the Soviet Union drove a rover on the moon. I don’t know how far, like, 100 kilometers or something, but it was all by people driving it from Earth. So they were like, yeah, there were like, six people trying to control it with the five second delay. And then they compared it. And then they compared it to the Perseverance run that we just did, right using AI. And yeah, it was, I feel like it was a couple 100 meters that they were able to pull off. And if you just start looking at those lines of how long people have gone, it’s just really amazing how automation and technology has really sped up our ability to explore."
+  },
+  {
+   "speaker": "Nilufar Ramji",
+   "text": "That’s a great way to describe some of the small steps we’ve taken to make these sort of giant leaps, if you will, as we go through this evolution of AI. And I touched on this a little bit, but I want to do a bit of a deeper dive here on the AI application and responsibility that we have as a federal agency. So NASA is responsible for safe and secure application of AI. So how can we as federal employees and contractors, ensure that we are being responsible stewards of this technology."
+  },
+  {
+   "speaker": "Kevin Murphy",
+   "text": "So part of it is to learn how the technology works and to have the resources available to understand, you know, where it makes sense and where it doesn’t. I think the first thing that everybody should recognize is that they are responsible for and accountable for the outcomes of the work that they do. They have to use their good judgment, just like they would when taking a source from the internet or working with a colleague, to ensure that the answers are correct and that they do their due diligence on what comes out of it. The other thing is, is that, you know, we don’t really have AI making decisions for us at this agency at this time, okay. So as long as there’s a human in the loop, especially for high consequence decisions, that’s a good thing to do, that we don’t have any shortcuts- we do testing properly- and validation and verification, whether that’s development of software or making specific decisions for how you write your email. You’ve got to do the work that you need to do. The other thing is, is that, you know, we talked earlier, that AI isn’t just one thing. AI is a multi-faceted set of tools, and not every tool is good for every job, right? So you know, for your your hammer, not everything is a nail. So you’ve really got to understand what models you’re using and how they impact the work that you’re doing. I think the final, and maybe one of the biggest things that we have at NASA is that we have to manage our data correctly to make those tools work well, right? You’ve probably heard the term garbage in, garbage out, right? That certainly can happen with AI too, right? So if you don’t do your prompt engineering correctly, if you give it bad data, if if you use it incorrectly, you’re not going to get a result which is useful."
+  },
+  {
+   "speaker": "Nilufar Ramji",
+   "text": "That’s really helpful. So check your work, do your due diligence, and ensure that you’re doing so within the parameters or the guidance of the security plans of the agency, is kind of where was my takeaway in that."
+  },
+  {
+   "speaker": "Kevin Murphy",
+   "text": "That that’s a much more succinct way to say it, but yes."
+  },
+  {
+   "speaker": "Nilufar Ramji",
+   "text": "So let’s, let’s talk about what not to do. What don’t you do with AI? And any advice on how we can adopt the technology and be safe, given that we’re a federal agency? What do we not do?"
+  },
+  {
+   "speaker": "Kevin Murphy",
+   "text": "So you know, I think I would say that you explore using AI, but you don’t let it make your decisions for you, right? You don’t want to set up a chat bot which responds to all your emails in your inbox, right? You want to be careful. You don’t know what it will say. And there have been horror stories out there, kind of in in the media or the tech news circles, where people have done that, you know, they’ve given AI access to all their social media accounts. It’s a disaster. You don’t want to do things like that. So use common sense, I think, is the best way to put it. Things that you need to do and are need to be high quality, need to be reviewed by you."
+  },
+  {
+   "speaker": "Nilufar Ramji",
+   "text": "I completely agree, although the notion of a clear and manageable inbox sounds dreamy, we need to make sure that we humans are doing like you said, our due diligence and checking our work. I’m smiling at that on the inside, one day, my inbox will be manageable. Okay, so-"
+  },
+  {
+   "speaker": "Kevin Murphy",
+   "text": "I don’t know about that!"
+  },
+  {
+   "speaker": "Nilufar Ramji",
+   "text": "We can sure dream. Let’s talk a little bit about workforce so people like me, I remember a couple of summers ago, NASA did this thing called the summer of AI, where we were learning, and we had different opportunities for brown bag lunches and to kind of talk about how we can adopt that technology here. So tell us a little bit about how your team are helping to train the workforce."
+  },
+  {
+   "speaker": "Kevin Murphy",
+   "text": "So today, we have a number of opportunities which are primarily discussion based. We are evaluating how we are going to make that transition from kind of just generalized discussions into an environment where people can learn how to use it more effectively. So I’d say that, you know, participate in the discussions in the communities of practice for now, but over the next, you know, little bit we’ll have a much more concentrated area in terms of how we enable the workforce to do this. There are a bunch of people out there that that are AI experts at centers and other places, and I would encourage people to go and reach out to them, because they have a lot of deep bench knowledge."
+  },
+  {
+   "speaker": "Nilufar Ramji",
+   "text": "That’s fantastic. And you know, I I’m a Office of Communications employee, so I have to ask this question, we can generate so many AI images lately, like I know that you know, just looking scrolling through my feeds during the Artemis II mission, I saw photos of the moon that I knew were definitely AI generated. So just in that vein of conversation, how are we as an agency ensuring that all of our content is factual and real, and ensure that the public knows that we are not generating any mission imagery, and that we are putting out real time operations and real time imagery."
+  },
+  {
+   "speaker": "Kevin Murphy",
+   "text": "NASA has a responsibility to the American public and the taxpayers that we would never publish things that could be misinterpreted as actual mission imagery or scientific information, which was AI generated. For things that would look like generative AI, which we can use potentially for, you know, future states or simulations of activities, you know, we do put an AI generated by AI label on them."
+  },
+  {
+   "speaker": "Nilufar Ramji",
+   "text": "So the labels are there for anything that we’ve generated as an agency. But then there are certain areas where we have kind of the “No, no” territory. So if it’s considered, a good example of that is human spaceflight missions, astronauts performing extra vehicular activity, or space walks, we would use authentic mission imagery, and we would never use AI. And that’s one of the parameters, if you will, that that we’ve established as an agency?"
+  },
+  {
+   "speaker": "Kevin Murphy",
+   "text": "That’s correct. You know, we cannot generate imagery through AI that could be confused as authentic mission images, For example. We are very clear in that we want to ensure that everything that we do as we explore the moon and beyond is real and that we don’t confuse people by putting out simulations that could be confused as real images. Nilufar Ramji 26:48 That’s such a good call, because for those of you who are listening to our podcast today, if you ever see a NASA image, you’ll often see “animation,” or you will see “data visualization.” You’ll see that marker on several products. So sometimes we’ll put out a video where we we’ve done a portion of the mission, but maybe not the whole thing just yet, we’re in the we’re in the process of going to the next milestone. So you’ll see a combination of real mission imagery or real B-roll that we’ve collected over the course of a certain developmental phase, and then you might see something like forward coming. So this is a really good flag here, Kevin, so I really appreciate that And it’s not just in images, right? Some people use use AI to help summarize documents or to make, you know, executive summaries for things and those acknowledgements should also be in those documents."
+  },
+  {
+   "speaker": "Nilufar Ramji",
+   "text": "Equally important. Exactly. We need to, if we’re using AI to help create efficiencies, we also need to be acknowledging the fact that we are using it for that reason. Tell us a little bit how we as NASA are safeguarding our systems against any kind of risk when we use AI."
+  },
+  {
+   "speaker": "Kevin Murphy",
+   "text": "So we treat AI as kind of a next extension of a lot of the work that we have to do successfully anyhow. So when we want to safeguard mission assets, we want to safeguard public safety for aeronautics, or what have you, we have processes by which we evaluate the safety of those systems and potentially astronauts on board, right. So we apply the validation and verification activities that we do to everything, including AI systems, to ensure that the results are sufficient for safe operation. We can’t let AI execute unsafe actions of course, or override critical decision making for our systems. We need experts to be involved in how we develop the models and how those models will behave over time and  we need to make sure that our systems that have AI embedded in them are deployed in secure and monitored environments, and that they align with the cyber security standards, so we don’t want leakage of CUI, ITAR, EAR data into public models. We don’t want people that don’t have the need to know those things, know them, so we have to be very conscientious of that. And we are working with cybersecurity and other groups, both in terms of authorizations to operate and procurement to make sure that we do that well."
+  },
+  {
+   "speaker": "Nilufar Ramji",
+   "text": "That’s very helpful, and I have a couple of questions related to that, but before we got there, I want to take a step back. You talked a little bit about autonomous systems on Mars. So how can AI best serve future missions on the surface of the Moon example. We’re going to be landing humans there very soon. So how can we leverage AI to help us serve our astronauts when we could be facing communication delays or blackout periods or anything like that."
+  },
+  {
+   "speaker": "Kevin Murphy",
+   "text": "So I’ve seen some really interesting demonstrations of people using AI in a lot of different ways across the agency in the past three or four months since I’ve been this Acting Chief AI Officer role really, really ingenious ways and mechanisms to operate machinery or instruments to, you know, looking at patterns for for radiation environments and things. So I don’t know all of the ways that AI will be helpful, but I’m sure it’s going to be helpful in all of the things we do. Okay, so that’s a kind of a non answer, but, but it’s just the people’s imagination. From from how do you support mission control better, to how do you turn like regolith into a landing pad using lasers and AI to to build, like, you know, a parking lot almost are just immense, right? How do you use AI to to lightweight structures for engineering, so that we can launch more mass to space, right? So it’s, it’s getting in, embedded in a lot of different parts of everything we do. So it’s hard to just single out one thing"
+  },
+  {
+   "speaker": "Nilufar Ramji",
+   "text": "that’s a very good non answer. I appreciate it, and my mind was going off thinking about all of the use cases that the agency submits. So now you’re in the hundreds. Soon you’re going to be in the 1000s. You also talked about, you know, garbage in, garbage out. So if we as humans are using our creativity and are looking at these problems and saying, Okay, this is how we can make our model smarter, that then results in good, tangible results. So there’s a lot out there, and once we’ve kind of landed on the Moon, I would love to have a follow up conversation with you to see what what’s changed, what’s what’s evolved then. But for now, we are also working with industry, right? So we’re working with what kinds of industry, external partnerships, other methods have enabled some of the successes you’ve described within NASA."
+  },
+  {
+   "speaker": "Kevin Murphy",
+   "text": "Well, we wouldn’t be able to do the work that we do without having really strong partnerships with industry, other government agencies. In academia, a lot of the expertise that we need to accomplish, the work that we do, especially in science, is within academic institutions, and you need experts to understand how a lot of these models work. We’ve had a very successful relationship with IBM in the development of foundation models for science, where we’ve released some of the first models in those areas worldwide, we released a Helio physics foundation model just last summer, for instance, which uses solar Dynamics Observatory data which helps us understand the radiation environment and other Sun activities that influence not only astronauts but what we do on earth and that also was supported by Nvidia, where we had to use their super computers to train a model which was way too large For anything that we have within NASA to do that processing. So we have a very strong relationship with both the academic community and  with industry. They have a lot of expertise in in machine learning, engineering, and operations, optimizations across these really large clusters, we as NASA bring that scientific expertise, that engineering expertise, and some really extreme use cases to them, which are super interesting. So, so it’s just been, it’s just been really good to see the over. All like, like, desire and excitement, both internal to NASA, but also externally on some of these problems. I think another big thing that we’re starting to work on is how we work with DOE and their Genesis Mission. So the Genesis Mission is an attempt to really bring AI to the forefront for productivity and engineering and really, really difficult questions. So we, we’ve looked at, you know, those ignition Day event activities and how they may apply to some of these really big AI models and infrastructure that the Genesis Mission is supporting."
+  },
+  {
+   "speaker": "Nilufar Ramji",
+   "text": "So the future is very bright. And DOE Department of Energy, for those of you who are listening, And you know what, Kevin, the opportunities to use AI have grown exponentially as new companies and products have been developed. And we’ve talked a little bit, we’ve kind of hit the surface on that here, and now it’s the time to identify sort of new potential innovations using AI across the agency. So we’re on the cusp of something really big. So that said, Do you have anything else that you’d like to share with us?"
+  },
+  {
+   "speaker": "Kevin Murphy",
+   "text": "What I would say is, is we’ve talked a lot about AI in this discussion, but we also have to really pay a lot of attention to how we manage our data and information."
+  },
+  {
+   "speaker": "Nilufar Ramji",
+   "text": "Exactly."
+  },
+  {
+   "speaker": "Kevin Murphy",
+   "text": "If we want to have good quality decisions at high velocity, we need to link data that has historically been kind of disconnected so that we can have that global view of how to execute well across the agency to meet the milestones that we have in front of us, we have incredible milestones, achieving the near impossible, I think, right, is one of the things that we’re really trying to do. And to do that, we need information and decisions at velocity, which means we need to connect our good data together so we have good insights. So I think it’s a challenge to the entire NASA workforce that we pull that information together and that we really treat data as a strategic asset, and then we can apply our AI techniques on top of that information for greater insights."
+  },
+  {
+   "speaker": "Nilufar Ramji",
+   "text": "What a great way to close us out. Kevin, the future is bright, but I can’t wait for another conversation with you. Thank you so much for joining us today."
+  },
+  {
+   "speaker": "Kevin Murphy",
+   "text": "Thank you. Happy to be here."
+  },
+  {
+   "speaker": "Nilufar Ramji",
+   "text": "Thanks for sticking around. I hope you learned something new today. You can check out the latest from around the agency at nasa.gov , and you can find out more about artificial intelligence at NASA by visiting nasa.gov/ai . Our full collection of episodes and all of the other wonderful NASA podcasts can be found at nasa.gov/podcasts . On social media we are on the NASA Johnson Space Center pages of Facebook , X , and Instagram . If you have questions for us or suggestions for future episodes, email us at nasa-houstonpodcast@mail.nasa.gov . This interview was recorded on May 5, 2026. Our producer is Dane Turner. Audio engineers are Will Flato and Daniel Tohill. And our social media is being managed by Leah Cheshier and Kelcie Howren. Houston We Have a Podcast was created and is supervised by Gary Jordan. Special thanks to Tiffany Blake and Tara Friesen for helping us plan and set up this interview. And of course, thanks again to Kevin Murphy for taking the time to come on the show. Give us a rating and feedback on whatever platform you’re listening to us on, and tell us what you think of our podcast. We’ll be back next week. 3… 2… 1… This is an official NASA Podcast."
+  }
+ ]
+}
