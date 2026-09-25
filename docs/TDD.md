@@ -33,7 +33,7 @@ flowchart LR
     C --> W[spoken vocabulary<br/>metaphone / dmetaphone]
   end
   IX --> PG[(PostgreSQL 16<br/>pgvector HNSW · GIN · pg_trgm · fuzzystrmatch)]
-  subgraph Query["Query path (~60–90 ms p50 on 4 CPU)"]
+  subgraph Query["Query path (p50 48 ms, p95 66 ms on 4 vCPU)"]
     Q[query] --> QP[parse: phrases, role:, file:]
     QP --> L[BM25 in SQL<br/>+ sounds-like expansion]
     QP --> S[query embedding → HNSW]
@@ -134,8 +134,10 @@ pyannote's pipelines require a gated Hugging Face token. The default here is ful
 6. **Labels.** Clusters are relabelled by first appearance (SPEAKER_00, SPEAKER_01). Each word keeps
    its posterior as a confidence.
 
-Measured: **99.9 % word-level speaker attribution** vs NASA transcripts (6 files, 9.1k aligned words);
-the smoothing ablation is in `reports/diarization_ablation.md`. Cost: ≈ 70 s per 9.3-min file on 4 vCPU.
+Measured: **99.9 % word-level speaker attribution** vs NASA transcripts (6 files, 9.1k aligned words).
+Smoothing ablation (`reports/diarization_ablation.md`), word diarization error rate:
+boundary-aware Viterbi **0.09 %**; raw window vote 0.11 %; uniform-cost Viterbi 0.27 %;
+ASR-segment majority vote (WhisperX-style) 2.10 %. Cost: ≈ 70 s per 9.3-min file on 4 vCPU.
 We also record an objective difficulty metric per file, the inter-speaker centroid cosine.
 
 ### 4.4 Utterances and turns
@@ -239,8 +241,9 @@ credit_u(d) = 1 if d contains u;  = expansion weight if d contains a sounds-like
 Plain RRF discards scores. With a small corpus it lets a passage that BM25 ranked highly for "people"
 and "world" beat the right semantic match, because appearing in both lists is rewarded. Coverage
 restores a *calibrated* piece of score information: it lies in [0, 1] and is comparable across
-queries, unlike raw BM25. On dev it raised hybrid paraphrase Recall@5 from 0.20 to 0.80 and overall
-Recall@5 from 0.74 to 0.86 (at k = 60). Surface-form intent weights add nothing on top of it, so
+queries, unlike raw BM25. On dev with the final configuration it raised hybrid Recall@5 from 0.80 to 0.92
+at k = 60 (paraphrase: 0.40 to 1.00), and from 0.88 to 0.93 at k = 10. On the held-out test split it
+gained +4.1 R@5 and +5.2 MRR over plain RRF, and fixed plain RRF's paraphrase loss (0.67 → 0.89). Surface-form intent weights add nothing on top of it, so
 they are off by default (kept for ablation). A convex combination of min-max-normalised scores is
 available (`fusion=cc`).
 
@@ -265,10 +268,16 @@ drops a moment if a better one from the same file is within 10 s or their passag
 than 50 %. Role and speaker filters apply at the utterance level: a passage that contains the guest
 still snaps only to a *guest* utterance.
 
-### 6.8 Latency (4 vCPU, warm, test split, no reranker)
-Per-stage timings are returned with every response and exported as Prometheus histograms. The query
-embedding (~40 ms with bge-base) dominates. Postgres work (BM25 + ANN + snapping) is ~15–25 ms at
-this scale. See EVALUATION.md for p50/p95.
+### 6.8 Latency (quiet 4-vCPU VM, 81 queries × 3 rounds, `reports/latency.md`)
+Per-stage timings are returned with every response and exported as Prometheus histograms.
+
+| Mode | p50 | p95 | p99 | mean per stage |
+|---|---:|---:|---:|---|
+| hybrid (default) | 48 ms | 66 ms | 74 ms | embed 32 · BM25 + sounds-like 5 · ANN 3 · fusion 1 · moments 8 · hydrate 1 |
+| lexical only | 11 ms | 22 ms | 28 ms | |
+| hybrid + reranker | 272 ms | 331 ms | 376 ms | rerank 199 |
+
+The query embedding dominates. All Postgres work is ~15 ms at this scale.
 
 ## 7. Interfaces
 
@@ -348,13 +357,13 @@ and moment logic (they operate on the top ~100 candidates).
 | ASR model | large-v3-turbo int8 | base.en, small.en, medium.en | RTF table §4.2; WER 4.3 %. base.en retrieval is close but moment offsets worsen (EVALUATION §4). |
 | Diarization | ECAPA + spectral + boundary Viterbi | pyannote 3.x (gated token), segment-majority, raw votes | 99.9 % word accuracy; `reports/diarization_ablation.md` |
 | Lexical scoring | BM25 in SQL | `ts_rank_cd`, pg_search, OpenSearch | IDF matters for rare terms; portability to managed Postgres |
-| Fusion | IDF-coverage-weighted RRF, k = 10 | plain RRF k = 60, intent weights, convex combination | R@5 0.74 → 0.86; MRR 0.74 → 0.84 (sweep in `scripts/tune_fusion.py`) |
+| Fusion | IDF-coverage-weighted RRF, k = 10 | plain RRF k = 60, intent weights, convex combination | dev R@5 0.80 → 0.93, MRR 0.80 → 0.94 (`reports/fusion_sweep_dev.txt`); test +5.2 MRR over plain RRF |
 | Embedding model | bge-base-en-v1.5 | bge-small, e5-base, MiniLM | MRR 0.94 vs 0.86 (small) vs 0.95 (e5); `scripts/tune_index.py` |
 | Chunk size | 50 words / 25 stride | 25, 35, 70, 100, 140 | 140 w clearly worse; 50 w best MRR with base models |
 | Dialogue context | off | question, question + title | R@5 0.934 (off) vs 0.922 (question) with bge-base; consistent across models |
-| Sounds-like | lexicon-aware expansion | none, expand every OOV token | misspelled R@5 0.42 → 0.88 (BM25); unrestricted expansion added noise ("inside" → "insights") |
-| Moments | utterance snapping + NMS | passage start | R@5 +12 pts; NMS +5 pts |
-| Reranker | optional | always on | +1–2 pts R@5 for +250 ms p50 on CPU |
+| Sounds-like | lexicon-aware expansion | none, expand every OOV token | test misspelled R@5: BM25 0.52 → 0.95, full system 0.81 → 0.95; unrestricted expansion added noise ("inside" → "insights") |
+| Moments | utterance snapping + NMS | passage start | test R@5 +11 pts (p = 0.03); NMS +4 pts (p = 0.01) |
+| Reranker | optional | always on | test: MRR +0.008, R@5 −0.016 for +200 ms on CPU |
 
 ## 12. Testing strategy
 

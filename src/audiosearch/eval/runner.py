@@ -10,6 +10,8 @@ Two kinds of variation are supported:
 
 from __future__ import annotations
 
+import hashlib
+import json
 import logging
 import statistics
 from collections import defaultdict
@@ -173,9 +175,25 @@ class IndexVariant:
     overrides: tuple[tuple[str, Any], ...] = ()
 
     def settings(self, base: Settings) -> Settings:
-        update = dict(self.overrides)
-        update["db_schema"] = "eval_" + "".join(c if c.isalnum() else "_" for c in self.name.lower())[:50]
-        return base.model_copy(update=update)
+        """Settings for this variant, in a schema named after the *effective* index configuration.
+
+        Hashing the resulting config (not just the variant name) means two different configurations can
+        never share a schema, while identical ones reuse it.
+        """
+        s = base.model_copy(update=dict(self.overrides))
+        key = json.dumps(
+            [
+                s.embedding_model,
+                s.transcript_set,
+                s.chunk_target_words,
+                s.chunk_stride_words,
+                s.chunk_context,
+                s.chunk_context_max_words,
+            ],
+        )
+        digest = hashlib.sha1(key.encode()).hexdigest()[:8]
+        slug = "".join(c if c.isalnum() else "_" for c in self.name.lower())[:40]
+        return s.model_copy(update={"db_schema": f"eval_{slug}_{digest}"})
 
 
 INDEX_VARIANTS: tuple[IndexVariant, ...] = (

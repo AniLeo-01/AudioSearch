@@ -21,10 +21,10 @@ RUN uv pip install --system --index-url https://download.pytorch.org/whl/cpu "to
 
 # ------------------------------------------------------------------------------------------------ api
 FROM base AS api
-COPY pyproject.toml README.md ./
+COPY pyproject.toml README.md requirements.lock ./
 COPY src ./src
-RUN uv pip install --system ".[api]"
-ARG EMBEDDING_MODEL=BAAI/bge-small-en-v1.5
+RUN uv pip install --system -c requirements.lock ".[api]"
+ARG EMBEDDING_MODEL=BAAI/bge-base-en-v1.5
 ARG RERANKER_MODEL=cross-encoder/ms-marco-MiniLM-L-6-v2
 RUN python -c "from sentence_transformers import SentenceTransformer, CrossEncoder; \
 SentenceTransformer('${EMBEDDING_MODEL}'); CrossEncoder('${RERANKER_MODEL}')"
@@ -40,7 +40,7 @@ CMD ["audiosearch", "serve", "--host", "0.0.0.0", "--port", "8000"]
 # ------------------------------------------------------------------------------------------- pipeline
 FROM api AS pipeline
 USER root
-RUN uv pip install --system ".[asr,diarization,eval]"
+RUN uv pip install --system -c requirements.lock ".[asr,diarization,eval]"
 ENV HF_HUB_OFFLINE=0 TRANSFORMERS_OFFLINE=0
 USER app
 CMD ["audiosearch", "build"]

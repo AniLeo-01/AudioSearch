@@ -18,10 +18,10 @@ pytestmark = [pytest.mark.eval, pytest.mark.slow]
 
 SYSTEMS = ("bm25", "dense", "hybrid-rrf", "full")
 
-# Floors (test split).  Measured values are in docs/EVALUATION.md; floors leave ~0.03 of headroom for
-# numerical noise across CPU types / library versions.
+# Floors (test split).  Measured on 2026-09-25 (docs/EVALUATION.md): R@1 0.660, R@5 0.915, R@10 0.966,
+# MRR 0.908.  Floors leave ~0.04-0.06 of headroom for numerical drift across CPUs / library versions.
 FLOOR = {
-    "full": {"recall@1": 0.45, "recall@5": 0.80, "recall@10": 0.88, "mrr": 0.75},
+    "full": {"recall@1": 0.60, "recall@5": 0.87, "recall@10": 0.92, "mrr": 0.86},
 }
 KEYWORD_RECALL5_FLOOR = 0.90
 

@@ -11,7 +11,7 @@ help:  ## show this help
 setup:  ## create .venv and install everything (CPU torch)
 	uv venv .venv --python 3.11
 	uv pip install --python $(PY) --index-url https://download.pytorch.org/whl/cpu torch==2.5.1 torchaudio==2.5.1
-	uv pip install --python $(PY) -e ".[all]"
+	uv pip install --python $(PY) -c requirements.lock -e ".[all]"
 
 db:  ## start PostgreSQL + pgvector in Docker
 	docker compose up -d db

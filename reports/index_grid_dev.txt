@@ -1,0 +1,15 @@
+# Dev-split grid: embedding model x dialogue context x chunk size (full system, coverage-weighted RRF k=10)
+# produced by scripts/tune_index.py
+model                    ctx       chunk  R@1   R@5   R@10  MRR   p50ms | keywo phras parap quest cross missp speak
+bge-small-en-v1.5        none       70/35 0.524 0.914 0.968 0.832    37 |  1.00  1.00  1.00  1.00  0.50  0.88  0.75
+bge-small-en-v1.5        none       50/25 0.533 0.874 0.937 0.862    14 |  1.00  1.00  1.00  0.80  0.39  0.88  0.83
+bge-small-en-v1.5        question   70/35 0.559 0.868 0.957 0.836    14 |  1.00  1.00  0.80  1.00  0.39  0.88  0.75
+bge-small-en-v1.5        question   50/25 0.513 0.862 0.937 0.812    17 |  1.00  1.00  1.00  0.80  0.39  0.79  0.83
+bge-base-en-v1.5         none       70/35 0.556 0.922 0.966 0.899    60 |  1.00  1.00  1.00  1.00  0.50  0.94  0.75
+bge-base-en-v1.5         none       50/25 0.625 0.934 0.957 0.937    17 |  1.00  1.00  1.00  1.00  0.61  0.94  0.75
+bge-base-en-v1.5         question   70/35 0.573 0.902 0.966 0.897    16 |  1.00  1.00  1.00  1.00  0.39  0.88  0.75
+bge-base-en-v1.5         question   50/25 0.613 0.922 0.945 0.915    15 |  1.00  1.00  1.00  1.00  0.50  0.94  0.75
+e5-base-v2               none       70/35 0.544 0.914 0.966 0.885    51 |  1.00  1.00  1.00  1.00  0.50  0.88  0.75
+e5-base-v2               none       50/25 0.659 0.920 0.945 0.954    13 |  1.00  1.00  1.00  1.00  0.50  0.88  0.83
+e5-base-v2               question   70/35 0.582 0.914 0.966 0.897    15 |  1.00  1.00  1.00  1.00  0.50  0.88  0.75
+e5-base-v2               question   50/25 0.625 0.920 0.945 0.937    15 |  1.00  1.00  1.00  1.00  0.50  0.88  0.83

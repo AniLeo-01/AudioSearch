@@ -2,7 +2,6 @@ name: ci
 
 on:
   push:
-    branches: [main]
   pull_request:
   workflow_dispatch:
 
@@ -52,7 +51,7 @@ jobs:
         run: |
           uv venv .venv --python 3.11
           uv pip install --python .venv/bin/python --index-url https://download.pytorch.org/whl/cpu torch==2.5.1
-          uv pip install --python .venv/bin/python -e ".[api,eval,dev]" scikit-learn scipy
+          uv pip install --python .venv/bin/python -c requirements.lock -e ".[api,eval,dev]" scipy
       - name: Type check
         run: .venv/bin/mypy src
       - name: Unit tests
