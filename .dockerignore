@@ -9,3 +9,4 @@ reports
 docs
 tests
 *.egg-info
+rebuild

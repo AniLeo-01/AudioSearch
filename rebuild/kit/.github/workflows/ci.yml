@@ -1,0 +1,25 @@
+name: ci
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: pgvector/pgvector:pg16
+        env:
+          POSTGRES_USER: audiosearch
+          POSTGRES_PASSWORD: audiosearch
+          POSTGRES_DB: audiosearch
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U audiosearch" --health-interval 2s --health-retries 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - run: sudo apt-get update && sudo apt-get install -y --no-install-recommends ffmpeg
+      - run: uv venv --python 3.11 && uv pip install --index-url https://download.pytorch.org/whl/cpu torch==2.5.1
+      - run: uv pip install -e ".[api,dev]"
+      - run: .venv/bin/ruff check src tests
+      - run: .venv/bin/audiosearch init-db && .venv/bin/audiosearch index
+      - run: .venv/bin/pytest -q

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AudioSearch</title>
+<style>
+  :root { --bg: #f6f7f9; --card: #fff; --text: #16181d; --muted: #5b6472; --accent: #2f6fed; --mark: #ffe58f; --line: #e3e6eb; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #0f1115; --card: #181b22; --text: #e8eaf0; --muted: #9aa3b2; --accent: #6ea8fe; --mark: #6b5a12; --line: #2a2f3a; }
+  }
+  body { margin: 0; font: 15px/1.5 system-ui, sans-serif; background: var(--bg); color: var(--text); }
+  main { max-width: 860px; margin: 0 auto; padding: 24px 16px 140px; }
+  h1 { margin: 0 0 12px; font-size: 22px; }
+  form { display: flex; gap: 8px; flex-wrap: wrap; }
+  input, select, button { font: inherit; padding: 10px 12px; border-radius: 8px; border: 1px solid var(--line); background: var(--card); color: var(--text); }
+  input { flex: 1 1 260px; }
+  button { background: var(--accent); color: #fff; border: 0; cursor: pointer; }
+  .hit { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; margin: 10px 0; cursor: pointer; }
+  .hit:hover, .hit.playing { border-color: var(--accent); }
+  .meta { color: var(--muted); font-size: 13px; }
+  .ts { font-variant-numeric: tabular-nums; font-weight: 600; color: var(--accent); }
+  mark { background: var(--mark); color: inherit; border-radius: 3px; padding: 0 2px; }
+  footer { position: fixed; bottom: 0; left: 0; right: 0; background: var(--card); border-top: 1px solid var(--line); padding: 10px 16px; }
+  footer > div { max-width: 860px; margin: 0 auto; }
+  audio { width: 100%; }
+</style>
+</head>
+<body>
+<main>
+  <h1>AudioSearch</h1>
+  <form id="form">
+    <input id="q" autofocus placeholder='why do clocks tick faster on Mars?  ·  "firing room one"  ·  Zubaire'>
+    <select id="role"><option value="">anyone</option><option>host</option><option>guest</option></select>
+    <button>Search</button>
+  </form>
+  <p class="meta" id="status">Search by words, meaning or sound. Click a result to play that moment.</p>
+  <div id="results"></div>
+</main>
+<footer><div><div class="meta" id="now">Nothing playing</div><audio id="audio" controls preload="metadata"></audio></div></footer>
+<script>
+const $ = (s) => document.querySelector(s);
+const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
+
+function highlight(text, spans) {
+  let out = "", pos = 0;
+  for (const [a, b] of spans) { out += esc(text.slice(pos, a)) + "<mark>" + esc(text.slice(a, b)) + "</mark>"; pos = b; }
+  return out + esc(text.slice(pos));
+}
+
+async function play(h, node) {
+  const audio = $("#audio");
+  if (!audio.src.endsWith(h.audio_url)) {
+    const ready = new Promise((r) => audio.addEventListener("loadedmetadata", r, { once: true }));
+    audio.src = h.audio_url;
+    audio.load();
+    await ready;  // setting currentTime before metadata has loaded is silently ignored
+  }
+  audio.currentTime = Math.max(0, h.start - 0.3);
+  audio.play().catch(() => {});
+  document.querySelectorAll(".hit.playing").forEach((n) => n.classList.remove("playing"));
+  node.classList.add("playing");
+  $("#now").textContent = `${h.title} · ${h.timestamp} · ${h.name || h.speaker} (${h.role})`;
+}
+
+$("#form").addEventListener("submit", async (ev) => {
+  ev.preventDefault();
+  const params = new URLSearchParams({ q: $("#q").value, k: 10 });
+  if ($("#role").value) params.set("role", $("#role").value);
+  const t0 = performance.now();
+  const res = await fetch("/api/search?" + params);
+  if (!res.ok) { $("#status").textContent = "Error: " + (await res.text()); return; }
+  const data = await res.json();
+  $("#status").textContent = `${data.hits.length} moments in ${Math.round(performance.now() - t0)} ms`;
+  $("#results").replaceChildren(...data.hits.map((h) => {
+    const node = document.createElement("div");
+    node.className = "hit";
+    node.innerHTML =
+      `<div class="meta"><span class="ts">${esc(h.timestamp)}</span> · ${esc(h.title)} · ` +
+      `${esc(h.name || h.speaker)} (${esc(h.role)}) · ${esc(Object.keys(h.channels).join(" + "))}</div>` +
+      `<div>${highlight(h.text, h.highlights)}</div>`;
+    node.addEventListener("click", () => play(h, node));
+    return node;
+  }));
+});
+</script>
+</body>
+</html>
