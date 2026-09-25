@@ -1,0 +1,64 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - name: Install linters
+        run: uv venv .venv --python 3.11 && uv pip install --python .venv/bin/python ruff
+      - name: Ruff
+        run: .venv/bin/ruff check src tests scripts && .venv/bin/ruff format --check src tests scripts
+
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    services:
+      postgres:
+        image: pgvector/pgvector:pg16
+        env:
+          POSTGRES_USER: audiosearch
+          POSTGRES_PASSWORD: audiosearch
+          POSTGRES_DB: audiosearch
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U audiosearch -d audiosearch"
+          --health-interval 5s --health-timeout 3s --health-retries 20
+    env:
+      AUDIOSEARCH_DATABASE_URL: postgresql://audiosearch:audiosearch@localhost:5432/audiosearch
+      HF_HOME: ${{ github.workspace }}/.hf-cache
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - name: System packages
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends ffmpeg
+      - name: Cache Hugging Face models
+        uses: actions/cache@v4
+        with:
+          path: .hf-cache
+          key: hf-${{ hashFiles('src/audiosearch/config.py') }}
+      - name: Install (CPU torch)
+        run: |
+          uv venv .venv --python 3.11
+          uv pip install --python .venv/bin/python --index-url https://download.pytorch.org/whl/cpu torch==2.5.1
+          uv pip install --python .venv/bin/python -c requirements.lock -e ".[api,eval,dev]" scipy
+      - name: Type check
+        run: .venv/bin/mypy src
+      - name: Unit tests
+        run: .venv/bin/python -m pytest tests/unit -q
+      - name: Integration tests (SQL + HTTP)
+        run: .venv/bin/python -m pytest tests/integration -q
+      - name: Index the golden corpus (committed transcripts; no ASR needed)
+        run: .venv/bin/audiosearch index
+      - name: Retrieval quality gate (Recall@K on the golden test split)
+        run: .venv/bin/python -m pytest tests/eval -q -s

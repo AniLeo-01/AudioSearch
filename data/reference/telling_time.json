@@ -1,0 +1,364 @@
+{
+ "file_id": "telling_time",
+ "source": "https://www.nasa.gov/podcasts/houston-we-have-a-podcast/telling-time-on-other-worlds/",
+ "scope": "full episode (the audio excerpt covers only part of it)",
+ "style": "clean verbatim, human-edited by NASA",
+ "turns": [
+  {
+   "speaker": "Dane Turner",
+   "text": "Houston We Have a Podcast. Welcome to the official podcast of the NASA Johnson Space Center. Episode 419: Telling Time on Other Worlds. I’m Dane Turner, and I’ll be your host today. On this podcast, we bring in the experts, scientists, engineers, and astronauts, all to let you know what’s going on in the world of human spaceflight and more. Days, hours, minutes. Time is so ubiquitous to our everyday lives that we often just think of it as numbers on a clock face. We forget that these numbers are tied to the motion of our planet. But what do we do when we aren’t on Earth? How do we tell time in a place where maybe morning, afternoon, and evening don’t necessarily align with our typical Earthly 24 hour day, or even seconds themselves may tick faster on the Moon? On this episode, we have Kevin Coggins, Deputy Associate Administrator for NASA’s Space Communication and Navigation or SCaN  program, to help us understand how NASA plans to keep time on other planetary bodies, and why accurate time keeping is so important to space flight. Let’s get started. Hi, Kevin. Thank you so much for coming on Houston We Have a Podcast today."
+  },
+  {
+   "speaker": "Kevin Coggins",
+   "text": "Hey, thanks for having me."
+  },
+  {
+   "speaker": "Dane Turner",
+   "text": "Can you tell us a little bit about your background and how you got started at NASA?"
+  },
+  {
+   "speaker": "Kevin Coggins",
+   "text": "Yeah. So let’s see it’s a strange background. It’s a strange loop that got me to NASA. Joined the Marine Corps at 17. I’m an electrical engineer. Worked in the defense and aerospace industry for many years. Found myself doing position navigation and timing for the Department of War, and then, lo and behold, I found myself doing Space Communications and Navigation at NASA."
+  },
+  {
+   "speaker": "Dane Turner",
+   "text": "So you’ve been doing the things that SCaN does for most of your career. Is that right?"
+  },
+  {
+   "speaker": "Kevin Coggins",
+   "text": "In some way, shape or form."
+  },
+  {
+   "speaker": "Dane Turner",
+   "text": "And so SCaN is NASA’s Space Communication and Navigation program. Can you give us a little more information on what that really covers?"
+  },
+  {
+   "speaker": "Kevin Coggins",
+   "text": "Sure thing. So SCaN is the lifeline, the line of which all data flows to and from any space mission we send up, whether it’s the International Space Station, the Artemis II Mission to the Moon, the Voyager spacecraft, or Europa Clipper, we manage the Deep Space Network, which are these huge antennas around the world, in Madrid, Canberra, and California. We manage the Near Space Network, which are a bunch of smaller antennas to talk to rockets that we launch and things that are orbiting the Earth for science missions and the ISS. And we also manage some satellite constellations. And then we have a lot of commercial space partners that bring a lot of capability to help us as well."
+  },
+  {
+   "speaker": "Dane Turner",
+   "text": "So is this a lot like, you know, we’re all used to GPS on our phones now these days. Is this like a space GPS?"
+  },
+  {
+   "speaker": "Kevin Coggins",
+   "text": "Yeah, so it’s communications, but it’s also positioning, navigation, and timing, or PNT, which you could say is space GPS. We’re putting right now GPS around the Moon in a program that’s got one of these weird NASA acronyms. We have a ton of acronyms here. This one’s LCRNS, Lunar Communications and Navigation Relay System and it’s going to include not just the ability to do communications on the moon, but to have GPS like capability on the moon, just like we have on Earth."
+  },
+  {
+   "speaker": "Dane Turner",
+   "text": "Okay, and these are also communication satellites, so like beaming phone calls and TV signals. Is that about right?"
+  },
+  {
+   "speaker": "Kevin Coggins",
+   "text": "That’s exactly right."
+  },
+  {
+   "speaker": "Dane Turner",
+   "text": "Amazing. Okay, so how do these capabilities relate to time keeping?"
+  },
+  {
+   "speaker": "Kevin Coggins",
+   "text": "See that is, that is the magic question, and that’s the question where some people are going to head nod and say, I like that answer, and the people that are really into precision time are going to head nod and say, yeah, it’s a little harder than that, because it is. It is one of the weirdest things I’ve ever encountered as my career is time. And you know, it starts with a question like, “What is it? What even is time?” Right? On the earth, we have all these atomic clocks, and they’re all just a little bit different, because clocks drift. And believe it or not, what they’re looking at in the clock are oscillations of atoms, and gravity affects the oscillation of the atom. So on the earth, we’re in this earth gravity. Well, we’re kind of all in the same gravity, and all. All these clocks are rotating on this planet. They’re experiencing different forces and vibrations and kind of the same gravity, and they all have to work together to vote to figure out what time is it, based on, you know, not only the oscillations of their individual atoms, but also the, you know, kind of like averaging out and norming between their differences. That’s time. That’s one definition of time. The moon has different gravity than the Earth. So how do we do it there?"
+  },
+  {
+   "speaker": "Dane Turner",
+   "text": "You’re starting to break my mind here, because I’m realizing that time is so tied to gravity that you’re going to get different time, basically anywhere you go!"
+  },
+  {
+   "speaker": "Kevin Coggins",
+   "text": "That’s 100% right."
+  },
+  {
+   "speaker": "Dane Turner",
+   "text": "So these atomic clocks, are they placed in? Are they all at sea level? Are they placed at different altitudes? How do we get that average time on the earth that becomes our Earth time."
+  },
+  {
+   "speaker": "Kevin Coggins",
+   "text": "You know, it’s a it’s a little more complicated. I told you, no one’s going to like the answers here. No one’s going to like it. Well, what’s a day here? It’s the rotation of the Earth, right? 24 hours. And how do we know where to begin the measurement and end the measurement of that rotation? We actually have to pay attention to the reference frame of how the Earth sits in space. And so we have to look at things that are really far from the Earth. We measure signals off of pulsars. We measure positioning of stars. They take that data down and gonkulate it with the clocks to figure out, you know, what time is here on the earth. And what’s really interesting about it is the rotation of the Earth changes a little bit. And we have this thing called Leap seconds, where every once a while, we shave a few seconds off the clock, because, you know, a second is not defined the same way as the rotation of the Earth, but we have to make a mesh. So there’s constant adjustment and calculation. And so there are these computers that take in all this data, things that measure the stars get factored into that, all of these clocks that are at different altitudes. They’re, you know, because they’re on the ground or in the ground somewhere in the world, in the United States, a lot of these clocks, and they all this data has to go back to one of a few places for this gonkulation, I call it, all this calculation to figure out what time is it."
+  },
+  {
+   "speaker": "Dane Turner",
+   "text": "It’s incredible. Yeah, we’re taught in school that a day is the time it takes for the Earth to revolve, and an hour is 1/24 of that, and then a second is 1/60 of a minute. But we’re, we’re almost moving away from the definition of of the Earth’s movement. And really putting this in into context of, you said the vibration of an atom is that right?"
+  },
+  {
+   "speaker": "Kevin Coggins",
+   "text": "That’s right. The vibrations of an atom, it could be rubidium, it could be cesium, it could be different atoms that vibrate a different number of times in what’s called one second. We just count those vibrations until we get to that magic number for whatever atom it is."
+  },
+  {
+   "speaker": "Dane Turner",
+   "text": "And so that’s what becomes one second. And then we extrapolate all of the other times from that second?"
+  },
+  {
+   "speaker": "Kevin Coggins",
+   "text": "Well, that helps us figure out what the second is. And then, yeah, we start to extrapolate. And we have, you know, we have to do a lot of calculation based on other measurements to figure out, you know, that second, that day, etc, and where we are in the in the earth reference frame."
+  },
+  {
+   "speaker": "Dane Turner",
+   "text": "Wow. Okay."
+  },
+  {
+   "speaker": "Kevin Coggins",
+   "text": "It’s wild. It’s totally wild. The people that do this work are extremely passionate about it. They could have an argument with you for hours, and you wouldn’t understand a thing they said."
+  },
+  {
+   "speaker": "Dane Turner",
+   "text": "It’s really wild. You go into a topic like this, and think, I know what time is. I have a clock, I have a watch. And then all of a sudden you start talking about it, and you realize that time, you know, time is a construct. But also time is something so complex. It’s incredible!"
+  },
+  {
+   "speaker": "Kevin Coggins",
+   "text": "You know, it’s it’s very important in it’s very important to have very precise time measurements. Because when you’re talking about your position measurement, the way these GPS satellites work, and the way they’ll work on the Moon and Mars one day is each of the satellites is sending you a signal, and your GPS is calculating the time difference between those signals, and a nanosecond is enough to travel about 1/3 of a meter. And so, you know, like on Mars, clocks will tick in. Average of 477,000,000th of a second faster than clocks on earth because of gravity. The gravity is different. The eccentric orbit is different, and so it can increase or decrease this amount by as much as 226 microseconds a day over the course of the Martian year. So why does that matter? 477 microseconds is enough time to travel 143,000 kilometers for at the speed of light. And so that’s how much, that’s how much distance you get from those microseconds. We need nanosecond accuracy to get down to very precise positioning of where you are."
+  },
+  {
+   "speaker": "Dane Turner",
+   "text": "Wow. So you’d be off by thousands of kilometers, hundreds of thousands of kilometers, if, if you your clock was off by a very minuscule amount."
+  },
+  {
+   "speaker": "Kevin Coggins",
+   "text": "That’s right. That’s why these precise clocks are so very important."
+  },
+  {
+   "speaker": "Dane Turner",
+   "text": "Incredible."
+  },
+  {
+   "speaker": "Kevin Coggins",
+   "text": "Well, let’s pick on the moon. Right? The moon a single lunar day is about 29.5 Earth days. That means, if we were to base a day on the moon’s natural cycles, the length of the day is going to be a lot longer than on the earth, and gravity is different on the moon than the Earth, so time is passing at a different rate, and so it’s a very difficult problem to figure out time and then extrapolate that to position on the surface of the moon, unless you’re doing it from within that reference frame, except in the case of one mission at a time, if it’s one mission at a time, that’s the history of what we’ve done at NASA. When we’ve sent a spacecraft up like Apollo, we have clocks on Apollo. We have, you know, on the on their lander, we have clocks on the earth, and we could just deal with we could do that from the earth, and kind of pay attention to its surroundings, figure out where it’s at and what time it is, kind of like mission time, you could call it, but not lunar time. But now we’re talking about building a moon base. We’re talking about rovers and landers and humans moving around the surface of the moon. You can’t, from the earth, do mission time individually. For each of them, they have to be on the same time scale, and that means they need lunar time."
+  },
+  {
+   "speaker": "Dane Turner",
+   "text": "Interesting. So let’s go back to that history real quick. So using the the idea of the reference frame with these historical missions like Mercury and Gemini and Apollo, we use the earth reference frame. Then what, what was the like, actual time keeping on that like?"
+  },
+  {
+   "speaker": "Kevin Coggins",
+   "text": "Well, it could have been a watch on someone’s wrist, right? It could be a clock in one of the, in the capsule, or, you know, a clock in some other part of the system. And over the radio link, maybe you did some clock synchronization. And maybe it was really, really rough, because you don’t, you didn’t have a GPS satellite, right? Given them positioning it was, you were calculating their positioning based on ranging measurements from the communication signal and any other observations. And so it was like, laser focused on that one thing. And yeah, if, if that watch on Buzz Aldrin’s wrist, what that he took to the Moon was very accurate to the nanosecond it would have drifted away from the time on the earth; but it wasn’t that accurate, so it was very not as noticeable. And so within that mission time, it was good enough. It was good enough, right? But when you’re going to have, when you’re going to have some of the technologies we have on the earth, like 5g connectivity across the surface assets and the network people knowing where they are, or machines knowing where they are with respect to where something else is. You’ve got to define- now you can’t just do it as a one off. You’ve got to define it for that reference frame that they’re in."
+  },
+  {
+   "speaker": "Dane Turner",
+   "text": "Okay, so for for those early missions, having a synchronized clock set to an Earth time was enough to get them where they need to go, because we didn’t need the precision with the satellites and everything at the time, and then as we move into shuttle, did that change then? Or was that still kind of the same idea?"
+  },
+  {
+   "speaker": "Kevin Coggins",
+   "text": "Well, you know, during Mercury and Gemini and Apollo and Shuttle, they use something called Mission Elapsed Time, or MET, right. Kind of like a standardized, continuous counter, days, hours, minutes, seconds, starts, the exact moment of launch for the space. Shuttle that they continued using it starting at liftoff, all shuttle operations were planned relative to that mission clock. However, when they started becoming more reliant on digital avionics and satellite communications, they needed more precise synchronization. We actually put GPS receivers on the space shuttle for some of that. And so we kind of started to move away from the Mission Clock to getting time, very accurate time from earth based GPS. Today, the ISS uses coordinated, universal time so that all the international partners and ground controllers can coordinate activities continuously. So we’ve kind of shifted away from Mission time for the ISS. Artemis II is going to use mission elapsed time as a primary operational timeline reference, starting at launch. And so it’s a, you know, it’s a single mission. It’s, it’s, you know, it’s gonna, it’s going to take off. It’s going to go around the moon. It’s got ground controllers and our entire communication network aimed at it. And so we just need that mission elapsed time. But you know, our broader moon to Mars architecture, as we start to do all these activities on the moon, we can’t continue to use mission elapsed time at all."
+  },
+  {
+   "speaker": "Dane Turner",
+   "text": "Right. And that kind of mirrors our operations on the ISS, right? The ISS, while being kind of a singular focus, is being focused on by so many different people that we need that that one Coordinated Universal Time to work to and is kind of like what we’ll be doing on the Moon when we have that moon base with all the multiple rovers and everything. Does that sound about right?"
+  },
+  {
+   "speaker": "Kevin Coggins",
+   "text": "That sounds absolutely right. Big difference is, ISS is around the Earth, right? So it can use Earth’s, you know, Coordinated Universal Time. And when we go to the moon, we’re gonna need Coordinated lunar time."
+  },
+  {
+   "speaker": "Dane Turner",
+   "text": "So we’ve talked a little bit about some of the considerations here, but we’re, we’re talking about a coordinated lunar time. We’re talking about some place with a different gravity well, with a different length of day and everything. What are these considerations that were we need when we’re exploring time keeping on another body like the Moon?"
+  },
+  {
+   "speaker": "Kevin Coggins",
+   "text": "Well, what’s the gravity? Right? Remember, we started this conversation with how gravity affects the oscillation of these atoms and how we measure them. So one of the things we have to pay attention to is, what’s the gravity? What’s the rotation of the planetary body we’re going to be on? A Martian day is about 24 hours and 39 minutes. And so we have to pay attention to, you know, this Mars mission, what they’re going to need locally, with time, with positioning, but also, there’s a team back on Earth supporting them. In 2012 when Curiosity landed on Mars, the engineers worked on Mars time, and because of that, their work shifts on earth moved about 39 minutes later each day to stay synchronized with the rover’s local daylight cycle, because daylight mattered, and so this helped them, you know, analyze data from the previous sol quickly send commands for the next one. But it was something for these humans to adjust their normal schedules to. They had to work around the daylight, day, night cycle on a different planetary body. That was tough on some of them."
+  },
+  {
+   "speaker": "Dane Turner",
+   "text": "So they were waking up at Mars morning, whatever time that happened to be on Earth and keeping you know that their lunch time was at Mars noon, and their end of their day was near the Mars end of day. Is that right? They were living on the Mars time, and just whatever happened to be on Earth, if is the middle of the night, is the middle of the night here?"
+  },
+  {
+   "speaker": "Kevin Coggins",
+   "text": "Exactly. That’s exactly right. Imagine the chaos that meant for them and just and the adjustment for their family that, you know, when they ate, when they slept, it was, it was quite an adjustment."
+  },
+  {
+   "speaker": "Dane Turner",
+   "text": "Oh, I bet you know, going to an Earth Store when you’re, you know, on Mars time is probably disorienting."
+  },
+  {
+   "speaker": "Kevin Coggins",
+   "text": "Exactly, exactly."
+  },
+  {
+   "speaker": "Dane Turner",
+   "text": "So are gravity and rotation the only things that we’re really need to keep into consideration when we’re building a time for another planet?"
+  },
+  {
+   "speaker": "Kevin Coggins",
+   "text": "I know you asked another planet, but I kinda want to pick on the moon, so let’s talk about a complexity of the moon. The moon’s not a planet. And, you know, the moon has very specific dynamics that that aren’t the same as the Earth. We have to root our reference frame for the moon positionally and time to our reference frame on the earth. And the math of, the math of figuring out positioning on the earth with satellites around the Earth and clocks on the earth, is hard, but we figured it out. Now you’ve got to take that math and you’ve got to put it around the moon, but keep it linked to the math around the earth. And I say math because I just want to highlight this stuff’s hard. There’s a lot of constant calculations on how we’re going to have to synchronize these clocks. Have a, have a lunar time reference scale, an earth time reference scale, where we’ll be talking with those missions and make it work this seamlessly together. There’s big questions, like, when you fly a rocket from the earth reference system, where’s that border with the moon where you switch clocks? Or do you just have two clocks now? It’s going to be, it’s going to be quite interesting, because if the communication services in and around the moon depend on lunar time, when you move into that reference frame, you’ve got to switch to that time to be able to communicate with everything in that environment. It’s things we’ve never encountered before."
+  },
+  {
+   "speaker": "Dane Turner",
+   "text": "And to top it all off, everything’s always in motion. That’s that’s something that I’ve had to learn when dealing with the orbital mechanics of the ISS and spacecraft and stuff and the Moon is no different. Everything is always in motion. So that’s just another wrench in the system."
+  },
+  {
+   "speaker": "Kevin Coggins",
+   "text": "Exactly, exactly. Yeah, it’s gonna be fun. You know, we’re gonna spend a lot of a lot of energy and brain power over the next few years figuring out how to do this and implementing capability. You know, on this, that’s that LCRNS project I told you about, that Lunar Communications Relay and Nav System, we’re going to start seeing satellites go up there in the next, you know, year or two, and we’ll start building that reference frame around the moon. Having those clocks begin to do their first ticks and start on these hard math problems, so that when a receiver on the moon receives the signal from these satellites, it’s getting the it’s getting the that data from those precise clocks, but it can determine exactly where it is on the surface of the moon. That brings me to another challenge. Most people don’t know, but there’s, there are groups in the in the government that work really hard to define how coordinates work on the surface of the earth. And they work really hard to make sure those, you know, with magnetic deviation at the poles, with the wobble of the earth and the shape of the Earth, that that they’ve got it well characterized, so that a point is a point, and it’s always that place, because the Earth isn’t static, it’s just not set and still, it’s moving. It’s shifting and doing weird things. Well, we’ve got to do that same kind of work on the moon so that we can define, you know, a coordinate system so that when you receive these signals from these satellites, and you do the math, the answer comes out the same coordinate every time, no matter when you took the measurement. That’s hard. And there are some amazing people that work in this every day on the earth. And I know I’ve talked to them recently, they’re really excited to settle this on the moon."
+  },
+  {
+   "speaker": "Dane Turner",
+   "text": "So with, with the Earth, do you do you know, what is that like, central point of the coordinate system? Or is there one?"
+  },
+  {
+   "speaker": "Kevin Coggins",
+   "text": "Oh, yeah. Now, now you, Dane, you’re passing my knowledge here. I think that’s one of their hotly debated topics as to, what is that central point? Or is there a central point at all? That’s part of the weird math they do."
+  },
+  {
+   "speaker": "Dane Turner",
+   "text": "Oh, yeah. I was just thinking about, I’m like, the North Pole. We think of that as static, but it shifts. And then you’ve got plate tectonics. So no matter where it is that you say, oh, you know, this point right here on this continent, well that’s not going to be, you know, in the exact same place in even just a year’s time, it will move by a centimeter or two."
+  },
+  {
+   "speaker": "Kevin Coggins",
+   "text": "We have a prime meridian. It gives us, it gives us on the surface, a basic reference frame to measure off of. However, when you start talking about, what is the center point of the earth, you know, there’s all kinds of questions like, you know, based on its motion, based on its mass, two different things. And based on its wobbling motion, that center points probably moving around a little bit. But maps can’t handle things moving around. When you get the signals you have to, you have to have an answer that comes. Out the other side of the gonkulator that says I’m exactly at this location to some degree of accuracy and you know, that’s, I think, a continuing challenge that never stops."
+  },
+  {
+   "speaker": "Dane Turner",
+   "text": "Now, I know that the moon doesn’t have plate tectonics. Do you know, like, what kind of challenges there are with the moon, with this similar to what there are with the Earth. Does the moon have a magnetic field or anything?"
+  },
+  {
+   "speaker": "Kevin Coggins",
+   "text": "No, you know, it doesn’t have a lot of the characteristics of a planet that we’re used to. And so, yeah, we don’t have to deal with a lot of those factors. You know, however I don’t think we know everything about the moon yet."
+  },
+  {
+   "speaker": "Dane Turner",
+   "text": "From what I understand, I think you’re right. We’re gonna go exciting things soon."
+  },
+  {
+   "speaker": "Kevin Coggins",
+   "text": "We’re gonna go find out."
+  },
+  {
+   "speaker": "Dane Turner",
+   "text": "You’ve talked about the how we have multiple atomic clocks around the earth to measure the different times and then gonkulate that Coordinated Universal Time? Do we know how many clocks and where we want to place them on the moon yet?"
+  },
+  {
+   "speaker": "Kevin Coggins",
+   "text": "That’s a great question. We don’t. You know, the heart of every GPS receiver actually is an is an okay clock, but the heart of every device that generates position navigation timing is a really great clock. And so you can imagine that as we begin a footprint on the south pole and equatorial you’re only going to need enough clocks to handle positioning really well in those areas. And so maybe you don’t need all your clocks at once. We’re going to have some clocks on the surface that are equipped to survive the night. And because clocks, by the way, they like stability. They like stable temperature. So they like to be turned on, and they like to warm up, and they like to stay warm. And so you’re going to need continuous power. You’re never going to want to power it down, because you’ll have to go through a warm up and synchronization cycle. And so surviving the night is important. We’re also going to have clocks on the satellites in orbit and at different places around the moon, and all of these clocks will talk to each other and share data and synchronize so that we can determine, you know, what is time at given points. We’re also going to have clocks on the earth that are going to be tied and forming these clocks up on the moon. They’re in a different gravity well. It’s characterized. We know how they’re going to be ticking on the earth. We’re going to characterize and know how they’re going to be ticking on the moon. That characterization is what’s going to allow us to have them all work together to form really precise time."
+  },
+  {
+   "speaker": "Dane Turner",
+   "text": "Interesting. So it’s kind of a backup and just a system to make sure that what you’re receiving from the moon is what you’re expecting to see?"
+  },
+  {
+   "speaker": "Kevin Coggins",
+   "text": "Exactly right, exactly right, and as and there are going to be things that happen where you have to make adjustments, and we’re going to see very, very small perturbations, based on gravity differences, based on, you know, all kinds of factors that we’ll have To constantly gonkulate, and factor in some clocks may be affected by something happening in space, and maybe the ones on the ground are more shielded and not as impacted. Those are the kind of errors you have to constantly look for and work out. I’ve got a really good use case for you for why these clocks and why precise positioning is important. Imagine you’re an astronaut on the surface of the moon, and maybe you’ve walked away from your rover couple 100 meters, and you’ve got a habitat maybe a mile or two away, and all of a sudden you get an alert on your communication system that says, hey, there’s a solar flare, you’ve got this amount of time to seek cover, or you’re going to endure some radiation that’s above our safety limits. Well, first thing you’re going to want to know is, all right, where do I go? You’re going to have to go back to your habitat. You need the most expedient route. You’re going to navigate back, probably visually. You’ll probably see where you park the rover. You’re going to get back, get in that rover, turn around. You’re going to have to drive that rover precisely, you know, without hitting an obstacle, going around different types of terrain, and maybe there’s power cables you have to avoid running over. You’re going to need, you know, to get there as quick as you can. And you want the most accurate route, and this positioning capability is a way to get that accurate route. And remember, a nanosecond, about a third of a meter. And so you need really good timing accuracy, so you’re going to drive back that distance through who knows what obstacles, what kind of terrain that’s been plotted for you precisely by a computer, using this position navigation and timing data, and get back into that habitat before these solar winds arrive and causes health concern."
+  },
+  {
+   "speaker": "Dane Turner",
+   "text": "So we’re talking this is a safety feature, and not just to make sure we get our spacecraft to the moon and back."
+  },
+  {
+   "speaker": "Kevin Coggins",
+   "text": "Absolutely."
+  },
+  {
+   "speaker": "Dane Turner",
+   "text": "So one of the things that you said just a minute ago was that these clocks will have to endure temperature. Is temperature something that affects time."
+  },
+  {
+   "speaker": "Kevin Coggins",
+   "text": "You know, it is for me. I’m from Florida. When, when it’s cold, things feel like they’re moving a little too slow. But you know what? You know the way these atomic clocks work is you use a laser, typically to excite an atom into a vibration state, and you measure the vibration. And that, and that’s a setting you want a very predictable outcome. And so you want temperature stability. So many different clocks depending on their mode of of generating a stable frequency depend on an oven or something to warm them up to a certain temperature where their performance is characterized. That means you know what it is at that temperature, and it’s predictable. And so let’s say you needed something to run at, you know, a megahertz, very precisely, one dot, lots of zeros, and you’ve characterized some materials to do that at a certain temperature. That temperature becomes essential to getting that predictable behavior out of the clock. Clocks are all about predictable, predictable measurements."
+  },
+  {
+   "speaker": "Dane Turner",
+   "text": "So this is about making sure that our measurements are the same where we’re recording what this frequency of this atom is at this temperature, so it’s standardized and not that time moves differently in different temperatures."
+  },
+  {
+   "speaker": "Kevin Coggins",
+   "text": "That’s correct. That’s correct. Remember, you know, is there really such thing as time? We know there’s such thing as a vibration of an atom. We know there’s such thing as a frequency. But time is just a measurement we create off of those vibrations. So you could argue that time is just something we created, that we need to be predictable and stable."
+  },
+  {
+   "speaker": "Dane Turner",
+   "text": "So we’ve been talking about the Moon here a lot and and we’re going to the Moon to then go on to Mars- looking at these considerations of the the gravity and and the rotation, everything, they’re different on Mars. So are, are we looking at the second being different on Mars?"
+  },
+  {
+   "speaker": "Kevin Coggins",
+   "text": "Well, you know, remember, clocks on Mars will tick an average of 477,000,000th of a second faster than clocks on Earth. And it’s, it’s, it’s orbit and the gravity from its neighbors can increase or decrease this amount by as much as 226 microseconds a day over the course of the Martian year. That’s a lot of variability on time. What is a second? Right. on the earth, we have a very precise definition of a second, if we take that definition to Mars, and it’s based on and it’s based on the number of vibrations. It’s going to be 477,000,000th of a second faster. And so it’s going to be different. It’s going to be different. Different gravity means the different rate of vibration of the atoms when they’re at the right temperature, excited by a laser. And when we do that measurement, it’s going to be different."
+  },
+  {
+   "speaker": "Dane Turner",
+   "text": "So we’re looking at having Earth time, Moon time and Mars time, all just a little bit different."
+  },
+  {
+   "speaker": "Kevin Coggins",
+   "text": "That’s exactly right. Anytime you go to a different Gravity Well, you’re going to have different time reference frame."
+  },
+  {
+   "speaker": "Dane Turner",
+   "text": "So in 2024 SCaN was tasked by the White House with developing this coordinated lunar time. How is that project coming along?"
+  },
+  {
+   "speaker": "Kevin Coggins",
+   "text": "So really well. You know, the key part of that is working with the different parts of the. Government that have roles to play in defining time on the earth and how we work together to define time on the moon. We have an active work going with a company named Intuitive Machines to put satellites around the moon. You know this LCRNS acronym, Lunar Communication Relay and Nav System. They’re well underway. I know they’re wrapping up some of their satellites and preparing to launch them, and you know the next part is going to be to once they’re on orbit, and we have some user equipment on the surface getting that cranked up, refining it and improving that accuracy, so that when we send astronauts and more systems to the surface, they don’t only have uninterrupted comm, right? They’ll have communications all around the moon from these relays orbiting they’ll have position navigation and timing wherever they’re at."
+  },
+  {
+   "speaker": "Dane Turner",
+   "text": "You mentioned earlier, this is a lot of math, a lot of really difficult math. Has all that math been completed? Or is it kind of a new things are popping up, and we’re having to solve problems as we find them."
+  },
+  {
+   "speaker": "Kevin Coggins",
+   "text": "Yeah, that’s a really good question. So, Dane, I don’t have the complete answer to that. I think there’s more math to do, man. You know, there’s definitely more math to do. I think the experts really understand what it’s going to take to do this. It’s a matter of giving them time to complete the work. We you know, we have to get the clocks up around the moon in these satellites and get data back of how it’s synchronizing and working. I’m sure there’s going to be adjustments, just like there were with the GPS system when we started to put it up around the Earth. As we see. How does it really play in the environment? I mean, the moon is a is a going to be a very interesting environment to solve these problems in. You’ve got Earth’s gravity on one side. You’ve got lunar gravity. You’ve got these different kind of orbits we’re going to use around the moon that are different from the ones we use around the Earth. So I’m sure there’s going to be fine tuning and adjustments as we deploy this capability. One advantage we have on the earth is we can move around the Earth freely and take measurements of the signals we’re getting from GPS satellites. Right now, we can’t we’re not yet at that point where we have the ability to take measurements all over the moon as fast as these scientists and engineers would like to have this data. And so you can imagine that as we continue to take measurements, we’re going to continue to have some adjustments."
+  },
+  {
+   "speaker": "Dane Turner",
+   "text": "You had that great example of the astronaut trying to avoid the solar flare. So we’ve seen, you know that this is a great way for astronauts to track the amount of time they have, and help navigate safely back to their base. We also talked about how having this accurate time helps make sure that we know where things are in space and not 1000s of kilometers away from where we think they should be. Are there any other applications to having this accurate time for the moon?"
+  },
+  {
+   "speaker": "Kevin Coggins",
+   "text": "Well, accurate time means accurate position, and if you just look down on the earth, let’s just look at what’s fun, right? It’s fun to get in your car and and program in your GPS somewhere you want to go and go there. And if you’re driving some of these newer electric cars, for it to drive you there itself. It’s fun to it’s fun for a kid to have a drone and, you know, fly that drone around, and maybe you’re using GPS or time to help you do that. You know, think about the things that make it really fun here on the Earth using GPS, those same things gonna apply on the moon just a little different way sometimes. If we wanted to do very precise sampling, very precise sampling of the lunar surface in the near term, this kind of capability can allow you not only to go to very precise spots and take these samples, but you can revisit those spots extremely accurately, autonomously. And so as we, as we explore the moon, with autonomous capabilities, this ability to for a location to be a location, no matter when you go, it’s going to, it’s going to be a game changer, an absolute game changer. You know, imagine that you need a lot of systems to work cooperatively together, and they can each know their very precise location in the same reference frame, just like just like we do here on the earth. I think it’s going to provide a lot of advantage."
+  },
+  {
+   "speaker": "Dane Turner",
+   "text": "And that coordination sounds like it’s it’s going to be that, that big leap. Compared to what we’ve done the past, where it’s been one mission at a time, but having all that coordination is really going to make the moon its own place."
+  },
+  {
+   "speaker": "Kevin Coggins",
+   "text": "Yeah, absolutely. You know, imagine this, imagine a steady stream of robotic missions to the moon, where we have to have precise landing, precise placement of logistics, maybe something, maybe there’s some robotic craft on the moon that have to go to certain points and retrieve these logistics, or do different missions. The amount of autonomy and capability they’re going to have to build a lunar base, to explore the moon, to conduct really precise science, is going to be directly enabled by their ability to have accurate positioning."
+  },
+  {
+   "speaker": "Dane Turner",
+   "text": "So looking back, well, looking forward to Mars again. We talked about how some of the rover missions were on Mars time, but they didn’t have the all the atomic clocks and all the GPS navigation satellites, everything at it for Mars yet, do they?"
+  },
+  {
+   "speaker": "Kevin Coggins",
+   "text": "Oh, no, not yet. Remember, they’re, they’re on the mission time. And so they’ve got, they’ll have a clock, but it’s the Mission Clock that they’ll be synchronized to, and so, and they operate very independently of one another. You know, remember, it’s, it’s old school, the way Gemini, Apollo was done, because there’s not distributed infrastructure there, and so you’ve got to work focused solely on that mission and that time for that mission only."
+  },
+  {
+   "speaker": "Dane Turner",
+   "text": "Right, okay, so the people working it were on the day night cycle and not living on the Martian clock. Okay, so is, Mars our next focus, after we get the moon infrastructure up, where we’re going to start looking at putting this infrastructure into Mars? Is that what we’re looking at?"
+  },
+  {
+   "speaker": "Kevin Coggins",
+   "text": "You know, our Moon to Mars program says, Let’s go do the Moon and let’s move on to Mars, based on what we learned. So, yeah, absolutely. And you know, Mars is going to be an interesting problem to solve. One thing we haven’t talked about is the distance of Mars. You know when we you know right now the moon is so close, the speed of light. Distance to the moon is negligible. It. You don’t even notice it. When we talk to Voyager, which is outside of the solar system, it takes 23 and a half hours for a signal to get from the Earth to Voyager, and then Voyager does something and sends something back, and takes 23 and a half hours more. So two days for round trip comms to Voyager. Mars is an orbiting planet around the Sun, and so it’s not a set distance from the Earth. The Earth is moving around the Sun at one rate and one orbit, and Mars is moving around another. And so our our the time difference to Mars ranges from 4 to, you know, 44 minutes. And so when it’s when it’s at a distant point, and I send a radio wave to Mars. It takes 44 minutes for it to get there, and then 44 minutes for it to get back. And so it’s we have to, we have to factor that in for when we start doing these, these Mars missions, and we start sending humans, it’s going to be very different experience than the Moon."
+  },
+  {
+   "speaker": "Dane Turner",
+   "text": "And I’m sure that the lessons that we learn on the Moon are going to inform all of the all of those challenges that we have going to Mars."
+  },
+  {
+   "speaker": "Kevin Coggins",
+   "text": "Yeah, absolutely. Just like the lessons we learned on the earth are giving us huge advantages for how we are applying technology to the moon."
+  },
+  {
+   "speaker": "Dane Turner",
+   "text": "This has been fantastic. I have learned so much today."
+  },
+  {
+   "speaker": "Kevin Coggins",
+   "text": "Was I right that you know you might not be satisfied with all the answers. It’s, uh, it’s crazy topic."
+  },
+  {
+   "speaker": "Dane Turner",
+   "text": "You know, the the dissatisfaction I have with some of the answers has just inspired me to learn more about what it takes to to tell time on this kind of accurate scale."
+  },
+  {
+   "speaker": "Kevin Coggins",
+   "text": "Oh, that’s the goal, right there."
+  },
+  {
+   "speaker": "Dane Turner",
+   "text": "Thank you so much for coming on and taking the time to talk about time with me."
+  },
+  {
+   "speaker": "Kevin Coggins",
+   "text": "Absolutely. Dane, thanks for having me."
+  },
+  {
+   "speaker": "Dane Turner",
+   "text": "Thanks for sticking around. I hope you had a good time. You can check out the latest from around the agency at nasa.gov . And to find out more about SCaN, you can go to nasa.gov/SCaN . Our full collection of episodes and all the other wonderful NASA Podcasts can be found at nasa.gov/podcasts . On social media, we’re on the NASA Johnson Space Center pages of Facebook , X , and Instagram . If you have any questions for us or suggestions for future episodes, email us at nasa-houstonpodcast@mail.nasa.gov . This interview was recorded on March 10, 2026. Our producer is Dane Turner. Audio engineers are Will Flato, Daniel Tohill, and Manny Cooper. And our social media is managed by Leah Cheshier and Kelsey Howren. Houston We Have a Podcast was created and is supervised by Gary Jordan. Special thanks to Katherine Schauer and Callie Dosberg for helping us plan and set up this interview. And of course, thanks again to Kevin Coggins for taking the time to come on the show. Give us a rating and feedback on whatever platform you’re listening to us on, and tell us what you think of our podcast. We’ll be back next week. 3… 2… 1… This is an official NASA podcast."
+  }
+ ]
+}

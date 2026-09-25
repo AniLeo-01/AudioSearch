@@ -1,0 +1,11637 @@
+{
+ "schema_version": 1,
+ "file_id": "wayfinding",
+ "duration": 553.77,
+ "meta": {
+  "signature": "3727c849232ff4d0",
+  "audio": {
+   "sha256": "cab9424335335ff3014fcc3bd8c0b49be06ad7fa18a1c196c785ad4dd8712bb2",
+   "duration": 553.77,
+   "sample_rate": 44100,
+   "channels": 1,
+   "codec": "mp3"
+  },
+  "asr": {
+   "engine": "faster-whisper",
+   "model": "large-v3-turbo",
+   "device": "cpu",
+   "compute_type": "int8",
+   "params": {
+    "language": "en",
+    "beam_size": 5,
+    "word_timestamps": true,
+    "vad_filter": true,
+    "vad_parameters": {
+     "min_silence_duration_ms": 500
+    },
+    "condition_on_previous_text": false
+   },
+   "elapsed_sec": 104.75,
+   "rtf": 0.189,
+   "audio_sha256": "cab9424335335ff3014fcc3bd8c0b49be06ad7fa18a1c196c785ad4dd8712bb2",
+   "audio_duration": 553.77
+  },
+  "diarization": {
+   "engine": "ecapa-spectral-viterbi",
+   "model": "speechbrain/spkrec-ecapa-voxceleb",
+   "num_speakers": 2,
+   "window_sec": 1.5,
+   "hop_sec": 0.75,
+   "switch_penalty": 4.0,
+   "boundary_discount": 0.15,
+   "n_windows": 689,
+   "inter_speaker_cosine": 0.026,
+   "speaker_changes": 11,
+   "words_changed_by_smoothing": 0,
+   "elapsed_sec": 73.51
+  }
+ },
+ "speakers": [
+  {
+   "label": "SPEAKER_00",
+   "role": "host",
+   "role_confidence": 1.0,
+   "display_name": "Leah Cheshier",
+   "talk_time": 63.24,
+   "n_words": 195,
+   "n_utterances": 12,
+   "question_rate": 0.5
+  },
+  {
+   "label": "SPEAKER_01",
+   "role": "guest",
+   "role_confidence": 1.0,
+   "display_name": "Giuseppe Iaria",
+   "talk_time": 460.07,
+   "n_words": 1143,
+   "n_utterances": 64,
+   "question_rate": 0.0781
+  }
+ ],
+ "utterances": [
+  {
+   "id": "wayfinding_u0000",
+   "idx": 0,
+   "speaker": "SPEAKER_00",
+   "start": 0.53,
+   "end": 4.31,
+   "text": "Well, Dr. Giuseppe Eardia, thank you so much for joining us today on Houston.",
+   "word_start": 0,
+   "word_end": 14
+  },
+  {
+   "id": "wayfinding_u0001",
+   "idx": 1,
+   "speaker": "SPEAKER_00",
+   "start": 4.45,
+   "end": 5.13,
+   "text": "We have a podcast.",
+   "word_start": 14,
+   "word_end": 18
+  },
+  {
+   "id": "wayfinding_u0002",
+   "idx": 2,
+   "speaker": "SPEAKER_01",
+   "start": 5.65,
+   "end": 6.75,
+   "text": "Thank you for having me.",
+   "word_start": 18,
+   "word_end": 23
+  },
+  {
+   "id": "wayfinding_u0003",
+   "idx": 3,
+   "speaker": "SPEAKER_00",
+   "start": 7.09,
+   "end": 13.33,
+   "text": "I'm really excited to talk about the wayfinding experiment, but I want to dive in first to a little bit more about you.",
+   "word_start": 23,
+   "word_end": 46
+  },
+  {
+   "id": "wayfinding_u0004",
+   "idx": 4,
+   "speaker": "SPEAKER_00",
+   "start": 13.57,
+   "end": 20.89,
+   "text": "So tell me about yourself, where you grew up, what your background is, and really how you first developed any interest in space.",
+   "word_start": 46,
+   "word_end": 69
+  },
+  {
+   "id": "wayfinding_u0005",
+   "idx": 5,
+   "speaker": "SPEAKER_01",
+   "start": 21.85,
+   "end": 23.69,
+   "text": "Well, it's very nice to start this way.",
+   "word_start": 69,
+   "word_end": 77
+  },
+  {
+   "id": "wayfinding_u0006",
+   "idx": 6,
+   "speaker": "SPEAKER_01",
+   "start": 23.69,
+   "end": 41.53,
+   "text": "So I grew up in a tiny little village in the south of Italy, Scalacelli, a stairway to heaven, a beautiful village of about maybe at the time, 800 people on a cliff looking to the Ionian Sea and mountains.",
+   "word_start": 77,
+   "word_end": 117
+  },
+  {
+   "id": "wayfinding_u0007",
+   "idx": 7,
+   "speaker": "SPEAKER_01",
+   "start": 41.53,
+   "end": 43.95,
+   "text": "It's a gorgeous place, but not that much to do.",
+   "word_start": 117,
+   "word_end": 127
+  },
+  {
+   "id": "wayfinding_u0008",
+   "idx": 8,
+   "speaker": "SPEAKER_01",
+   "start": 46.13,
+   "end": 56.25,
+   "text": "And I went to high school in a city close by, and a terrible time, a nightmare time, like all teens in a high school, I guess.",
+   "word_start": 127,
+   "word_end": 154
+  },
+  {
+   "id": "wayfinding_u0009",
+   "idx": 9,
+   "speaker": "SPEAKER_01",
+   "start": 56.63,
+   "end": 60.41,
+   "text": "And from there, I went to Rome, the University of Rome, La Sapienza.",
+   "word_start": 154,
+   "word_end": 167
+  },
+  {
+   "id": "wayfinding_u0010",
+   "idx": 10,
+   "speaker": "SPEAKER_01",
+   "start": 60.85,
+   "end": 87.33,
+   "text": "I got into psychology, didn't like it at first, until then I discovered biology, genetics, and then finally neuropsychology and I developed an interest on the brain and from then things happened and so I had the opportunity to meet this incredible group of scientists at the University of Rome.",
+   "word_start": 167,
+   "word_end": 217
+  },
+  {
+   "id": "wayfinding_u0011",
+   "idx": 11,
+   "speaker": "SPEAKER_01",
+   "start": 87.63,
+   "end": 89.27,
+   "text": "I was doing some research with them.",
+   "word_start": 217,
+   "word_end": 224
+  },
+  {
+   "id": "wayfinding_u0012",
+   "idx": 12,
+   "speaker": "SPEAKER_01",
+   "start": 89.39,
+   "end": 94.25,
+   "text": "I did my honors thesis and then and eventually a training in neuropsychology.",
+   "word_start": 224,
+   "word_end": 237
+  },
+  {
+   "id": "wayfinding_u0013",
+   "idx": 13,
+   "speaker": "SPEAKER_01",
+   "start": 94.85,
+   "end": 107.57,
+   "text": "And I had, since then, next to me this incredible academic father figure of Gino Pizzamilio, who has taught me everything I know about life and science.",
+   "word_start": 237,
+   "word_end": 264
+  },
+  {
+   "id": "wayfinding_u0014",
+   "idx": 14,
+   "speaker": "SPEAKER_00",
+   "start": 108.01,
+   "end": 109.31,
+   "text": "Oh, that's fantastic.",
+   "word_start": 264,
+   "word_end": 267
+  },
+  {
+   "id": "wayfinding_u0015",
+   "idx": 15,
+   "speaker": "SPEAKER_00",
+   "start": 109.93,
+   "end": 115.81,
+   "text": "So you touched on a lot of things that I wanted to talk about, but did you always know that you wanted to work in science?",
+   "word_start": 267,
+   "word_end": 293
+  },
+  {
+   "id": "wayfinding_u0016",
+   "idx": 16,
+   "speaker": "SPEAKER_00",
+   "start": 115.99,
+   "end": 119.67,
+   "text": "Was that something that, you know as you were younger was a goal for you?",
+   "word_start": 293,
+   "word_end": 308
+  },
+  {
+   "id": "wayfinding_u0017",
+   "idx": 17,
+   "speaker": "SPEAKER_01",
+   "start": 120.46,
+   "end": 137.56,
+   "text": "No I could say yes and make a big you know story about that but no not really I went to Rome did not know what to do I went into psychology because I the only thing I knew about psychology was that it was diverse there were a lot",
+   "word_start": 308,
+   "word_end": 358
+  },
+  {
+   "id": "wayfinding_u0018",
+   "idx": 18,
+   "speaker": "SPEAKER_01",
+   "start": 137.56,
+   "end": 156.83,
+   "text": "of things to study about psychology so it was a good way for me to try to understand what I was really interested about and so then I discovered the brain within psychology and from the brain I discovered cognition and memory and then my mentor at the time and",
+   "word_start": 358,
+   "word_end": 408
+  },
+  {
+   "id": "wayfinding_u0019",
+   "idx": 19,
+   "speaker": "SPEAKER_01",
+   "start": 156.83,
+   "end": 174.53,
+   "text": "still my mentor Gino Pizzamilio had this idea of giving me the opportunity to go to Montreal so I went to the Montreal Neurological Institute where I studied like a memory and I learned about neuroimaging and and I learned how to do neuroimaging.",
+   "word_start": 408,
+   "word_end": 452
+  },
+  {
+   "id": "wayfinding_u0020",
+   "idx": 20,
+   "speaker": "SPEAKER_01",
+   "start": 175.15,
+   "end": 177.35,
+   "text": "And so everything really started from there.",
+   "word_start": 452,
+   "word_end": 459
+  },
+  {
+   "id": "wayfinding_u0021",
+   "idx": 21,
+   "speaker": "SPEAKER_01",
+   "start": 177.63,
+   "end": 181.35,
+   "text": "The interest in cognitive neuroscience developed throughout the years.",
+   "word_start": 459,
+   "word_end": 468
+  },
+  {
+   "id": "wayfinding_u0022",
+   "idx": 22,
+   "speaker": "SPEAKER_01",
+   "start": 181.55,
+   "end": 185.29,
+   "text": "I didn't really have a childhood dream about that.",
+   "word_start": 468,
+   "word_end": 477
+  },
+  {
+   "id": "wayfinding_u0023",
+   "idx": 23,
+   "speaker": "SPEAKER_00",
+   "start": 186.39,
+   "end": 186.95,
+   "text": "Fascinating.",
+   "word_start": 477,
+   "word_end": 478
+  },
+  {
+   "id": "wayfinding_u0024",
+   "idx": 24,
+   "speaker": "SPEAKER_00",
+   "start": 187.25,
+   "end": 194.45,
+   "text": "Okay, so this early research that you were doing, how did that really shape what you're doing now with human spaceflight?",
+   "word_start": 478,
+   "word_end": 499
+  },
+  {
+   "id": "wayfinding_u0025",
+   "idx": 25,
+   "speaker": "SPEAKER_00",
+   "start": 194.57,
+   "end": 196.35,
+   "text": "Was it connected in any way?",
+   "word_start": 499,
+   "word_end": 505
+  },
+  {
+   "id": "wayfinding_u0026",
+   "idx": 26,
+   "speaker": "SPEAKER_01",
+   "start": 196.94,
+   "end": 197.92,
+   "text": "Yes, absolutely.",
+   "word_start": 505,
+   "word_end": 507
+  },
+  {
+   "id": "wayfinding_u0027",
+   "idx": 27,
+   "speaker": "SPEAKER_01",
+   "start": 198.24,
+   "end": 202.72,
+   "text": "So I developed an interest in processing space.",
+   "word_start": 507,
+   "word_end": 515
+  },
+  {
+   "id": "wayfinding_u0028",
+   "idx": 28,
+   "speaker": "SPEAKER_01",
+   "start": 202.94,
+   "end": 208.52,
+   "text": "Okay, so we will be talking about space in two different ways throughout this conversation, Leah.",
+   "word_start": 515,
+   "word_end": 531
+  },
+  {
+   "id": "wayfinding_u0029",
+   "idx": 29,
+   "speaker": "SPEAKER_01",
+   "start": 208.76,
+   "end": 215.28,
+   "text": "So I do space research, meaning the surroundings around you.",
+   "word_start": 531,
+   "word_end": 541
+  },
+  {
+   "id": "wayfinding_u0030",
+   "idx": 30,
+   "speaker": "SPEAKER_01",
+   "start": 215.5,
+   "end": 215.7,
+   "text": "Okay.",
+   "word_start": 541,
+   "word_end": 542
+  },
+  {
+   "id": "wayfinding_u0031",
+   "idx": 31,
+   "speaker": "SPEAKER_01",
+   "start": 216.14,
+   "end": 216.4,
+   "text": "Yes.",
+   "word_start": 542,
+   "word_end": 543
+  },
+  {
+   "id": "wayfinding_u0032",
+   "idx": 32,
+   "speaker": "SPEAKER_01",
+   "start": 216.66,
+   "end": 219.44,
+   "text": "But we will also be talking about other space.",
+   "word_start": 543,
+   "word_end": 552
+  },
+  {
+   "id": "wayfinding_u0033",
+   "idx": 33,
+   "speaker": "SPEAKER_01",
+   "start": 219.68,
+   "end": 225.18,
+   "text": "And so let's keep it these two terms to refer to other space and space.",
+   "word_start": 552,
+   "word_end": 567
+  },
+  {
+   "id": "wayfinding_u0034",
+   "idx": 34,
+   "speaker": "SPEAKER_01",
+   "start": 225.32,
+   "end": 236.06,
+   "text": "So I got interested in space and space for memory through an interesting group of patients who had what is called any neglect syndrome.",
+   "word_start": 567,
+   "word_end": 591
+  },
+  {
+   "id": "wayfinding_u0035",
+   "idx": 35,
+   "speaker": "SPEAKER_01",
+   "start": 236.3,
+   "end": 252.72,
+   "text": "So they have a brain injury and they somehow are not paying attention anymore to the side of the space, their body and or extra personal space that is contralateral to the lesions they had in their brain.",
+   "word_start": 591,
+   "word_end": 629
+  },
+  {
+   "id": "wayfinding_u0036",
+   "idx": 36,
+   "speaker": "SPEAKER_01",
+   "start": 252.9,
+   "end": 264.44,
+   "text": "And so I was fascinated by the fact that But because of, you know, sometimes small brain lesions, patients were ignoring parts of their bodies or parts of their space.",
+   "word_start": 629,
+   "word_end": 659
+  },
+  {
+   "id": "wayfinding_u0037",
+   "idx": 37,
+   "speaker": "SPEAKER_01",
+   "start": 264.44,
+   "end": 270.68,
+   "text": "And so I would start wondering about memory for those spaces and how they would navigate through spaces.",
+   "word_start": 659,
+   "word_end": 677
+  },
+  {
+   "id": "wayfinding_u0038",
+   "idx": 38,
+   "speaker": "SPEAKER_01",
+   "start": 271.24,
+   "end": 273.16,
+   "text": "So then I got into spatial memory.",
+   "word_start": 677,
+   "word_end": 684
+  },
+  {
+   "id": "wayfinding_u0039",
+   "idx": 39,
+   "speaker": "SPEAKER_01",
+   "start": 273.16,
+   "end": 275.08,
+   "text": "So how do we remember places?",
+   "word_start": 684,
+   "word_end": 690
+  },
+  {
+   "id": "wayfinding_u0040",
+   "idx": 40,
+   "speaker": "SPEAKER_01",
+   "start": 275.32,
+   "end": 277.16,
+   "text": "How do we form memories?",
+   "word_start": 690,
+   "word_end": 695
+  },
+  {
+   "id": "wayfinding_u0041",
+   "idx": 41,
+   "speaker": "SPEAKER_01",
+   "start": 277.4,
+   "end": 290.22,
+   "text": "And from there, I developed a very significant interest in topographical orientation, which is basically our ability to find a way around, or wayfinding, how you will call it.",
+   "word_start": 695,
+   "word_end": 724
+  },
+  {
+   "id": "wayfinding_u0042",
+   "idx": 42,
+   "speaker": "SPEAKER_01",
+   "start": 290.96,
+   "end": 297.16,
+   "text": "And so within that topic, I was fascinated by something that usually scientists try to control.",
+   "word_start": 724,
+   "word_end": 740
+  },
+  {
+   "id": "wayfinding_u0043",
+   "idx": 43,
+   "speaker": "SPEAKER_01",
+   "start": 297.5,
+   "end": 300.96,
+   "text": "So scientists, they usually try to control variability, okay?",
+   "word_start": 740,
+   "word_end": 749
+  },
+  {
+   "id": "wayfinding_u0044",
+   "idx": 44,
+   "speaker": "SPEAKER_01",
+   "start": 301.06,
+   "end": 306.74,
+   "text": "They try to select people that are similar to each other to try to find an answer to their questions.",
+   "word_start": 749,
+   "word_end": 769
+  },
+  {
+   "id": "wayfinding_u0045",
+   "idx": 45,
+   "speaker": "SPEAKER_01",
+   "start": 306.74,
+   "end": 309.2,
+   "text": "And I was interested in the opposite.",
+   "word_start": 769,
+   "word_end": 776
+  },
+  {
+   "id": "wayfinding_u0046",
+   "idx": 46,
+   "speaker": "SPEAKER_01",
+   "start": 309.2,
+   "end": 311.76,
+   "text": "I was interested in that human variability.",
+   "word_start": 776,
+   "word_end": 783
+  },
+  {
+   "id": "wayfinding_u0047",
+   "idx": 47,
+   "speaker": "SPEAKER_01",
+   "start": 311.76,
+   "end": 317.4,
+   "text": "I was interested in why people are different in terms of spatial orientation skills.",
+   "word_start": 783,
+   "word_end": 797
+  },
+  {
+   "id": "wayfinding_u0048",
+   "idx": 48,
+   "speaker": "SPEAKER_01",
+   "start": 317.68,
+   "end": 319.18,
+   "text": "What makes that difference?",
+   "word_start": 797,
+   "word_end": 801
+  },
+  {
+   "id": "wayfinding_u0049",
+   "idx": 49,
+   "speaker": "SPEAKER_00",
+   "start": 320.43,
+   "end": 330.51,
+   "text": "That's what I was going to ask is, do you find any similarities in the types of people that have better spatial understanding than others?",
+   "word_start": 801,
+   "word_end": 826
+  },
+  {
+   "id": "wayfinding_u0050",
+   "idx": 50,
+   "speaker": "SPEAKER_01",
+   "start": 332.63,
+   "end": 334.41,
+   "text": "Well, it's a big spectrum.",
+   "word_start": 826,
+   "word_end": 831
+  },
+  {
+   "id": "wayfinding_u0051",
+   "idx": 51,
+   "speaker": "SPEAKER_01",
+   "start": 334.89,
+   "end": 342.01,
+   "text": "Okay, so there is a variety of factors that contribute to the variability in spatial orientation skills.",
+   "word_start": 831,
+   "word_end": 848
+  },
+  {
+   "id": "wayfinding_u0052",
+   "idx": 52,
+   "speaker": "SPEAKER_01",
+   "start": 342.31,
+   "end": 361.87,
+   "text": "There is sex factors like being a female or a male as an impact on spatial orientation skills, aging as an impact, sleep as an impact, the spontaneous bias in using different information for orientation and navigation as an impact.",
+   "word_start": 848,
+   "word_end": 888
+  },
+  {
+   "id": "wayfinding_u0053",
+   "idx": 53,
+   "speaker": "SPEAKER_01",
+   "start": 362.11,
+   "end": 363.87,
+   "text": "And so it's really complex.",
+   "word_start": 888,
+   "word_end": 893
+  },
+  {
+   "id": "wayfinding_u0054",
+   "idx": 54,
+   "speaker": "SPEAKER_01",
+   "start": 364.11,
+   "end": 369.27,
+   "text": "There are so many different factors that contribute to this variability in finding our way around.",
+   "word_start": 893,
+   "word_end": 909
+  },
+  {
+   "id": "wayfinding_u0055",
+   "idx": 55,
+   "speaker": "SPEAKER_01",
+   "start": 369.27,
+   "end": 379.61,
+   "text": "However, while studying this variability, I discovered clinical conditions, so what we called developmental topographical disorientation.",
+   "word_start": 909,
+   "word_end": 925
+  },
+  {
+   "id": "wayfinding_u0056",
+   "idx": 56,
+   "speaker": "SPEAKER_01",
+   "start": 379.77,
+   "end": 394.67,
+   "text": "So there are certain people outside of that variability that are not able to find their way from childhood and in extremely familiar surroundings, like their home houses or the neighbors where they have lived their entire lives.",
+   "word_start": 925,
+   "word_end": 963
+  },
+  {
+   "id": "wayfinding_u0057",
+   "idx": 57,
+   "speaker": "SPEAKER_01",
+   "start": 394.67,
+   "end": 402.23,
+   "text": "And so this seems distanced from the space research and other space research that we'll be talking about, but it's not really.",
+   "word_start": 963,
+   "word_end": 985
+  },
+  {
+   "id": "wayfinding_u0058",
+   "idx": 58,
+   "speaker": "SPEAKER_01",
+   "start": 402.41,
+   "end": 414.41,
+   "text": "So the DTD research that I have done has taught me that there is one important ability to find, one important source of information to find a way around.",
+   "word_start": 985,
+   "word_end": 1014
+  },
+  {
+   "id": "wayfinding_u0059",
+   "idx": 59,
+   "speaker": "SPEAKER_01",
+   "start": 414.41,
+   "end": 419.87,
+   "text": "That is the ability to create a mental map, what we call the cognitive map.",
+   "word_start": 1014,
+   "word_end": 1029
+  },
+  {
+   "id": "wayfinding_u0060",
+   "idx": 60,
+   "speaker": "SPEAKER_01",
+   "start": 419.87,
+   "end": 429.95,
+   "text": "And one of the factors that contributes to creating a cognitive map of the environment is obviously the visual information that we process.",
+   "word_start": 1029,
+   "word_end": 1052
+  },
+  {
+   "id": "wayfinding_u0061",
+   "idx": 61,
+   "speaker": "SPEAKER_01",
+   "start": 430.15,
+   "end": 433.05,
+   "text": "But one critical factor is the vestibular information.",
+   "word_start": 1052,
+   "word_end": 1060
+  },
+  {
+   "id": "wayfinding_u0062",
+   "idx": 62,
+   "speaker": "SPEAKER_01",
+   "start": 433.45,
+   "end": 445.11,
+   "text": "And so the information that our vestibular system, some organs that are in our inner ears, they process while we move, while we accelerate, while we turn left, we turn right.",
+   "word_start": 1060,
+   "word_end": 1091
+  },
+  {
+   "id": "wayfinding_u0063",
+   "idx": 63,
+   "speaker": "SPEAKER_01",
+   "start": 445.31,
+   "end": 446.25,
+   "text": "And guess what?",
+   "word_start": 1091,
+   "word_end": 1094
+  },
+  {
+   "id": "wayfinding_u0064",
+   "idx": 64,
+   "speaker": "SPEAKER_01",
+   "start": 446.37,
+   "end": 449.69,
+   "text": "This information is provided to us thanks to gravity.",
+   "word_start": 1094,
+   "word_end": 1103
+  },
+  {
+   "id": "wayfinding_u0065",
+   "idx": 65,
+   "speaker": "SPEAKER_01",
+   "start": 450.39,
+   "end": 455.37,
+   "text": "So that factor is very, very hard to study in humans.",
+   "word_start": 1103,
+   "word_end": 1114
+  },
+  {
+   "id": "wayfinding_u0066",
+   "idx": 66,
+   "speaker": "SPEAKER_01",
+   "start": 456.41,
+   "end": 468.19,
+   "text": "Very, very challenging to isolate that factors in humans because we can't really take away gravity unless we go deep into the ocean or we do some other artifacts, but they're not really natural.",
+   "word_start": 1114,
+   "word_end": 1148
+  },
+  {
+   "id": "wayfinding_u0067",
+   "idx": 67,
+   "speaker": "SPEAKER_01",
+   "start": 469.27,
+   "end": 478.07,
+   "text": "Or we can study that factor by investigating spatial orientation skills in patients who actually have vestibular problems.",
+   "word_start": 1148,
+   "word_end": 1166
+  },
+  {
+   "id": "wayfinding_u0068",
+   "idx": 68,
+   "speaker": "SPEAKER_01",
+   "start": 478.07,
+   "end": 490.97,
+   "text": "But with vestibular problems, they create a lot of, you know, like not just navigational problem, but a lot of clinical issues that are very hard to, makes very hard to investigate these people.",
+   "word_start": 1166,
+   "word_end": 1200
+  },
+  {
+   "id": "wayfinding_u0069",
+   "idx": 69,
+   "speaker": "SPEAKER_01",
+   "start": 491.41,
+   "end": 504.87,
+   "text": "And so the dream story was maybe one way to really understand what is the contribution of the vestibular system in spatial orientation and navigation is to study astronauts while they are exposed to microgravity.",
+   "word_start": 1200,
+   "word_end": 1235
+  },
+  {
+   "id": "wayfinding_u0070",
+   "idx": 70,
+   "speaker": "SPEAKER_01",
+   "start": 505.39,
+   "end": 507.31,
+   "text": "And that's where we are 10 years later.",
+   "word_start": 1235,
+   "word_end": 1243
+  },
+  {
+   "id": "wayfinding_u0071",
+   "idx": 71,
+   "speaker": "SPEAKER_00",
+   "start": 508.23,
+   "end": 522.97,
+   "text": "Well, before we dive into the outer space portion of that research, how is and why is understanding the brain, especially in this extreme environment, so important for humans as we prepare for exploration?",
+   "word_start": 1243,
+   "word_end": 1277
+  },
+  {
+   "id": "wayfinding_u0072",
+   "idx": 72,
+   "speaker": "SPEAKER_01",
+   "start": 524.94,
+   "end": 533.83,
+   "text": "Well, it's extremely important because the brain is perhaps one of the most plastic organs we have in our body.",
+   "word_start": 1277,
+   "word_end": 1297
+  },
+  {
+   "id": "wayfinding_u0073",
+   "idx": 73,
+   "speaker": "SPEAKER_01",
+   "start": 533.91,
+   "end": 537.79,
+   "text": "So it changes and it adapts very quickly.",
+   "word_start": 1297,
+   "word_end": 1305
+  },
+  {
+   "id": "wayfinding_u0074",
+   "idx": 74,
+   "speaker": "SPEAKER_01",
+   "start": 537.79,
+   "end": 546.06,
+   "text": "But the problem is that our cognition and our habits, they do not follow that timeline.",
+   "word_start": 1305,
+   "word_end": 1321
+  },
+  {
+   "id": "wayfinding_u0075",
+   "idx": 75,
+   "speaker": "SPEAKER_01",
+   "start": 546.56,
+   "end": 553.44,
+   "text": "And so while the brain is changing, our habits, our memory of things are shaping our behaviors.",
+   "word_start": 1321,
+   "word_end": 1338
+  }
+ ],
+ "turns": [
+  {
+   "idx": 0,
+   "speaker": "SPEAKER_00",
+   "start": 0.53,
+   "end": 5.13,
+   "utterance_start": 0,
+   "utterance_end": 2
+  },
+  {
+   "idx": 1,
+   "speaker": "SPEAKER_01",
+   "start": 5.65,
+   "end": 6.75,
+   "utterance_start": 2,
+   "utterance_end": 3
+  },
+  {
+   "idx": 2,
+   "speaker": "SPEAKER_00",
+   "start": 7.09,
+   "end": 20.89,
+   "utterance_start": 3,
+   "utterance_end": 5
+  },
+  {
+   "idx": 3,
+   "speaker": "SPEAKER_01",
+   "start": 21.85,
+   "end": 107.57,
+   "utterance_start": 5,
+   "utterance_end": 14
+  },
+  {
+   "idx": 4,
+   "speaker": "SPEAKER_00",
+   "start": 108.01,
+   "end": 119.67,
+   "utterance_start": 14,
+   "utterance_end": 17
+  },
+  {
+   "idx": 5,
+   "speaker": "SPEAKER_01",
+   "start": 120.46,
+   "end": 185.29,
+   "utterance_start": 17,
+   "utterance_end": 23
+  },
+  {
+   "idx": 6,
+   "speaker": "SPEAKER_00",
+   "start": 186.39,
+   "end": 196.35,
+   "utterance_start": 23,
+   "utterance_end": 26
+  },
+  {
+   "idx": 7,
+   "speaker": "SPEAKER_01",
+   "start": 196.94,
+   "end": 319.18,
+   "utterance_start": 26,
+   "utterance_end": 49
+  },
+  {
+   "idx": 8,
+   "speaker": "SPEAKER_00",
+   "start": 320.43,
+   "end": 330.51,
+   "utterance_start": 49,
+   "utterance_end": 50
+  },
+  {
+   "idx": 9,
+   "speaker": "SPEAKER_01",
+   "start": 332.63,
+   "end": 507.31,
+   "utterance_start": 50,
+   "utterance_end": 71
+  },
+  {
+   "idx": 10,
+   "speaker": "SPEAKER_00",
+   "start": 508.23,
+   "end": 522.97,
+   "utterance_start": 71,
+   "utterance_end": 72
+  },
+  {
+   "idx": 11,
+   "speaker": "SPEAKER_01",
+   "start": 524.94,
+   "end": 553.44,
+   "utterance_start": 72,
+   "utterance_end": 76
+  }
+ ],
+ "words": [
+  {
+   "w": "Well,",
+   "s": 0.53,
+   "e": 1.05,
+   "p": 0.93,
+   "spk": "SPEAKER_00",
+   "sc": 0.986
+  },
+  {
+   "w": "Dr.",
+   "s": 1.23,
+   "e": 1.37,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.989
+  },
+  {
+   "w": "Giuseppe",
+   "s": 1.47,
+   "e": 1.83,
+   "p": 0.999,
+   "spk": "SPEAKER_00",
+   "sc": 0.989
+  },
+  {
+   "w": "Eardia,",
+   "s": 1.83,
+   "e": 2.27,
+   "p": 0.758,
+   "spk": "SPEAKER_00",
+   "sc": 0.992
+  },
+  {
+   "w": "thank",
+   "s": 2.41,
+   "e": 2.55,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.994
+  },
+  {
+   "w": "you",
+   "s": 2.55,
+   "e": 2.67,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.994
+  },
+  {
+   "w": "so",
+   "s": 2.67,
+   "e": 2.83,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.995
+  },
+  {
+   "w": "much",
+   "s": 2.83,
+   "e": 3.03,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.996
+  },
+  {
+   "w": "for",
+   "s": 3.03,
+   "e": 3.17,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.996
+  },
+  {
+   "w": "joining",
+   "s": 3.17,
+   "e": 3.41,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.996
+  },
+  {
+   "w": "us",
+   "s": 3.41,
+   "e": 3.59,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.996
+  },
+  {
+   "w": "today",
+   "s": 3.59,
+   "e": 3.79,
+   "p": 0.999,
+   "spk": "SPEAKER_00",
+   "sc": 0.996
+  },
+  {
+   "w": "on",
+   "s": 3.79,
+   "e": 3.99,
+   "p": 0.994,
+   "spk": "SPEAKER_00",
+   "sc": 0.996
+  },
+  {
+   "w": "Houston.",
+   "s": 3.99,
+   "e": 4.31,
+   "p": 0.998,
+   "spk": "SPEAKER_00",
+   "sc": 0.996
+  },
+  {
+   "w": "We",
+   "s": 4.45,
+   "e": 4.47,
+   "p": 0.999,
+   "spk": "SPEAKER_00",
+   "sc": 0.997
+  },
+  {
+   "w": "have",
+   "s": 4.45,
+   "e": 4.55,
+   "p": 0.994,
+   "spk": "SPEAKER_00",
+   "sc": 0.997
+  },
+  {
+   "w": "a",
+   "s": 4.55,
+   "e": 4.63,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.997
+  },
+  {
+   "w": "podcast.",
+   "s": 4.63,
+   "e": 5.13,
+   "p": 0.999,
+   "spk": "SPEAKER_00",
+   "sc": 0.997
+  },
+  {
+   "w": "Thank",
+   "s": 5.65,
+   "e": 6.05,
+   "p": 0.998,
+   "spk": "SPEAKER_01",
+   "sc": 0.991
+  },
+  {
+   "w": "you",
+   "s": 6.05,
+   "e": 6.17,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.991
+  },
+  {
+   "w": "for",
+   "s": 6.17,
+   "e": 6.33,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.991
+  },
+  {
+   "w": "having",
+   "s": 6.33,
+   "e": 6.55,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.665
+  },
+  {
+   "w": "me.",
+   "s": 6.55,
+   "e": 6.75,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.502
+  },
+  {
+   "w": "I'm",
+   "s": 7.09,
+   "e": 7.49,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.828
+  },
+  {
+   "w": "really",
+   "s": 7.49,
+   "e": 7.63,
+   "p": 0.999,
+   "spk": "SPEAKER_00",
+   "sc": 0.993
+  },
+  {
+   "w": "excited",
+   "s": 7.63,
+   "e": 7.93,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.994
+  },
+  {
+   "w": "to",
+   "s": 7.93,
+   "e": 8.11,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.997
+  },
+  {
+   "w": "talk",
+   "s": 8.11,
+   "e": 8.37,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.997
+  },
+  {
+   "w": "about",
+   "s": 8.37,
+   "e": 8.87,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.997
+  },
+  {
+   "w": "the",
+   "s": 8.87,
+   "e": 9.55,
+   "p": 0.998,
+   "spk": "SPEAKER_00",
+   "sc": 0.997
+  },
+  {
+   "w": "wayfinding",
+   "s": 9.55,
+   "e": 9.99,
+   "p": 0.928,
+   "spk": "SPEAKER_00",
+   "sc": 0.999
+  },
+  {
+   "w": "experiment,",
+   "s": 9.99,
+   "e": 10.57,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.998
+  },
+  {
+   "w": "but",
+   "s": 10.57,
+   "e": 10.93,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.998
+  },
+  {
+   "w": "I",
+   "s": 10.93,
+   "e": 11.05,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.998
+  },
+  {
+   "w": "want",
+   "s": 11.05,
+   "e": 11.25,
+   "p": 0.997,
+   "spk": "SPEAKER_00",
+   "sc": 0.998
+  },
+  {
+   "w": "to",
+   "s": 11.25,
+   "e": 11.37,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.998
+  },
+  {
+   "w": "dive",
+   "s": 11.37,
+   "e": 11.59,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.998
+  },
+  {
+   "w": "in",
+   "s": 11.59,
+   "e": 11.75,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.998
+  },
+  {
+   "w": "first",
+   "s": 11.75,
+   "e": 12.05,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.998
+  },
+  {
+   "w": "to",
+   "s": 12.05,
+   "e": 12.35,
+   "p": 0.997,
+   "spk": "SPEAKER_00",
+   "sc": 0.998
+  },
+  {
+   "w": "a",
+   "s": 12.35,
+   "e": 12.67,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.997
+  },
+  {
+   "w": "little",
+   "s": 12.67,
+   "e": 12.75,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.997
+  },
+  {
+   "w": "bit",
+   "s": 12.75,
+   "e": 12.85,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.997
+  },
+  {
+   "w": "more",
+   "s": 12.85,
+   "e": 12.99,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.997
+  },
+  {
+   "w": "about",
+   "s": 12.99,
+   "e": 13.17,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.996
+  },
+  {
+   "w": "you.",
+   "s": 13.17,
+   "e": 13.33,
+   "p": 0.996,
+   "spk": "SPEAKER_00",
+   "sc": 0.995
+  },
+  {
+   "w": "So",
+   "s": 13.57,
+   "e": 13.67,
+   "p": 0.964,
+   "spk": "SPEAKER_00",
+   "sc": 0.995
+  },
+  {
+   "w": "tell",
+   "s": 13.67,
+   "e": 14.31,
+   "p": 0.941,
+   "spk": "SPEAKER_00",
+   "sc": 0.995
+  },
+  {
+   "w": "me",
+   "s": 14.31,
+   "e": 14.45,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.996
+  },
+  {
+   "w": "about",
+   "s": 14.45,
+   "e": 14.69,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.995
+  },
+  {
+   "w": "yourself,",
+   "s": 14.69,
+   "e": 15.21,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.993
+  },
+  {
+   "w": "where",
+   "s": 15.21,
+   "e": 15.85,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.989
+  },
+  {
+   "w": "you",
+   "s": 15.85,
+   "e": 15.95,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.987
+  },
+  {
+   "w": "grew",
+   "s": 15.95,
+   "e": 16.09,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.987
+  },
+  {
+   "w": "up,",
+   "s": 16.09,
+   "e": 16.31,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.989
+  },
+  {
+   "w": "what",
+   "s": 16.39,
+   "e": 16.47,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.99
+  },
+  {
+   "w": "your",
+   "s": 16.47,
+   "e": 16.59,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.99
+  },
+  {
+   "w": "background",
+   "s": 16.59,
+   "e": 17.01,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.993
+  },
+  {
+   "w": "is,",
+   "s": 17.01,
+   "e": 17.59,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.998
+  },
+  {
+   "w": "and",
+   "s": 17.63,
+   "e": 18.15,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.999
+  },
+  {
+   "w": "really",
+   "s": 18.15,
+   "e": 18.61,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.999
+  },
+  {
+   "w": "how",
+   "s": 18.61,
+   "e": 18.83,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.999
+  },
+  {
+   "w": "you",
+   "s": 18.83,
+   "e": 18.99,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.999
+  },
+  {
+   "w": "first",
+   "s": 18.99,
+   "e": 19.25,
+   "p": 0.999,
+   "spk": "SPEAKER_00",
+   "sc": 0.998
+  },
+  {
+   "w": "developed",
+   "s": 19.25,
+   "e": 19.61,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.998
+  },
+  {
+   "w": "any",
+   "s": 19.61,
+   "e": 19.87,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.998
+  },
+  {
+   "w": "interest",
+   "s": 19.87,
+   "e": 20.23,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.998
+  },
+  {
+   "w": "in",
+   "s": 20.23,
+   "e": 20.43,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.997
+  },
+  {
+   "w": "space.",
+   "s": 20.43,
+   "e": 20.89,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.998
+  },
+  {
+   "w": "Well,",
+   "s": 21.85,
+   "e": 22.25,
+   "p": 0.841,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "it's",
+   "s": 22.29,
+   "e": 22.45,
+   "p": 0.871,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "very",
+   "s": 22.45,
+   "e": 22.63,
+   "p": 0.896,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "nice",
+   "s": 22.63,
+   "e": 22.87,
+   "p": 0.998,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "to",
+   "s": 22.87,
+   "e": 23.03,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "start",
+   "s": 23.03,
+   "e": 23.27,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "this",
+   "s": 23.27,
+   "e": 23.49,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "way.",
+   "s": 23.49,
+   "e": 23.69,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "So",
+   "s": 23.69,
+   "e": 24.21,
+   "p": 0.944,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "I",
+   "s": 24.21,
+   "e": 24.43,
+   "p": 0.8,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "grew",
+   "s": 24.43,
+   "e": 24.67,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "up",
+   "s": 24.67,
+   "e": 24.89,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "in",
+   "s": 24.89,
+   "e": 25.05,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "a",
+   "s": 25.05,
+   "e": 25.43,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "tiny",
+   "s": 25.43,
+   "e": 25.99,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "little",
+   "s": 25.99,
+   "e": 26.41,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "village",
+   "s": 26.41,
+   "e": 27.27,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "in",
+   "s": 27.27,
+   "e": 27.49,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "the",
+   "s": 27.49,
+   "e": 27.61,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "south",
+   "s": 27.61,
+   "e": 27.91,
+   "p": 0.985,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "of",
+   "s": 27.91,
+   "e": 28.11,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.99
+  },
+  {
+   "w": "Italy,",
+   "s": 28.11,
+   "e": 28.41,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.99
+  },
+  {
+   "w": "Scalacelli,",
+   "s": 28.77,
+   "e": 29.45,
+   "p": 0.834,
+   "spk": "SPEAKER_01",
+   "sc": 0.987
+  },
+  {
+   "w": "a",
+   "s": 30.33,
+   "e": 30.59,
+   "p": 0.403,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "stairway",
+   "s": 30.59,
+   "e": 30.93,
+   "p": 0.995,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "to",
+   "s": 30.93,
+   "e": 31.13,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "heaven,",
+   "s": 31.13,
+   "e": 31.57,
+   "p": 0.974,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "a",
+   "s": 31.99,
+   "e": 32.13,
+   "p": 0.964,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "beautiful",
+   "s": 32.13,
+   "e": 32.71,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "village",
+   "s": 32.71,
+   "e": 33.89,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "of",
+   "s": 33.89,
+   "e": 34.05,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "about",
+   "s": 34.05,
+   "e": 34.35,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "maybe",
+   "s": 34.35,
+   "e": 34.71,
+   "p": 0.682,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "at",
+   "s": 34.71,
+   "e": 34.87,
+   "p": 0.974,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "the",
+   "s": 34.87,
+   "e": 35.01,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "time,",
+   "s": 35.01,
+   "e": 35.37,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "800",
+   "s": 35.63,
+   "e": 35.97,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "people",
+   "s": 35.97,
+   "e": 36.51,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "on",
+   "s": 36.51,
+   "e": 37.13,
+   "p": 0.797,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "a",
+   "s": 37.13,
+   "e": 37.25,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "cliff",
+   "s": 37.25,
+   "e": 37.55,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "looking",
+   "s": 37.55,
+   "e": 38.13,
+   "p": 0.973,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "to",
+   "s": 38.13,
+   "e": 38.43,
+   "p": 0.98,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "the",
+   "s": 38.43,
+   "e": 38.81,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "Ionian",
+   "s": 38.81,
+   "e": 39.55,
+   "p": 0.597,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "Sea",
+   "s": 39.55,
+   "e": 40.13,
+   "p": 0.929,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "and",
+   "s": 40.13,
+   "e": 40.99,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "mountains.",
+   "s": 40.99,
+   "e": 41.53,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "It's",
+   "s": 41.53,
+   "e": 41.69,
+   "p": 0.76,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "a",
+   "s": 41.69,
+   "e": 42.09,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "gorgeous",
+   "s": 42.09,
+   "e": 42.41,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "place,",
+   "s": 42.41,
+   "e": 42.77,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "but",
+   "s": 42.85,
+   "e": 42.97,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "not",
+   "s": 42.97,
+   "e": 43.17,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "that",
+   "s": 43.17,
+   "e": 43.35,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "much",
+   "s": 43.35,
+   "e": 43.59,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "to",
+   "s": 43.59,
+   "e": 43.75,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "do.",
+   "s": 43.75,
+   "e": 43.95,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "And",
+   "s": 46.13,
+   "e": 46.61,
+   "p": 0.96,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "I",
+   "s": 46.61,
+   "e": 46.69,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "went",
+   "s": 46.69,
+   "e": 46.85,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "to",
+   "s": 46.85,
+   "e": 46.99,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "high",
+   "s": 46.99,
+   "e": 47.21,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "school",
+   "s": 47.21,
+   "e": 47.53,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "in",
+   "s": 47.53,
+   "e": 47.77,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "a",
+   "s": 47.77,
+   "e": 48.15,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "city",
+   "s": 48.15,
+   "e": 48.45,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "close",
+   "s": 48.45,
+   "e": 48.83,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "by,",
+   "s": 48.83,
+   "e": 49.21,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "and",
+   "s": 49.61,
+   "e": 49.77,
+   "p": 0.994,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "a",
+   "s": 49.77,
+   "e": 50.19,
+   "p": 0.634,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "terrible",
+   "s": 50.19,
+   "e": 50.63,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "time,",
+   "s": 50.63,
+   "e": 51.09,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.99
+  },
+  {
+   "w": "a",
+   "s": 51.33,
+   "e": 52.17,
+   "p": 0.915,
+   "spk": "SPEAKER_01",
+   "sc": 0.979
+  },
+  {
+   "w": "nightmare",
+   "s": 52.17,
+   "e": 52.53,
+   "p": 0.996,
+   "spk": "SPEAKER_01",
+   "sc": 0.977
+  },
+  {
+   "w": "time,",
+   "s": 52.53,
+   "e": 53.31,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.977
+  },
+  {
+   "w": "like",
+   "s": 53.49,
+   "e": 53.81,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.974
+  },
+  {
+   "w": "all",
+   "s": 53.81,
+   "e": 54.25,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.97
+  },
+  {
+   "w": "teens",
+   "s": 54.25,
+   "e": 54.99,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.98
+  },
+  {
+   "w": "in",
+   "s": 54.99,
+   "e": 55.21,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.987
+  },
+  {
+   "w": "a",
+   "s": 55.21,
+   "e": 55.29,
+   "p": 0.9,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "high",
+   "s": 55.29,
+   "e": 55.51,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "school,",
+   "s": 55.51,
+   "e": 55.77,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "I",
+   "s": 55.85,
+   "e": 55.95,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "guess.",
+   "s": 55.95,
+   "e": 56.25,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "And",
+   "s": 56.63,
+   "e": 57.11,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "from",
+   "s": 57.11,
+   "e": 57.29,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "there,",
+   "s": 57.29,
+   "e": 57.45,
+   "p": 0.993,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "I",
+   "s": 57.51,
+   "e": 57.57,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.991
+  },
+  {
+   "w": "went",
+   "s": 57.57,
+   "e": 57.73,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.991
+  },
+  {
+   "w": "to",
+   "s": 57.73,
+   "e": 57.89,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.991
+  },
+  {
+   "w": "Rome,",
+   "s": 57.89,
+   "e": 58.29,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.991
+  },
+  {
+   "w": "the",
+   "s": 58.83,
+   "e": 58.99,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "University",
+   "s": 58.99,
+   "e": 59.35,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "of",
+   "s": 59.35,
+   "e": 59.53,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "Rome,",
+   "s": 59.53,
+   "e": 59.77,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "La",
+   "s": 59.85,
+   "e": 59.95,
+   "p": 0.986,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "Sapienza.",
+   "s": 59.95,
+   "e": 60.41,
+   "p": 0.997,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "I",
+   "s": 60.85,
+   "e": 61.07,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "got",
+   "s": 61.07,
+   "e": 62.13,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "into",
+   "s": 62.13,
+   "e": 62.41,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "psychology,",
+   "s": 62.41,
+   "e": 63.11,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "didn't",
+   "s": 63.11,
+   "e": 64.55,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.992
+  },
+  {
+   "w": "like",
+   "s": 64.55,
+   "e": 64.79,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.991
+  },
+  {
+   "w": "it",
+   "s": 64.79,
+   "e": 64.89,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.992
+  },
+  {
+   "w": "at",
+   "s": 64.89,
+   "e": 65.07,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "first,",
+   "s": 65.07,
+   "e": 65.45,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "until",
+   "s": 65.47,
+   "e": 65.81,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "then",
+   "s": 65.81,
+   "e": 66.05,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "I",
+   "s": 66.05,
+   "e": 66.17,
+   "p": 0.987,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "discovered",
+   "s": 66.17,
+   "e": 66.71,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.99
+  },
+  {
+   "w": "biology,",
+   "s": 66.71,
+   "e": 67.35,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.982
+  },
+  {
+   "w": "genetics,",
+   "s": 67.57,
+   "e": 67.91,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.982
+  },
+  {
+   "w": "and",
+   "s": 67.91,
+   "e": 68.31,
+   "p": 0.754,
+   "spk": "SPEAKER_01",
+   "sc": 0.99
+  },
+  {
+   "w": "then",
+   "s": 68.31,
+   "e": 68.53,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.991
+  },
+  {
+   "w": "finally",
+   "s": 68.53,
+   "e": 69.05,
+   "p": 0.984,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "neuropsychology",
+   "s": 69.05,
+   "e": 70.95,
+   "p": 0.966,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "and",
+   "s": 70.95,
+   "e": 71.43,
+   "p": 0.256,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "I",
+   "s": 71.43,
+   "e": 72.07,
+   "p": 0.925,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "developed",
+   "s": 72.07,
+   "e": 72.41,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "an",
+   "s": 72.41,
+   "e": 72.61,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "interest",
+   "s": 72.61,
+   "e": 72.89,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "on",
+   "s": 72.89,
+   "e": 73.11,
+   "p": 0.89,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "the",
+   "s": 73.11,
+   "e": 73.19,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "brain",
+   "s": 73.19,
+   "e": 73.59,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "and",
+   "s": 73.59,
+   "e": 75.57,
+   "p": 0.524,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "from",
+   "s": 75.57,
+   "e": 75.95,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "then",
+   "s": 75.95,
+   "e": 76.41,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.991
+  },
+  {
+   "w": "things",
+   "s": 76.41,
+   "e": 77.33,
+   "p": 0.962,
+   "spk": "SPEAKER_01",
+   "sc": 0.99
+  },
+  {
+   "w": "happened",
+   "s": 77.33,
+   "e": 77.73,
+   "p": 0.549,
+   "spk": "SPEAKER_01",
+   "sc": 0.992
+  },
+  {
+   "w": "and",
+   "s": 77.73,
+   "e": 78.81,
+   "p": 0.819,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "so",
+   "s": 78.81,
+   "e": 79.09,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "I",
+   "s": 79.09,
+   "e": 79.53,
+   "p": 0.998,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "had",
+   "s": 79.53,
+   "e": 80.15,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "the",
+   "s": 80.15,
+   "e": 80.71,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "opportunity",
+   "s": 80.71,
+   "e": 81.45,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "to",
+   "s": 81.45,
+   "e": 81.87,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "meet",
+   "s": 81.87,
+   "e": 82.15,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "this",
+   "s": 82.15,
+   "e": 82.47,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "incredible",
+   "s": 82.47,
+   "e": 83.75,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "group",
+   "s": 83.75,
+   "e": 84.33,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "of",
+   "s": 84.33,
+   "e": 84.71,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "scientists",
+   "s": 84.71,
+   "e": 85.45,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "at",
+   "s": 85.45,
+   "e": 86.15,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "the",
+   "s": 86.15,
+   "e": 86.35,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "University",
+   "s": 86.35,
+   "e": 86.73,
+   "p": 0.986,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "of",
+   "s": 86.73,
+   "e": 87.03,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "Rome.",
+   "s": 87.03,
+   "e": 87.33,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "I",
+   "s": 87.63,
+   "e": 87.65,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "was",
+   "s": 87.63,
+   "e": 87.81,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "doing",
+   "s": 87.81,
+   "e": 88.01,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "some",
+   "s": 88.01,
+   "e": 88.27,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "research",
+   "s": 88.27,
+   "e": 88.73,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "with",
+   "s": 88.73,
+   "e": 89.01,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "them.",
+   "s": 89.01,
+   "e": 89.27,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "I",
+   "s": 89.39,
+   "e": 89.41,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "did",
+   "s": 89.39,
+   "e": 89.55,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "my",
+   "s": 89.55,
+   "e": 89.83,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "honors",
+   "s": 89.83,
+   "e": 90.53,
+   "p": 0.665,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "thesis",
+   "s": 90.53,
+   "e": 91.01,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "and",
+   "s": 91.01,
+   "e": 91.29,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "then",
+   "s": 91.29,
+   "e": 91.47,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "and",
+   "s": 91.47,
+   "e": 91.49,
+   "p": 0.408,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "eventually",
+   "s": 91.49,
+   "e": 92.55,
+   "p": 0.992,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "a",
+   "s": 92.55,
+   "e": 92.77,
+   "p": 0.978,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "training",
+   "s": 92.77,
+   "e": 93.09,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "in",
+   "s": 93.09,
+   "e": 93.31,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "neuropsychology.",
+   "s": 93.31,
+   "e": 94.25,
+   "p": 0.998,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "And",
+   "s": 94.85,
+   "e": 95.39,
+   "p": 0.943,
+   "spk": "SPEAKER_01",
+   "sc": 0.981
+  },
+  {
+   "w": "I",
+   "s": 95.39,
+   "e": 95.65,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.983
+  },
+  {
+   "w": "had,",
+   "s": 95.65,
+   "e": 96.29,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.986
+  },
+  {
+   "w": "since",
+   "s": 96.39,
+   "e": 96.77,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.989
+  },
+  {
+   "w": "then,",
+   "s": 96.77,
+   "e": 97.27,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.99
+  },
+  {
+   "w": "next",
+   "s": 97.79,
+   "e": 98.19,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "to",
+   "s": 98.19,
+   "e": 98.47,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "me",
+   "s": 98.47,
+   "e": 98.75,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "this",
+   "s": 98.75,
+   "e": 99.09,
+   "p": 0.823,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "incredible",
+   "s": 99.09,
+   "e": 99.65,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "academic",
+   "s": 100.55,
+   "e": 101.09,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "father",
+   "s": 101.09,
+   "e": 101.59,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "figure",
+   "s": 101.59,
+   "e": 102.05,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "of",
+   "s": 102.05,
+   "e": 102.47,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "Gino",
+   "s": 102.47,
+   "e": 102.75,
+   "p": 0.911,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "Pizzamilio,",
+   "s": 102.75,
+   "e": 103.45,
+   "p": 0.724,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "who",
+   "s": 103.47,
+   "e": 104.01,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "has",
+   "s": 104.01,
+   "e": 104.25,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "taught",
+   "s": 104.25,
+   "e": 104.53,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "me",
+   "s": 104.53,
+   "e": 104.81,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "everything",
+   "s": 104.81,
+   "e": 105.49,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "I",
+   "s": 105.49,
+   "e": 105.73,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "know",
+   "s": 105.73,
+   "e": 105.89,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "about",
+   "s": 105.89,
+   "e": 106.15,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "life",
+   "s": 106.15,
+   "e": 106.55,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "and",
+   "s": 106.55,
+   "e": 107.13,
+   "p": 0.99,
+   "spk": "SPEAKER_01",
+   "sc": 0.991
+  },
+  {
+   "w": "science.",
+   "s": 107.13,
+   "e": 107.57,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.759
+  },
+  {
+   "w": "Oh,",
+   "s": 108.01,
+   "e": 108.31,
+   "p": 0.967,
+   "spk": "SPEAKER_00",
+   "sc": 0.813
+  },
+  {
+   "w": "that's",
+   "s": 108.45,
+   "e": 108.65,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.886
+  },
+  {
+   "w": "fantastic.",
+   "s": 108.65,
+   "e": 109.31,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.967
+  },
+  {
+   "w": "So",
+   "s": 109.93,
+   "e": 110.47,
+   "p": 0.999,
+   "spk": "SPEAKER_00",
+   "sc": 0.999
+  },
+  {
+   "w": "you",
+   "s": 110.47,
+   "e": 110.55,
+   "p": 0.859,
+   "spk": "SPEAKER_00",
+   "sc": 0.999
+  },
+  {
+   "w": "touched",
+   "s": 110.55,
+   "e": 110.73,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.999
+  },
+  {
+   "w": "on",
+   "s": 110.73,
+   "e": 110.91,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.999
+  },
+  {
+   "w": "a",
+   "s": 110.91,
+   "e": 111.05,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.999
+  },
+  {
+   "w": "lot",
+   "s": 111.05,
+   "e": 111.15,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.999
+  },
+  {
+   "w": "of",
+   "s": 111.15,
+   "e": 111.27,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.999
+  },
+  {
+   "w": "things",
+   "s": 111.27,
+   "e": 111.49,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.999
+  },
+  {
+   "w": "that",
+   "s": 111.49,
+   "e": 111.67,
+   "p": 0.999,
+   "spk": "SPEAKER_00",
+   "sc": 0.999
+  },
+  {
+   "w": "I",
+   "s": 111.67,
+   "e": 111.87,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.999
+  },
+  {
+   "w": "wanted",
+   "s": 111.87,
+   "e": 112.11,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.999
+  },
+  {
+   "w": "to",
+   "s": 112.11,
+   "e": 112.27,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.997
+  },
+  {
+   "w": "talk",
+   "s": 112.27,
+   "e": 112.53,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.997
+  },
+  {
+   "w": "about,",
+   "s": 112.53,
+   "e": 112.77,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.997
+  },
+  {
+   "w": "but",
+   "s": 112.91,
+   "e": 113.03,
+   "p": 0.999,
+   "spk": "SPEAKER_00",
+   "sc": 0.997
+  },
+  {
+   "w": "did",
+   "s": 113.03,
+   "e": 113.67,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.997
+  },
+  {
+   "w": "you",
+   "s": 113.67,
+   "e": 113.77,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.998
+  },
+  {
+   "w": "always",
+   "s": 113.77,
+   "e": 114.07,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.998
+  },
+  {
+   "w": "know",
+   "s": 114.07,
+   "e": 114.35,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.998
+  },
+  {
+   "w": "that",
+   "s": 114.35,
+   "e": 114.57,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.998
+  },
+  {
+   "w": "you",
+   "s": 114.57,
+   "e": 114.69,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.998
+  },
+  {
+   "w": "wanted",
+   "s": 114.69,
+   "e": 114.91,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.998
+  },
+  {
+   "w": "to",
+   "s": 114.91,
+   "e": 115.07,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.998
+  },
+  {
+   "w": "work",
+   "s": 115.07,
+   "e": 115.29,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.998
+  },
+  {
+   "w": "in",
+   "s": 115.29,
+   "e": 115.45,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.998
+  },
+  {
+   "w": "science?",
+   "s": 115.45,
+   "e": 115.81,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.998
+  },
+  {
+   "w": "Was",
+   "s": 115.99,
+   "e": 116.09,
+   "p": 0.999,
+   "spk": "SPEAKER_00",
+   "sc": 0.998
+  },
+  {
+   "w": "that",
+   "s": 116.09,
+   "e": 116.25,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.998
+  },
+  {
+   "w": "something",
+   "s": 116.25,
+   "e": 116.59,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.998
+  },
+  {
+   "w": "that,",
+   "s": 116.59,
+   "e": 117.05,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.997
+  },
+  {
+   "w": "you",
+   "s": 117.05,
+   "e": 117.41,
+   "p": 0.412,
+   "spk": "SPEAKER_00",
+   "sc": 0.997
+  },
+  {
+   "w": "know",
+   "s": 117.41,
+   "e": 117.51,
+   "p": 0.999,
+   "spk": "SPEAKER_00",
+   "sc": 0.997
+  },
+  {
+   "w": "as",
+   "s": 117.51,
+   "e": 117.75,
+   "p": 0.172,
+   "spk": "SPEAKER_00",
+   "sc": 0.996
+  },
+  {
+   "w": "you",
+   "s": 117.75,
+   "e": 117.87,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.996
+  },
+  {
+   "w": "were",
+   "s": 117.87,
+   "e": 117.99,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.996
+  },
+  {
+   "w": "younger",
+   "s": 117.99,
+   "e": 118.29,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.994
+  },
+  {
+   "w": "was",
+   "s": 118.29,
+   "e": 118.69,
+   "p": 0.977,
+   "spk": "SPEAKER_00",
+   "sc": 0.99
+  },
+  {
+   "w": "a",
+   "s": 118.69,
+   "e": 118.81,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.99
+  },
+  {
+   "w": "goal",
+   "s": 118.81,
+   "e": 119.11,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.987
+  },
+  {
+   "w": "for",
+   "s": 119.11,
+   "e": 119.39,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.984
+  },
+  {
+   "w": "you?",
+   "s": 119.39,
+   "e": 119.67,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.984
+  },
+  {
+   "w": "No",
+   "s": 120.46,
+   "e": 120.94,
+   "p": 0.985,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "I",
+   "s": 120.94,
+   "e": 121.4,
+   "p": 0.728,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "could",
+   "s": 121.4,
+   "e": 121.78,
+   "p": 0.993,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "say",
+   "s": 121.78,
+   "e": 122.0,
+   "p": 0.98,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "yes",
+   "s": 122.0,
+   "e": 122.44,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "and",
+   "s": 122.44,
+   "e": 122.72,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "make",
+   "s": 122.72,
+   "e": 123.02,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "a",
+   "s": 123.02,
+   "e": 123.14,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "big",
+   "s": 123.14,
+   "e": 123.44,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "you",
+   "s": 123.44,
+   "e": 123.64,
+   "p": 0.982,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "know",
+   "s": 123.64,
+   "e": 123.72,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "story",
+   "s": 123.72,
+   "e": 124.1,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "about",
+   "s": 124.1,
+   "e": 124.36,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "that",
+   "s": 124.36,
+   "e": 124.74,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.99
+  },
+  {
+   "w": "but",
+   "s": 124.74,
+   "e": 125.3,
+   "p": 0.9,
+   "spk": "SPEAKER_01",
+   "sc": 0.99
+  },
+  {
+   "w": "no",
+   "s": 125.3,
+   "e": 125.94,
+   "p": 0.98,
+   "spk": "SPEAKER_01",
+   "sc": 0.99
+  },
+  {
+   "w": "not",
+   "s": 125.94,
+   "e": 126.18,
+   "p": 0.47,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "really",
+   "s": 126.18,
+   "e": 126.48,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "I",
+   "s": 126.48,
+   "e": 126.86,
+   "p": 0.729,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "went",
+   "s": 126.86,
+   "e": 127.08,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "to",
+   "s": 127.08,
+   "e": 127.26,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "Rome",
+   "s": 127.26,
+   "e": 127.62,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.991
+  },
+  {
+   "w": "did",
+   "s": 127.62,
+   "e": 128.4,
+   "p": 0.97,
+   "spk": "SPEAKER_01",
+   "sc": 0.992
+  },
+  {
+   "w": "not",
+   "s": 128.4,
+   "e": 128.62,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.991
+  },
+  {
+   "w": "know",
+   "s": 128.62,
+   "e": 128.78,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "what",
+   "s": 128.78,
+   "e": 129.0,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "to",
+   "s": 129.0,
+   "e": 129.18,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "do",
+   "s": 129.18,
+   "e": 129.44,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "I",
+   "s": 129.44,
+   "e": 130.18,
+   "p": 0.902,
+   "spk": "SPEAKER_01",
+   "sc": 0.992
+  },
+  {
+   "w": "went",
+   "s": 130.18,
+   "e": 130.44,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.989
+  },
+  {
+   "w": "into",
+   "s": 130.44,
+   "e": 130.68,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.987
+  },
+  {
+   "w": "psychology",
+   "s": 130.68,
+   "e": 131.26,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.99
+  },
+  {
+   "w": "because",
+   "s": 131.26,
+   "e": 131.64,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "I",
+   "s": 131.64,
+   "e": 131.84,
+   "p": 0.916,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "the",
+   "s": 131.84,
+   "e": 132.54,
+   "p": 0.807,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "only",
+   "s": 132.54,
+   "e": 132.7,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.99
+  },
+  {
+   "w": "thing",
+   "s": 132.7,
+   "e": 132.84,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.99
+  },
+  {
+   "w": "I",
+   "s": 132.84,
+   "e": 132.98,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.99
+  },
+  {
+   "w": "knew",
+   "s": 132.98,
+   "e": 133.12,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.99
+  },
+  {
+   "w": "about",
+   "s": 133.12,
+   "e": 133.32,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.99
+  },
+  {
+   "w": "psychology",
+   "s": 133.32,
+   "e": 133.96,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.989
+  },
+  {
+   "w": "was",
+   "s": 133.96,
+   "e": 135.04,
+   "p": 0.996,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "that",
+   "s": 135.04,
+   "e": 135.4,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "it",
+   "s": 135.4,
+   "e": 135.88,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "was",
+   "s": 135.88,
+   "e": 136.08,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "diverse",
+   "s": 136.08,
+   "e": 136.64,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.991
+  },
+  {
+   "w": "there",
+   "s": 136.64,
+   "e": 137.14,
+   "p": 0.984,
+   "spk": "SPEAKER_01",
+   "sc": 0.99
+  },
+  {
+   "w": "were",
+   "s": 137.14,
+   "e": 137.3,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.99
+  },
+  {
+   "w": "a",
+   "s": 137.3,
+   "e": 137.42,
+   "p": 0.926,
+   "spk": "SPEAKER_01",
+   "sc": 0.99
+  },
+  {
+   "w": "lot",
+   "s": 137.42,
+   "e": 137.56,
+   "p": 0.998,
+   "spk": "SPEAKER_01",
+   "sc": 0.99
+  },
+  {
+   "w": "of",
+   "s": 137.56,
+   "e": 137.7,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.99
+  },
+  {
+   "w": "things",
+   "s": 137.7,
+   "e": 137.94,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "to",
+   "s": 137.94,
+   "e": 138.14,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "study",
+   "s": 138.14,
+   "e": 138.48,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "about",
+   "s": 138.48,
+   "e": 138.7,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "psychology",
+   "s": 138.7,
+   "e": 139.28,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "so",
+   "s": 139.28,
+   "e": 139.68,
+   "p": 0.997,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "it",
+   "s": 139.68,
+   "e": 140.32,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "was",
+   "s": 140.32,
+   "e": 140.5,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "a",
+   "s": 140.5,
+   "e": 140.62,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "good",
+   "s": 140.62,
+   "e": 140.8,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "way",
+   "s": 140.8,
+   "e": 141.0,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "for",
+   "s": 141.0,
+   "e": 141.18,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "me",
+   "s": 141.18,
+   "e": 141.34,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "to",
+   "s": 141.34,
+   "e": 141.5,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "try",
+   "s": 141.5,
+   "e": 141.72,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "to",
+   "s": 141.72,
+   "e": 141.9,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "understand",
+   "s": 141.9,
+   "e": 142.26,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "what",
+   "s": 142.26,
+   "e": 142.52,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "I",
+   "s": 142.52,
+   "e": 142.64,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "was",
+   "s": 142.64,
+   "e": 142.84,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "really",
+   "s": 142.84,
+   "e": 143.06,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "interested",
+   "s": 143.06,
+   "e": 143.44,
+   "p": 0.922,
+   "spk": "SPEAKER_01",
+   "sc": 0.991
+  },
+  {
+   "w": "about",
+   "s": 143.44,
+   "e": 143.78,
+   "p": 0.988,
+   "spk": "SPEAKER_01",
+   "sc": 0.991
+  },
+  {
+   "w": "and",
+   "s": 143.85,
+   "e": 144.83,
+   "p": 0.31,
+   "spk": "SPEAKER_01",
+   "sc": 0.988
+  },
+  {
+   "w": "so",
+   "s": 144.83,
+   "e": 145.15,
+   "p": 0.997,
+   "spk": "SPEAKER_01",
+   "sc": 0.99
+  },
+  {
+   "w": "then",
+   "s": 145.15,
+   "e": 145.97,
+   "p": 0.988,
+   "spk": "SPEAKER_01",
+   "sc": 0.991
+  },
+  {
+   "w": "I",
+   "s": 145.97,
+   "e": 146.09,
+   "p": 0.66,
+   "spk": "SPEAKER_01",
+   "sc": 0.992
+  },
+  {
+   "w": "discovered",
+   "s": 146.09,
+   "e": 146.57,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.992
+  },
+  {
+   "w": "the",
+   "s": 146.57,
+   "e": 146.75,
+   "p": 0.998,
+   "spk": "SPEAKER_01",
+   "sc": 0.992
+  },
+  {
+   "w": "brain",
+   "s": 146.75,
+   "e": 147.11,
+   "p": 0.998,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "within",
+   "s": 147.11,
+   "e": 147.49,
+   "p": 0.995,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "psychology",
+   "s": 147.49,
+   "e": 148.21,
+   "p": 0.994,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "and",
+   "s": 148.21,
+   "e": 148.81,
+   "p": 0.995,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "from",
+   "s": 148.81,
+   "e": 149.13,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "the",
+   "s": 149.13,
+   "e": 149.29,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "brain",
+   "s": 149.29,
+   "e": 149.57,
+   "p": 0.998,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "I",
+   "s": 149.57,
+   "e": 149.75,
+   "p": 0.973,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "discovered",
+   "s": 149.75,
+   "e": 150.17,
+   "p": 0.985,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "cognition",
+   "s": 150.17,
+   "e": 150.95,
+   "p": 0.987,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "and",
+   "s": 150.95,
+   "e": 151.47,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "memory",
+   "s": 151.47,
+   "e": 151.99,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "and",
+   "s": 151.99,
+   "e": 152.59,
+   "p": 0.98,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "then",
+   "s": 152.59,
+   "e": 152.91,
+   "p": 0.998,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "my",
+   "s": 152.91,
+   "e": 154.05,
+   "p": 0.945,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "mentor",
+   "s": 154.05,
+   "e": 154.97,
+   "p": 0.997,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "at",
+   "s": 154.97,
+   "e": 155.13,
+   "p": 0.992,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "the",
+   "s": 155.13,
+   "e": 155.23,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "time",
+   "s": 155.23,
+   "e": 155.65,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "and",
+   "s": 155.65,
+   "e": 156.83,
+   "p": 0.945,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "still",
+   "s": 156.83,
+   "e": 157.07,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "my",
+   "s": 157.07,
+   "e": 157.39,
+   "p": 0.995,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "mentor",
+   "s": 157.39,
+   "e": 157.83,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "Gino",
+   "s": 157.83,
+   "e": 158.19,
+   "p": 0.988,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "Pizzamilio",
+   "s": 158.19,
+   "e": 158.87,
+   "p": 0.858,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "had",
+   "s": 159.95,
+   "e": 160.67,
+   "p": 0.984,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "this",
+   "s": 160.67,
+   "e": 160.93,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "idea",
+   "s": 160.93,
+   "e": 161.33,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "of",
+   "s": 161.33,
+   "e": 162.11,
+   "p": 0.997,
+   "spk": "SPEAKER_01",
+   "sc": 0.979
+  },
+  {
+   "w": "giving",
+   "s": 162.11,
+   "e": 163.13,
+   "p": 0.989,
+   "spk": "SPEAKER_01",
+   "sc": 0.978
+  },
+  {
+   "w": "me",
+   "s": 163.13,
+   "e": 163.31,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "the",
+   "s": 163.31,
+   "e": 163.45,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "opportunity",
+   "s": 163.45,
+   "e": 163.85,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "to",
+   "s": 163.85,
+   "e": 164.05,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "go",
+   "s": 164.05,
+   "e": 164.13,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "to",
+   "s": 164.13,
+   "e": 164.27,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "Montreal",
+   "s": 164.27,
+   "e": 164.69,
+   "p": 0.998,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "so",
+   "s": 164.69,
+   "e": 165.91,
+   "p": 0.84,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "I",
+   "s": 165.91,
+   "e": 166.03,
+   "p": 0.998,
+   "spk": "SPEAKER_01",
+   "sc": 1.0
+  },
+  {
+   "w": "went",
+   "s": 166.03,
+   "e": 166.21,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 1.0
+  },
+  {
+   "w": "to",
+   "s": 166.21,
+   "e": 166.37,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 1.0
+  },
+  {
+   "w": "the",
+   "s": 166.37,
+   "e": 166.61,
+   "p": 0.998,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "Montreal",
+   "s": 166.61,
+   "e": 167.11,
+   "p": 0.987,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "Neurological",
+   "s": 167.11,
+   "e": 167.77,
+   "p": 0.991,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "Institute",
+   "s": 167.77,
+   "e": 168.19,
+   "p": 0.998,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "where",
+   "s": 168.19,
+   "e": 168.53,
+   "p": 0.997,
+   "spk": "SPEAKER_01",
+   "sc": 0.988
+  },
+  {
+   "w": "I",
+   "s": 168.53,
+   "e": 168.69,
+   "p": 0.998,
+   "spk": "SPEAKER_01",
+   "sc": 0.988
+  },
+  {
+   "w": "studied",
+   "s": 168.69,
+   "e": 169.11,
+   "p": 0.993,
+   "spk": "SPEAKER_01",
+   "sc": 0.988
+  },
+  {
+   "w": "like",
+   "s": 169.11,
+   "e": 169.37,
+   "p": 0.806,
+   "spk": "SPEAKER_01",
+   "sc": 0.987
+  },
+  {
+   "w": "a",
+   "s": 169.37,
+   "e": 169.59,
+   "p": 0.691,
+   "spk": "SPEAKER_01",
+   "sc": 0.987
+  },
+  {
+   "w": "memory",
+   "s": 169.59,
+   "e": 170.65,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "and",
+   "s": 170.65,
+   "e": 170.85,
+   "p": 0.949,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "I",
+   "s": 170.85,
+   "e": 170.93,
+   "p": 0.998,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "learned",
+   "s": 170.93,
+   "e": 171.27,
+   "p": 0.994,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "about",
+   "s": 171.27,
+   "e": 172.11,
+   "p": 0.997,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "neuroimaging",
+   "s": 172.11,
+   "e": 172.77,
+   "p": 0.976,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "and",
+   "s": 172.77,
+   "e": 173.01,
+   "p": 0.997,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "and",
+   "s": 173.01,
+   "e": 173.09,
+   "p": 0.529,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "I",
+   "s": 173.09,
+   "e": 173.17,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "learned",
+   "s": 173.17,
+   "e": 173.41,
+   "p": 0.98,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "how",
+   "s": 173.41,
+   "e": 173.57,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "to",
+   "s": 173.57,
+   "e": 173.75,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "do",
+   "s": 173.75,
+   "e": 173.89,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "neuroimaging.",
+   "s": 173.89,
+   "e": 174.53,
+   "p": 0.997,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "And",
+   "s": 175.15,
+   "e": 175.55,
+   "p": 0.96,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "so",
+   "s": 175.55,
+   "e": 175.69,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "everything",
+   "s": 175.69,
+   "e": 175.97,
+   "p": 0.862,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "really",
+   "s": 175.97,
+   "e": 176.33,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "started",
+   "s": 176.33,
+   "e": 176.71,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "from",
+   "s": 176.71,
+   "e": 176.99,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "there.",
+   "s": 176.99,
+   "e": 177.35,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "The",
+   "s": 177.63,
+   "e": 178.11,
+   "p": 0.997,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "interest",
+   "s": 178.11,
+   "e": 178.47,
+   "p": 0.837,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "in",
+   "s": 178.47,
+   "e": 178.61,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 1.0
+  },
+  {
+   "w": "cognitive",
+   "s": 178.61,
+   "e": 178.99,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "neuroscience",
+   "s": 178.99,
+   "e": 179.51,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "developed",
+   "s": 179.51,
+   "e": 180.17,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "throughout",
+   "s": 180.17,
+   "e": 180.73,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "the",
+   "s": 180.73,
+   "e": 180.93,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "years.",
+   "s": 180.93,
+   "e": 181.35,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "I",
+   "s": 181.55,
+   "e": 182.11,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "didn't",
+   "s": 182.11,
+   "e": 182.43,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.991
+  },
+  {
+   "w": "really",
+   "s": 182.43,
+   "e": 182.67,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.991
+  },
+  {
+   "w": "have",
+   "s": 182.67,
+   "e": 183.13,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.99
+  },
+  {
+   "w": "a",
+   "s": 183.13,
+   "e": 183.71,
+   "p": 0.998,
+   "spk": "SPEAKER_01",
+   "sc": 0.992
+  },
+  {
+   "w": "childhood",
+   "s": 183.71,
+   "e": 184.17,
+   "p": 0.348,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "dream",
+   "s": 184.17,
+   "e": 184.71,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "about",
+   "s": 184.71,
+   "e": 185.03,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "that.",
+   "s": 185.03,
+   "e": 185.29,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "Fascinating.",
+   "s": 186.39,
+   "e": 186.95,
+   "p": 0.997,
+   "spk": "SPEAKER_00",
+   "sc": 0.997
+  },
+  {
+   "w": "Okay,",
+   "s": 187.25,
+   "e": 187.45,
+   "p": 0.949,
+   "spk": "SPEAKER_00",
+   "sc": 0.996
+  },
+  {
+   "w": "so",
+   "s": 187.67,
+   "e": 187.87,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.996
+  },
+  {
+   "w": "this",
+   "s": 187.87,
+   "e": 189.11,
+   "p": 0.998,
+   "spk": "SPEAKER_00",
+   "sc": 0.993
+  },
+  {
+   "w": "early",
+   "s": 189.11,
+   "e": 189.57,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.995
+  },
+  {
+   "w": "research",
+   "s": 189.57,
+   "e": 189.95,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.997
+  },
+  {
+   "w": "that",
+   "s": 189.95,
+   "e": 190.19,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.997
+  },
+  {
+   "w": "you",
+   "s": 190.19,
+   "e": 190.29,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.998
+  },
+  {
+   "w": "were",
+   "s": 190.29,
+   "e": 190.43,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.998
+  },
+  {
+   "w": "doing,",
+   "s": 190.43,
+   "e": 190.71,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.998
+  },
+  {
+   "w": "how",
+   "s": 191.09,
+   "e": 191.39,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.999
+  },
+  {
+   "w": "did",
+   "s": 191.39,
+   "e": 191.55,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.999
+  },
+  {
+   "w": "that",
+   "s": 191.55,
+   "e": 191.77,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.998
+  },
+  {
+   "w": "really",
+   "s": 191.77,
+   "e": 192.03,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.997
+  },
+  {
+   "w": "shape",
+   "s": 192.03,
+   "e": 192.47,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.998
+  },
+  {
+   "w": "what",
+   "s": 192.47,
+   "e": 192.83,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.998
+  },
+  {
+   "w": "you're",
+   "s": 192.83,
+   "e": 192.99,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.998
+  },
+  {
+   "w": "doing",
+   "s": 192.99,
+   "e": 193.17,
+   "p": 0.999,
+   "spk": "SPEAKER_00",
+   "sc": 0.998
+  },
+  {
+   "w": "now",
+   "s": 193.17,
+   "e": 193.43,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.999
+  },
+  {
+   "w": "with",
+   "s": 193.43,
+   "e": 193.63,
+   "p": 0.999,
+   "spk": "SPEAKER_00",
+   "sc": 0.999
+  },
+  {
+   "w": "human",
+   "s": 193.63,
+   "e": 193.89,
+   "p": 0.994,
+   "spk": "SPEAKER_00",
+   "sc": 0.999
+  },
+  {
+   "w": "spaceflight?",
+   "s": 193.89,
+   "e": 194.45,
+   "p": 0.956,
+   "spk": "SPEAKER_00",
+   "sc": 0.999
+  },
+  {
+   "w": "Was",
+   "s": 194.57,
+   "e": 194.71,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.999
+  },
+  {
+   "w": "it",
+   "s": 194.71,
+   "e": 194.81,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.999
+  },
+  {
+   "w": "connected",
+   "s": 194.81,
+   "e": 195.13,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.999
+  },
+  {
+   "w": "in",
+   "s": 195.13,
+   "e": 195.39,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.999
+  },
+  {
+   "w": "any",
+   "s": 195.39,
+   "e": 195.61,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.999
+  },
+  {
+   "w": "way?",
+   "s": 195.61,
+   "e": 196.35,
+   "p": 0.292,
+   "spk": "SPEAKER_00",
+   "sc": 0.999
+  },
+  {
+   "w": "Yes,",
+   "s": 196.94,
+   "e": 197.48,
+   "p": 0.992,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "absolutely.",
+   "s": 197.56,
+   "e": 197.92,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.983
+  },
+  {
+   "w": "So",
+   "s": 198.24,
+   "e": 198.46,
+   "p": 0.969,
+   "spk": "SPEAKER_01",
+   "sc": 0.976
+  },
+  {
+   "w": "I",
+   "s": 198.46,
+   "e": 199.1,
+   "p": 0.736,
+   "spk": "SPEAKER_01",
+   "sc": 0.953
+  },
+  {
+   "w": "developed",
+   "s": 199.1,
+   "e": 199.62,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.963
+  },
+  {
+   "w": "an",
+   "s": 199.62,
+   "e": 199.8,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.965
+  },
+  {
+   "w": "interest",
+   "s": 199.8,
+   "e": 200.08,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.979
+  },
+  {
+   "w": "in",
+   "s": 200.08,
+   "e": 200.48,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "processing",
+   "s": 200.48,
+   "e": 201.94,
+   "p": 0.998,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "space.",
+   "s": 201.94,
+   "e": 202.72,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "Okay,",
+   "s": 202.94,
+   "e": 203.06,
+   "p": 0.862,
+   "spk": "SPEAKER_01",
+   "sc": 0.99
+  },
+  {
+   "w": "so",
+   "s": 203.16,
+   "e": 203.24,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.989
+  },
+  {
+   "w": "we",
+   "s": 203.24,
+   "e": 203.62,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.988
+  },
+  {
+   "w": "will",
+   "s": 203.62,
+   "e": 204.32,
+   "p": 0.956,
+   "spk": "SPEAKER_01",
+   "sc": 0.978
+  },
+  {
+   "w": "be",
+   "s": 204.32,
+   "e": 204.48,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.98
+  },
+  {
+   "w": "talking",
+   "s": 204.48,
+   "e": 204.84,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.984
+  },
+  {
+   "w": "about",
+   "s": 204.84,
+   "e": 205.22,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.988
+  },
+  {
+   "w": "space",
+   "s": 205.22,
+   "e": 205.74,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "in",
+   "s": 205.74,
+   "e": 205.98,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "two",
+   "s": 205.98,
+   "e": 206.14,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "different",
+   "s": 206.14,
+   "e": 206.46,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "ways",
+   "s": 206.46,
+   "e": 206.84,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "throughout",
+   "s": 206.84,
+   "e": 207.22,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "this",
+   "s": 207.22,
+   "e": 207.54,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "conversation,",
+   "s": 207.54,
+   "e": 208.22,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "Leah.",
+   "s": 208.32,
+   "e": 208.52,
+   "p": 0.969,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "So",
+   "s": 208.76,
+   "e": 209.22,
+   "p": 0.995,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "I",
+   "s": 209.22,
+   "e": 209.92,
+   "p": 0.998,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "do",
+   "s": 209.92,
+   "e": 210.4,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.992
+  },
+  {
+   "w": "space",
+   "s": 210.4,
+   "e": 211.26,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "research,",
+   "s": 211.26,
+   "e": 211.94,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "meaning",
+   "s": 212.24,
+   "e": 212.48,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.992
+  },
+  {
+   "w": "the",
+   "s": 212.48,
+   "e": 213.52,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.992
+  },
+  {
+   "w": "surroundings",
+   "s": 213.52,
+   "e": 214.28,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "around",
+   "s": 214.28,
+   "e": 214.94,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "you.",
+   "s": 214.94,
+   "e": 215.28,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.977
+  },
+  {
+   "w": "Okay.",
+   "s": 215.5,
+   "e": 215.7,
+   "p": 0.675,
+   "spk": "SPEAKER_01",
+   "sc": 0.925
+  },
+  {
+   "w": "Yes.",
+   "s": 216.14,
+   "e": 216.4,
+   "p": 0.643,
+   "spk": "SPEAKER_01",
+   "sc": 0.814
+  },
+  {
+   "w": "But",
+   "s": 216.66,
+   "e": 217.12,
+   "p": 0.936,
+   "spk": "SPEAKER_01",
+   "sc": 0.842
+  },
+  {
+   "w": "we",
+   "s": 217.12,
+   "e": 217.32,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.947
+  },
+  {
+   "w": "will",
+   "s": 217.32,
+   "e": 217.46,
+   "p": 0.916,
+   "spk": "SPEAKER_01",
+   "sc": 0.982
+  },
+  {
+   "w": "also",
+   "s": 217.46,
+   "e": 217.72,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.982
+  },
+  {
+   "w": "be",
+   "s": 217.72,
+   "e": 218.02,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.978
+  },
+  {
+   "w": "talking",
+   "s": 218.02,
+   "e": 218.3,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.969
+  },
+  {
+   "w": "about",
+   "s": 218.3,
+   "e": 218.56,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.969
+  },
+  {
+   "w": "other",
+   "s": 218.56,
+   "e": 218.9,
+   "p": 0.866,
+   "spk": "SPEAKER_01",
+   "sc": 0.978
+  },
+  {
+   "w": "space.",
+   "s": 218.9,
+   "e": 219.44,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.983
+  },
+  {
+   "w": "And",
+   "s": 219.68,
+   "e": 219.92,
+   "p": 0.997,
+   "spk": "SPEAKER_01",
+   "sc": 0.991
+  },
+  {
+   "w": "so",
+   "s": 219.92,
+   "e": 220.22,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.988
+  },
+  {
+   "w": "let's",
+   "s": 220.22,
+   "e": 221.24,
+   "p": 0.994,
+   "spk": "SPEAKER_01",
+   "sc": 0.986
+  },
+  {
+   "w": "keep",
+   "s": 221.24,
+   "e": 221.44,
+   "p": 0.925,
+   "spk": "SPEAKER_01",
+   "sc": 0.988
+  },
+  {
+   "w": "it",
+   "s": 221.44,
+   "e": 221.56,
+   "p": 0.991,
+   "spk": "SPEAKER_01",
+   "sc": 0.988
+  },
+  {
+   "w": "these",
+   "s": 221.56,
+   "e": 221.78,
+   "p": 0.828,
+   "spk": "SPEAKER_01",
+   "sc": 0.992
+  },
+  {
+   "w": "two",
+   "s": 221.78,
+   "e": 221.96,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "terms",
+   "s": 221.96,
+   "e": 222.4,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "to",
+   "s": 222.4,
+   "e": 223.44,
+   "p": 0.969,
+   "spk": "SPEAKER_01",
+   "sc": 0.987
+  },
+  {
+   "w": "refer",
+   "s": 223.44,
+   "e": 223.74,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.986
+  },
+  {
+   "w": "to",
+   "s": 223.74,
+   "e": 224.0,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.986
+  },
+  {
+   "w": "other",
+   "s": 224.0,
+   "e": 224.26,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.991
+  },
+  {
+   "w": "space",
+   "s": 224.26,
+   "e": 224.72,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.991
+  },
+  {
+   "w": "and",
+   "s": 224.72,
+   "e": 224.9,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.99
+  },
+  {
+   "w": "space.",
+   "s": 224.9,
+   "e": 225.18,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.99
+  },
+  {
+   "w": "So",
+   "s": 225.32,
+   "e": 225.38,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.99
+  },
+  {
+   "w": "I",
+   "s": 225.38,
+   "e": 225.48,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.991
+  },
+  {
+   "w": "got",
+   "s": 225.48,
+   "e": 225.66,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "interested",
+   "s": 225.66,
+   "e": 225.96,
+   "p": 0.998,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "in",
+   "s": 225.96,
+   "e": 226.14,
+   "p": 0.87,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "space",
+   "s": 226.14,
+   "e": 226.58,
+   "p": 0.988,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "and",
+   "s": 226.58,
+   "e": 227.54,
+   "p": 0.914,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "space",
+   "s": 227.54,
+   "e": 228.18,
+   "p": 0.791,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "for",
+   "s": 228.18,
+   "e": 228.4,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "memory",
+   "s": 228.4,
+   "e": 228.82,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.964
+  },
+  {
+   "w": "through",
+   "s": 228.82,
+   "e": 229.64,
+   "p": 0.536,
+   "spk": "SPEAKER_01",
+   "sc": 0.954
+  },
+  {
+   "w": "an",
+   "s": 229.64,
+   "e": 231.08,
+   "p": 0.997,
+   "spk": "SPEAKER_01",
+   "sc": 0.967
+  },
+  {
+   "w": "interesting",
+   "s": 231.08,
+   "e": 231.5,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.982
+  },
+  {
+   "w": "group",
+   "s": 231.5,
+   "e": 231.94,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "of",
+   "s": 231.94,
+   "e": 232.28,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "patients",
+   "s": 232.28,
+   "e": 233.0,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "who",
+   "s": 233.0,
+   "e": 233.4,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "had",
+   "s": 233.4,
+   "e": 233.88,
+   "p": 0.998,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "what",
+   "s": 233.88,
+   "e": 234.3,
+   "p": 0.998,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "is",
+   "s": 234.3,
+   "e": 234.46,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "called",
+   "s": 234.46,
+   "e": 234.84,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "any",
+   "s": 234.84,
+   "e": 235.18,
+   "p": 0.507,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "neglect",
+   "s": 235.18,
+   "e": 235.54,
+   "p": 0.997,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "syndrome.",
+   "s": 235.54,
+   "e": 236.06,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "So",
+   "s": 236.3,
+   "e": 236.68,
+   "p": 0.988,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "they",
+   "s": 236.68,
+   "e": 236.82,
+   "p": 0.845,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "have",
+   "s": 236.82,
+   "e": 237.02,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "a",
+   "s": 237.02,
+   "e": 237.12,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "brain",
+   "s": 237.12,
+   "e": 237.34,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "injury",
+   "s": 237.34,
+   "e": 237.76,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "and",
+   "s": 237.76,
+   "e": 238.22,
+   "p": 0.893,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "they",
+   "s": 238.22,
+   "e": 239.0,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "somehow",
+   "s": 239.0,
+   "e": 239.7,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "are",
+   "s": 239.7,
+   "e": 240.42,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.99
+  },
+  {
+   "w": "not",
+   "s": 240.42,
+   "e": 240.78,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.99
+  },
+  {
+   "w": "paying",
+   "s": 240.78,
+   "e": 241.22,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.991
+  },
+  {
+   "w": "attention",
+   "s": 241.22,
+   "e": 241.74,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "anymore",
+   "s": 241.74,
+   "e": 242.18,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "to",
+   "s": 242.18,
+   "e": 242.56,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "the",
+   "s": 242.56,
+   "e": 242.92,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "side",
+   "s": 242.92,
+   "e": 243.68,
+   "p": 0.996,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "of",
+   "s": 243.68,
+   "e": 243.88,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "the",
+   "s": 243.88,
+   "e": 244.04,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "space,",
+   "s": 244.04,
+   "e": 244.6,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "their",
+   "s": 244.88,
+   "e": 244.96,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "body",
+   "s": 244.96,
+   "e": 245.4,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "and",
+   "s": 245.4,
+   "e": 245.98,
+   "p": 0.876,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "or",
+   "s": 245.98,
+   "e": 246.46,
+   "p": 0.996,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "extra",
+   "s": 246.46,
+   "e": 247.22,
+   "p": 0.991,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "personal",
+   "s": 247.22,
+   "e": 247.6,
+   "p": 0.986,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "space",
+   "s": 247.6,
+   "e": 248.3,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "that",
+   "s": 248.3,
+   "e": 249.5,
+   "p": 0.983,
+   "spk": "SPEAKER_01",
+   "sc": 0.991
+  },
+  {
+   "w": "is",
+   "s": 249.5,
+   "e": 249.88,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "contralateral",
+   "s": 249.88,
+   "e": 250.82,
+   "p": 0.855,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "to",
+   "s": 250.82,
+   "e": 251.14,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "the",
+   "s": 251.14,
+   "e": 251.28,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "lesions",
+   "s": 251.28,
+   "e": 251.64,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "they",
+   "s": 251.64,
+   "e": 251.86,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "had",
+   "s": 251.86,
+   "e": 252.12,
+   "p": 0.542,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "in",
+   "s": 252.12,
+   "e": 252.26,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "their",
+   "s": 252.26,
+   "e": 252.38,
+   "p": 0.998,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "brain.",
+   "s": 252.38,
+   "e": 252.72,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "And",
+   "s": 252.9,
+   "e": 253.36,
+   "p": 0.996,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "so",
+   "s": 253.36,
+   "e": 253.62,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "I",
+   "s": 253.62,
+   "e": 253.94,
+   "p": 0.991,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "was",
+   "s": 253.94,
+   "e": 254.14,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "fascinated",
+   "s": 254.14,
+   "e": 254.58,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "by",
+   "s": 254.58,
+   "e": 254.92,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "the",
+   "s": 254.92,
+   "e": 255.1,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "fact",
+   "s": 255.1,
+   "e": 255.34,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "that",
+   "s": 255.34,
+   "e": 255.62,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "But",
+   "s": 255.62,
+   "e": 255.7,
+   "p": 0.078,
+   "spk": "SPEAKER_01",
+   "sc": 0.992
+  },
+  {
+   "w": "because",
+   "s": 255.7,
+   "e": 256.12,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "of,",
+   "s": 256.12,
+   "e": 256.32,
+   "p": 0.998,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "you",
+   "s": 256.44,
+   "e": 257.06,
+   "p": 0.998,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "know,",
+   "s": 257.06,
+   "e": 257.14,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "sometimes",
+   "s": 257.36,
+   "e": 257.72,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "small",
+   "s": 257.72,
+   "e": 258.2,
+   "p": 0.977,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "brain",
+   "s": 258.2,
+   "e": 258.56,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "lesions,",
+   "s": 258.56,
+   "e": 259.08,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "patients",
+   "s": 259.9,
+   "e": 260.44,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "were",
+   "s": 260.44,
+   "e": 260.84,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "ignoring",
+   "s": 260.84,
+   "e": 261.76,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.992
+  },
+  {
+   "w": "parts",
+   "s": 261.76,
+   "e": 262.38,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.99
+  },
+  {
+   "w": "of",
+   "s": 262.38,
+   "e": 262.52,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.986
+  },
+  {
+   "w": "their",
+   "s": 262.52,
+   "e": 262.68,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.986
+  },
+  {
+   "w": "bodies",
+   "s": 262.68,
+   "e": 263.1,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.985
+  },
+  {
+   "w": "or",
+   "s": 263.1,
+   "e": 263.38,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.983
+  },
+  {
+   "w": "parts",
+   "s": 263.38,
+   "e": 263.8,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.985
+  },
+  {
+   "w": "of",
+   "s": 263.8,
+   "e": 263.96,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.989
+  },
+  {
+   "w": "their",
+   "s": 263.96,
+   "e": 264.12,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.989
+  },
+  {
+   "w": "space.",
+   "s": 264.12,
+   "e": 264.44,
+   "p": 0.997,
+   "spk": "SPEAKER_01",
+   "sc": 0.992
+  },
+  {
+   "w": "And",
+   "s": 264.44,
+   "e": 264.72,
+   "p": 0.998,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "so",
+   "s": 264.72,
+   "e": 264.82,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "I",
+   "s": 264.82,
+   "e": 264.92,
+   "p": 0.88,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "would",
+   "s": 264.92,
+   "e": 265.06,
+   "p": 0.727,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "start",
+   "s": 265.06,
+   "e": 265.3,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "wondering",
+   "s": 265.3,
+   "e": 265.68,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "about",
+   "s": 265.68,
+   "e": 266.14,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "memory",
+   "s": 266.14,
+   "e": 267.44,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "for",
+   "s": 267.44,
+   "e": 267.72,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "those",
+   "s": 267.72,
+   "e": 268.0,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "spaces",
+   "s": 268.0,
+   "e": 268.44,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "and",
+   "s": 268.44,
+   "e": 268.74,
+   "p": 0.995,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "how",
+   "s": 268.74,
+   "e": 268.98,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "they",
+   "s": 268.98,
+   "e": 269.2,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "would",
+   "s": 269.2,
+   "e": 269.4,
+   "p": 0.502,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "navigate",
+   "s": 269.4,
+   "e": 269.96,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "through",
+   "s": 269.96,
+   "e": 270.22,
+   "p": 0.877,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "spaces.",
+   "s": 270.22,
+   "e": 270.68,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "So",
+   "s": 271.24,
+   "e": 271.62,
+   "p": 0.994,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "then",
+   "s": 271.62,
+   "e": 271.78,
+   "p": 0.966,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "I",
+   "s": 271.78,
+   "e": 271.9,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "got",
+   "s": 271.9,
+   "e": 272.04,
+   "p": 0.997,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "into",
+   "s": 272.04,
+   "e": 272.3,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "spatial",
+   "s": 272.3,
+   "e": 272.76,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "memory.",
+   "s": 272.76,
+   "e": 273.16,
+   "p": 0.986,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "So",
+   "s": 273.16,
+   "e": 273.46,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "how",
+   "s": 273.46,
+   "e": 273.68,
+   "p": 0.993,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "do",
+   "s": 273.68,
+   "e": 273.9,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "we",
+   "s": 273.9,
+   "e": 274.08,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "remember",
+   "s": 274.08,
+   "e": 274.54,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "places?",
+   "s": 274.54,
+   "e": 275.08,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "How",
+   "s": 275.32,
+   "e": 275.8,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "do",
+   "s": 275.8,
+   "e": 276.04,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "we",
+   "s": 276.04,
+   "e": 276.24,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "form",
+   "s": 276.24,
+   "e": 276.68,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "memories?",
+   "s": 276.68,
+   "e": 277.16,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "And",
+   "s": 277.4,
+   "e": 277.8,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "from",
+   "s": 277.8,
+   "e": 278.04,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "there,",
+   "s": 278.04,
+   "e": 278.36,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "I",
+   "s": 278.4,
+   "e": 279.18,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.991
+  },
+  {
+   "w": "developed",
+   "s": 279.18,
+   "e": 279.56,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.989
+  },
+  {
+   "w": "a",
+   "s": 279.56,
+   "e": 279.76,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.991
+  },
+  {
+   "w": "very",
+   "s": 279.76,
+   "e": 280.08,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.991
+  },
+  {
+   "w": "significant",
+   "s": 280.08,
+   "e": 281.18,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "interest",
+   "s": 281.18,
+   "e": 281.8,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "in",
+   "s": 281.8,
+   "e": 282.36,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "topographical",
+   "s": 282.36,
+   "e": 283.4,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.983
+  },
+  {
+   "w": "orientation,",
+   "s": 283.4,
+   "e": 283.96,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.978
+  },
+  {
+   "w": "which",
+   "s": 283.96,
+   "e": 284.54,
+   "p": 0.949,
+   "spk": "SPEAKER_01",
+   "sc": 0.991
+  },
+  {
+   "w": "is",
+   "s": 284.54,
+   "e": 284.72,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.992
+  },
+  {
+   "w": "basically",
+   "s": 284.72,
+   "e": 285.18,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "our",
+   "s": 285.18,
+   "e": 285.68,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "ability",
+   "s": 285.68,
+   "e": 286.26,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "to",
+   "s": 286.26,
+   "e": 286.46,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "find",
+   "s": 286.46,
+   "e": 286.74,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "a",
+   "s": 286.74,
+   "e": 286.86,
+   "p": 0.517,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "way",
+   "s": 286.86,
+   "e": 287.02,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "around,",
+   "s": 287.02,
+   "e": 287.36,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "or",
+   "s": 287.58,
+   "e": 287.66,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "wayfinding,",
+   "s": 287.66,
+   "e": 288.3,
+   "p": 0.941,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "how",
+   "s": 288.54,
+   "e": 288.7,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "you",
+   "s": 288.7,
+   "e": 289.18,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.99
+  },
+  {
+   "w": "will",
+   "s": 289.18,
+   "e": 289.44,
+   "p": 0.746,
+   "spk": "SPEAKER_01",
+   "sc": 0.987
+  },
+  {
+   "w": "call",
+   "s": 289.44,
+   "e": 289.98,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.984
+  },
+  {
+   "w": "it.",
+   "s": 289.98,
+   "e": 290.22,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.979
+  },
+  {
+   "w": "And",
+   "s": 290.96,
+   "e": 291.04,
+   "p": 0.989,
+   "spk": "SPEAKER_01",
+   "sc": 0.988
+  },
+  {
+   "w": "so",
+   "s": 291.04,
+   "e": 291.36,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.988
+  },
+  {
+   "w": "within",
+   "s": 291.36,
+   "e": 292.04,
+   "p": 0.705,
+   "spk": "SPEAKER_01",
+   "sc": 0.988
+  },
+  {
+   "w": "that",
+   "s": 292.04,
+   "e": 292.4,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.989
+  },
+  {
+   "w": "topic,",
+   "s": 292.4,
+   "e": 292.84,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.991
+  },
+  {
+   "w": "I",
+   "s": 292.84,
+   "e": 293.28,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "was",
+   "s": 293.28,
+   "e": 293.54,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "fascinated",
+   "s": 293.54,
+   "e": 294.24,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "by",
+   "s": 294.24,
+   "e": 294.62,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "something",
+   "s": 294.62,
+   "e": 295.06,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "that",
+   "s": 295.06,
+   "e": 295.32,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "usually",
+   "s": 295.32,
+   "e": 295.66,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "scientists",
+   "s": 295.66,
+   "e": 296.18,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "try",
+   "s": 296.18,
+   "e": 296.54,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "to",
+   "s": 296.54,
+   "e": 296.74,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "control.",
+   "s": 296.74,
+   "e": 297.16,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "So",
+   "s": 297.5,
+   "e": 297.74,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "scientists,",
+   "s": 297.74,
+   "e": 298.2,
+   "p": 0.998,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "they",
+   "s": 298.32,
+   "e": 298.66,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "usually",
+   "s": 298.66,
+   "e": 298.98,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "try",
+   "s": 298.98,
+   "e": 299.26,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "to",
+   "s": 299.26,
+   "e": 299.42,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "control",
+   "s": 299.42,
+   "e": 299.84,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "variability,",
+   "s": 299.84,
+   "e": 300.32,
+   "p": 0.984,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "okay?",
+   "s": 300.86,
+   "e": 300.96,
+   "p": 0.978,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "They",
+   "s": 301.06,
+   "e": 301.2,
+   "p": 0.974,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "try",
+   "s": 301.2,
+   "e": 301.46,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "to",
+   "s": 301.46,
+   "e": 301.66,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "select",
+   "s": 301.66,
+   "e": 301.92,
+   "p": 0.701,
+   "spk": "SPEAKER_01",
+   "sc": 0.992
+  },
+  {
+   "w": "people",
+   "s": 301.92,
+   "e": 302.38,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.992
+  },
+  {
+   "w": "that",
+   "s": 302.38,
+   "e": 302.56,
+   "p": 0.991,
+   "spk": "SPEAKER_01",
+   "sc": 0.992
+  },
+  {
+   "w": "are",
+   "s": 302.56,
+   "e": 303.04,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.992
+  },
+  {
+   "w": "similar",
+   "s": 303.04,
+   "e": 303.46,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "to",
+   "s": 303.46,
+   "e": 303.7,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "each",
+   "s": 303.7,
+   "e": 303.88,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "other",
+   "s": 303.88,
+   "e": 304.1,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "to",
+   "s": 304.1,
+   "e": 304.38,
+   "p": 0.985,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "try",
+   "s": 304.38,
+   "e": 304.68,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "to",
+   "s": 304.68,
+   "e": 304.96,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "find",
+   "s": 304.96,
+   "e": 305.38,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "an",
+   "s": 305.38,
+   "e": 305.56,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.992
+  },
+  {
+   "w": "answer",
+   "s": 305.56,
+   "e": 305.92,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.992
+  },
+  {
+   "w": "to",
+   "s": 305.92,
+   "e": 306.12,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.992
+  },
+  {
+   "w": "their",
+   "s": 306.12,
+   "e": 306.28,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "questions.",
+   "s": 306.28,
+   "e": 306.74,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "And",
+   "s": 306.74,
+   "e": 307.4,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "I",
+   "s": 307.4,
+   "e": 307.54,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "was",
+   "s": 307.54,
+   "e": 307.96,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "interested",
+   "s": 307.96,
+   "e": 308.46,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "in",
+   "s": 308.46,
+   "e": 308.68,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "the",
+   "s": 308.68,
+   "e": 308.82,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "opposite.",
+   "s": 308.82,
+   "e": 309.2,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "I",
+   "s": 309.2,
+   "e": 309.52,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "was",
+   "s": 309.52,
+   "e": 309.72,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "interested",
+   "s": 309.72,
+   "e": 310.08,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "in",
+   "s": 310.08,
+   "e": 310.46,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "that",
+   "s": 310.46,
+   "e": 310.86,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "human",
+   "s": 310.86,
+   "e": 311.26,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "variability.",
+   "s": 311.26,
+   "e": 311.76,
+   "p": 0.991,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "I",
+   "s": 311.76,
+   "e": 312.62,
+   "p": 0.998,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "was",
+   "s": 312.62,
+   "e": 312.8,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "interested",
+   "s": 312.8,
+   "e": 313.2,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "in",
+   "s": 313.2,
+   "e": 314.0,
+   "p": 0.989,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "why",
+   "s": 314.0,
+   "e": 314.58,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.99
+  },
+  {
+   "w": "people",
+   "s": 314.58,
+   "e": 315.16,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.985
+  },
+  {
+   "w": "are",
+   "s": 315.16,
+   "e": 315.34,
+   "p": 0.995,
+   "spk": "SPEAKER_01",
+   "sc": 0.988
+  },
+  {
+   "w": "different",
+   "s": 315.34,
+   "e": 315.72,
+   "p": 0.979,
+   "spk": "SPEAKER_01",
+   "sc": 0.988
+  },
+  {
+   "w": "in",
+   "s": 315.72,
+   "e": 315.96,
+   "p": 0.699,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "terms",
+   "s": 315.96,
+   "e": 316.1,
+   "p": 0.995,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "of",
+   "s": 316.1,
+   "e": 316.2,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "spatial",
+   "s": 316.2,
+   "e": 316.48,
+   "p": 0.998,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "orientation",
+   "s": 316.48,
+   "e": 316.86,
+   "p": 0.998,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "skills.",
+   "s": 316.86,
+   "e": 317.4,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "What",
+   "s": 317.68,
+   "e": 318.12,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "makes",
+   "s": 318.12,
+   "e": 318.5,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "that",
+   "s": 318.5,
+   "e": 318.76,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "difference?",
+   "s": 318.76,
+   "e": 319.18,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "That's",
+   "s": 320.43,
+   "e": 321.07,
+   "p": 0.999,
+   "spk": "SPEAKER_00",
+   "sc": 0.998
+  },
+  {
+   "w": "what",
+   "s": 321.07,
+   "e": 321.51,
+   "p": 0.993,
+   "spk": "SPEAKER_00",
+   "sc": 0.998
+  },
+  {
+   "w": "I",
+   "s": 321.51,
+   "e": 321.61,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.998
+  },
+  {
+   "w": "was",
+   "s": 321.61,
+   "e": 321.75,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.998
+  },
+  {
+   "w": "going",
+   "s": 321.75,
+   "e": 321.91,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.998
+  },
+  {
+   "w": "to",
+   "s": 321.91,
+   "e": 322.07,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.998
+  },
+  {
+   "w": "ask",
+   "s": 322.07,
+   "e": 322.39,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.998
+  },
+  {
+   "w": "is,",
+   "s": 322.39,
+   "e": 322.57,
+   "p": 0.709,
+   "spk": "SPEAKER_00",
+   "sc": 0.998
+  },
+  {
+   "w": "do",
+   "s": 322.69,
+   "e": 322.77,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.997
+  },
+  {
+   "w": "you",
+   "s": 322.77,
+   "e": 323.07,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.997
+  },
+  {
+   "w": "find",
+   "s": 323.07,
+   "e": 323.87,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.998
+  },
+  {
+   "w": "any",
+   "s": 323.87,
+   "e": 324.81,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.999
+  },
+  {
+   "w": "similarities",
+   "s": 324.81,
+   "e": 326.23,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.998
+  },
+  {
+   "w": "in",
+   "s": 326.23,
+   "e": 327.15,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.997
+  },
+  {
+   "w": "the",
+   "s": 327.15,
+   "e": 327.25,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.994
+  },
+  {
+   "w": "types",
+   "s": 327.25,
+   "e": 327.43,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.993
+  },
+  {
+   "w": "of",
+   "s": 327.43,
+   "e": 327.55,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.993
+  },
+  {
+   "w": "people",
+   "s": 327.55,
+   "e": 327.71,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.993
+  },
+  {
+   "w": "that",
+   "s": 327.71,
+   "e": 327.89,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.993
+  },
+  {
+   "w": "have",
+   "s": 327.89,
+   "e": 328.07,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.993
+  },
+  {
+   "w": "better",
+   "s": 328.07,
+   "e": 328.37,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.991
+  },
+  {
+   "w": "spatial",
+   "s": 328.37,
+   "e": 329.05,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.995
+  },
+  {
+   "w": "understanding",
+   "s": 329.05,
+   "e": 329.89,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.998
+  },
+  {
+   "w": "than",
+   "s": 329.89,
+   "e": 330.13,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.999
+  },
+  {
+   "w": "others?",
+   "s": 330.13,
+   "e": 330.51,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.999
+  },
+  {
+   "w": "Well,",
+   "s": 332.63,
+   "e": 333.27,
+   "p": 0.995,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "it's",
+   "s": 333.37,
+   "e": 333.61,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.991
+  },
+  {
+   "w": "a",
+   "s": 333.61,
+   "e": 333.69,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.991
+  },
+  {
+   "w": "big",
+   "s": 333.69,
+   "e": 333.89,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.991
+  },
+  {
+   "w": "spectrum.",
+   "s": 333.89,
+   "e": 334.41,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.989
+  },
+  {
+   "w": "Okay,",
+   "s": 334.89,
+   "e": 334.99,
+   "p": 0.387,
+   "spk": "SPEAKER_01",
+   "sc": 0.989
+  },
+  {
+   "w": "so",
+   "s": 335.15,
+   "e": 335.35,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.989
+  },
+  {
+   "w": "there",
+   "s": 335.35,
+   "e": 335.93,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "is",
+   "s": 335.93,
+   "e": 336.11,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "a",
+   "s": 336.11,
+   "e": 336.39,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "variety",
+   "s": 336.39,
+   "e": 337.59,
+   "p": 0.976,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "of",
+   "s": 337.59,
+   "e": 337.93,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "factors",
+   "s": 337.93,
+   "e": 338.39,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "that",
+   "s": 338.39,
+   "e": 338.65,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "contribute",
+   "s": 338.65,
+   "e": 339.13,
+   "p": 0.993,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "to",
+   "s": 339.13,
+   "e": 339.61,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "the",
+   "s": 339.61,
+   "e": 340.11,
+   "p": 0.997,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "variability",
+   "s": 340.11,
+   "e": 340.45,
+   "p": 0.994,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "in",
+   "s": 340.45,
+   "e": 340.79,
+   "p": 0.966,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "spatial",
+   "s": 340.79,
+   "e": 341.03,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "orientation",
+   "s": 341.03,
+   "e": 341.43,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "skills.",
+   "s": 341.43,
+   "e": 342.01,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "There",
+   "s": 342.31,
+   "e": 342.91,
+   "p": 0.869,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "is",
+   "s": 342.91,
+   "e": 343.15,
+   "p": 0.977,
+   "spk": "SPEAKER_01",
+   "sc": 0.978
+  },
+  {
+   "w": "sex",
+   "s": 343.15,
+   "e": 344.53,
+   "p": 0.649,
+   "spk": "SPEAKER_01",
+   "sc": 0.922
+  },
+  {
+   "w": "factors",
+   "s": 344.53,
+   "e": 345.01,
+   "p": 0.998,
+   "spk": "SPEAKER_01",
+   "sc": 0.977
+  },
+  {
+   "w": "like",
+   "s": 345.01,
+   "e": 345.31,
+   "p": 0.63,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "being",
+   "s": 345.31,
+   "e": 345.53,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "a",
+   "s": 345.53,
+   "e": 345.73,
+   "p": 0.597,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "female",
+   "s": 345.73,
+   "e": 346.05,
+   "p": 0.945,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "or",
+   "s": 346.05,
+   "e": 346.33,
+   "p": 0.977,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "a",
+   "s": 346.33,
+   "e": 346.57,
+   "p": 0.917,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "male",
+   "s": 346.57,
+   "e": 346.85,
+   "p": 0.994,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "as",
+   "s": 346.85,
+   "e": 347.53,
+   "p": 0.707,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "an",
+   "s": 347.53,
+   "e": 347.67,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "impact",
+   "s": 347.67,
+   "e": 348.07,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "on",
+   "s": 348.07,
+   "e": 348.37,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "spatial",
+   "s": 348.37,
+   "e": 348.79,
+   "p": 0.953,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "orientation",
+   "s": 348.79,
+   "e": 349.15,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "skills,",
+   "s": 349.15,
+   "e": 349.77,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "aging",
+   "s": 350.37,
+   "e": 350.67,
+   "p": 0.983,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "as",
+   "s": 350.67,
+   "e": 350.93,
+   "p": 0.998,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "an",
+   "s": 350.93,
+   "e": 351.07,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "impact,",
+   "s": 351.07,
+   "e": 351.43,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "sleep",
+   "s": 351.71,
+   "e": 351.97,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "as",
+   "s": 351.97,
+   "e": 352.31,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "an",
+   "s": 352.31,
+   "e": 352.47,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "impact,",
+   "s": 352.47,
+   "e": 353.01,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.989
+  },
+  {
+   "w": "the",
+   "s": 353.47,
+   "e": 355.11,
+   "p": 0.992,
+   "spk": "SPEAKER_01",
+   "sc": 0.968
+  },
+  {
+   "w": "spontaneous",
+   "s": 355.11,
+   "e": 356.01,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "bias",
+   "s": 356.01,
+   "e": 356.65,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "in",
+   "s": 356.65,
+   "e": 357.15,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "using",
+   "s": 357.15,
+   "e": 357.51,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "different",
+   "s": 357.51,
+   "e": 358.09,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "information",
+   "s": 358.09,
+   "e": 359.17,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "for",
+   "s": 359.17,
+   "e": 359.51,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "orientation",
+   "s": 359.51,
+   "e": 360.01,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "and",
+   "s": 360.01,
+   "e": 360.25,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "navigation",
+   "s": 360.25,
+   "e": 360.77,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "as",
+   "s": 360.77,
+   "e": 361.29,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "an",
+   "s": 361.29,
+   "e": 361.41,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "impact.",
+   "s": 361.41,
+   "e": 361.87,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "And",
+   "s": 362.11,
+   "e": 362.47,
+   "p": 0.993,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "so",
+   "s": 362.47,
+   "e": 362.67,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "it's",
+   "s": 362.67,
+   "e": 363.01,
+   "p": 0.939,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "really",
+   "s": 363.01,
+   "e": 363.27,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "complex.",
+   "s": 363.27,
+   "e": 363.87,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "There",
+   "s": 364.11,
+   "e": 364.15,
+   "p": 0.966,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "are",
+   "s": 364.15,
+   "e": 364.31,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "so",
+   "s": 364.31,
+   "e": 364.49,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "many",
+   "s": 364.49,
+   "e": 364.65,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "different",
+   "s": 364.65,
+   "e": 364.97,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "factors",
+   "s": 364.97,
+   "e": 365.37,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "that",
+   "s": 365.37,
+   "e": 365.67,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "contribute",
+   "s": 365.67,
+   "e": 366.19,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "to",
+   "s": 366.19,
+   "e": 366.47,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "this",
+   "s": 366.47,
+   "e": 366.75,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "variability",
+   "s": 366.75,
+   "e": 367.23,
+   "p": 0.993,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "in",
+   "s": 367.23,
+   "e": 367.93,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "finding",
+   "s": 367.93,
+   "e": 368.45,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "our",
+   "s": 368.45,
+   "e": 368.73,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.989
+  },
+  {
+   "w": "way",
+   "s": 368.73,
+   "e": 368.97,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.984
+  },
+  {
+   "w": "around.",
+   "s": 368.97,
+   "e": 369.27,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.983
+  },
+  {
+   "w": "However,",
+   "s": 369.27,
+   "e": 370.15,
+   "p": 0.99,
+   "spk": "SPEAKER_01",
+   "sc": 0.974
+  },
+  {
+   "w": "while",
+   "s": 370.81,
+   "e": 371.47,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "studying",
+   "s": 371.47,
+   "e": 371.87,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "this",
+   "s": 371.87,
+   "e": 372.07,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "variability,",
+   "s": 372.07,
+   "e": 372.47,
+   "p": 0.99,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "I",
+   "s": 372.83,
+   "e": 372.91,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "discovered",
+   "s": 372.91,
+   "e": 373.61,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "clinical",
+   "s": 373.61,
+   "e": 375.29,
+   "p": 0.892,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "conditions,",
+   "s": 375.29,
+   "e": 375.91,
+   "p": 0.974,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "so",
+   "s": 376.13,
+   "e": 376.19,
+   "p": 0.824,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "what",
+   "s": 376.19,
+   "e": 376.31,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "we",
+   "s": 376.31,
+   "e": 376.43,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "called",
+   "s": 376.43,
+   "e": 376.83,
+   "p": 0.328,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "developmental",
+   "s": 376.83,
+   "e": 377.93,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "topographical",
+   "s": 377.93,
+   "e": 378.67,
+   "p": 0.998,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "disorientation.",
+   "s": 378.67,
+   "e": 379.61,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "So",
+   "s": 379.77,
+   "e": 380.01,
+   "p": 0.993,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "there",
+   "s": 380.01,
+   "e": 380.17,
+   "p": 0.866,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "are",
+   "s": 380.17,
+   "e": 380.33,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "certain",
+   "s": 380.33,
+   "e": 380.71,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "people",
+   "s": 380.71,
+   "e": 381.19,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "outside",
+   "s": 381.19,
+   "e": 382.07,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "of",
+   "s": 382.07,
+   "e": 382.75,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "that",
+   "s": 382.75,
+   "e": 383.01,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "variability",
+   "s": 383.01,
+   "e": 383.55,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "that",
+   "s": 383.55,
+   "e": 383.95,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "are",
+   "s": 383.95,
+   "e": 384.11,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "not",
+   "s": 384.11,
+   "e": 384.31,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "able",
+   "s": 384.31,
+   "e": 384.57,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "to",
+   "s": 384.57,
+   "e": 384.77,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "find",
+   "s": 384.77,
+   "e": 385.07,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "their",
+   "s": 385.07,
+   "e": 385.25,
+   "p": 0.941,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "way",
+   "s": 385.25,
+   "e": 385.57,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "from",
+   "s": 385.57,
+   "e": 386.19,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "childhood",
+   "s": 386.19,
+   "e": 386.67,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "and",
+   "s": 386.67,
+   "e": 387.37,
+   "p": 0.997,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "in",
+   "s": 387.37,
+   "e": 387.53,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "extremely",
+   "s": 387.53,
+   "e": 388.11,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "familiar",
+   "s": 388.11,
+   "e": 389.05,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "surroundings,",
+   "s": 389.05,
+   "e": 389.67,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "like",
+   "s": 389.67,
+   "e": 390.07,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "their",
+   "s": 390.07,
+   "e": 390.27,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "home",
+   "s": 390.27,
+   "e": 390.51,
+   "p": 0.703,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "houses",
+   "s": 390.51,
+   "e": 391.05,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "or",
+   "s": 391.05,
+   "e": 391.81,
+   "p": 0.967,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "the",
+   "s": 391.81,
+   "e": 392.27,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "neighbors",
+   "s": 392.27,
+   "e": 392.85,
+   "p": 0.983,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "where",
+   "s": 392.85,
+   "e": 393.15,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "they",
+   "s": 393.15,
+   "e": 393.31,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "have",
+   "s": 393.31,
+   "e": 393.55,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "lived",
+   "s": 393.55,
+   "e": 393.79,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "their",
+   "s": 393.79,
+   "e": 393.97,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "entire",
+   "s": 393.97,
+   "e": 394.33,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "lives.",
+   "s": 394.33,
+   "e": 394.67,
+   "p": 0.968,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "And",
+   "s": 394.67,
+   "e": 395.37,
+   "p": 0.978,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "so",
+   "s": 395.37,
+   "e": 395.65,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "this",
+   "s": 395.65,
+   "e": 396.25,
+   "p": 0.802,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "seems",
+   "s": 396.25,
+   "e": 396.49,
+   "p": 0.989,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "distanced",
+   "s": 396.49,
+   "e": 397.01,
+   "p": 0.694,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "from",
+   "s": 397.01,
+   "e": 397.27,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.989
+  },
+  {
+   "w": "the",
+   "s": 397.27,
+   "e": 397.69,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.988
+  },
+  {
+   "w": "space",
+   "s": 397.69,
+   "e": 398.11,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.981
+  },
+  {
+   "w": "research",
+   "s": 398.11,
+   "e": 398.95,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.977
+  },
+  {
+   "w": "and",
+   "s": 398.95,
+   "e": 399.31,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.98
+  },
+  {
+   "w": "other",
+   "s": 399.31,
+   "e": 399.65,
+   "p": 0.998,
+   "spk": "SPEAKER_01",
+   "sc": 0.991
+  },
+  {
+   "w": "space",
+   "s": 399.65,
+   "e": 400.05,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "research",
+   "s": 400.05,
+   "e": 400.43,
+   "p": 0.998,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "that",
+   "s": 400.43,
+   "e": 400.57,
+   "p": 0.563,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "we'll",
+   "s": 400.57,
+   "e": 400.71,
+   "p": 0.995,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "be",
+   "s": 400.71,
+   "e": 400.81,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "talking",
+   "s": 400.81,
+   "e": 401.13,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "about,",
+   "s": 401.13,
+   "e": 401.43,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "but",
+   "s": 401.55,
+   "e": 401.61,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "it's",
+   "s": 401.61,
+   "e": 401.79,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "not",
+   "s": 401.79,
+   "e": 401.95,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "really.",
+   "s": 401.95,
+   "e": 402.23,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "So",
+   "s": 402.41,
+   "e": 402.85,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "the",
+   "s": 402.85,
+   "e": 403.21,
+   "p": 0.989,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "DTD",
+   "s": 403.21,
+   "e": 404.07,
+   "p": 0.989,
+   "spk": "SPEAKER_01",
+   "sc": 0.992
+  },
+  {
+   "w": "research",
+   "s": 404.07,
+   "e": 404.93,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.992
+  },
+  {
+   "w": "that",
+   "s": 404.93,
+   "e": 405.19,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "I",
+   "s": 405.19,
+   "e": 405.33,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "have",
+   "s": 405.33,
+   "e": 405.55,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "done",
+   "s": 405.55,
+   "e": 405.85,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "has",
+   "s": 405.85,
+   "e": 406.89,
+   "p": 0.998,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "taught",
+   "s": 406.89,
+   "e": 407.13,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "me",
+   "s": 407.13,
+   "e": 407.35,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "that",
+   "s": 407.35,
+   "e": 407.71,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "there",
+   "s": 407.71,
+   "e": 407.95,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "is",
+   "s": 407.95,
+   "e": 408.11,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "one",
+   "s": 408.11,
+   "e": 408.63,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "important",
+   "s": 408.63,
+   "e": 409.41,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "ability",
+   "s": 409.41,
+   "e": 410.15,
+   "p": 0.784,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "to",
+   "s": 410.15,
+   "e": 411.01,
+   "p": 0.995,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "find,",
+   "s": 411.01,
+   "e": 411.45,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "one",
+   "s": 411.61,
+   "e": 411.75,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "important",
+   "s": 411.75,
+   "e": 412.17,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "source",
+   "s": 412.17,
+   "e": 412.47,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "of",
+   "s": 412.47,
+   "e": 412.69,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "information",
+   "s": 412.69,
+   "e": 413.31,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "to",
+   "s": 413.31,
+   "e": 413.57,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "find",
+   "s": 413.57,
+   "e": 413.83,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "a",
+   "s": 413.83,
+   "e": 413.95,
+   "p": 0.841,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "way",
+   "s": 413.95,
+   "e": 414.09,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "around.",
+   "s": 414.09,
+   "e": 414.41,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "That",
+   "s": 414.41,
+   "e": 414.97,
+   "p": 0.998,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "is",
+   "s": 414.97,
+   "e": 415.21,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "the",
+   "s": 415.21,
+   "e": 415.43,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "ability",
+   "s": 415.43,
+   "e": 415.83,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "to",
+   "s": 415.83,
+   "e": 416.31,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "create",
+   "s": 416.31,
+   "e": 417.51,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "a",
+   "s": 417.51,
+   "e": 417.83,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.992
+  },
+  {
+   "w": "mental",
+   "s": 417.83,
+   "e": 418.11,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "map,",
+   "s": 418.11,
+   "e": 418.51,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "what",
+   "s": 418.67,
+   "e": 418.71,
+   "p": 0.993,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "we",
+   "s": 418.71,
+   "e": 418.83,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "call",
+   "s": 418.83,
+   "e": 419.05,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "the",
+   "s": 419.05,
+   "e": 419.17,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "cognitive",
+   "s": 419.17,
+   "e": 419.47,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "map.",
+   "s": 419.47,
+   "e": 419.87,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "And",
+   "s": 419.87,
+   "e": 420.69,
+   "p": 0.982,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "one",
+   "s": 420.69,
+   "e": 421.01,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "of",
+   "s": 421.01,
+   "e": 421.17,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "the",
+   "s": 421.17,
+   "e": 421.33,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "factors",
+   "s": 421.33,
+   "e": 421.85,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "that",
+   "s": 421.85,
+   "e": 422.17,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "contributes",
+   "s": 422.17,
+   "e": 422.71,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "to",
+   "s": 422.71,
+   "e": 423.07,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "creating",
+   "s": 423.07,
+   "e": 423.61,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "a",
+   "s": 423.61,
+   "e": 424.57,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "cognitive",
+   "s": 424.57,
+   "e": 425.07,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "map",
+   "s": 425.07,
+   "e": 425.65,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "of",
+   "s": 425.65,
+   "e": 425.91,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "the",
+   "s": 425.91,
+   "e": 426.03,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "environment",
+   "s": 426.03,
+   "e": 426.45,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "is",
+   "s": 426.45,
+   "e": 427.45,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "obviously",
+   "s": 427.45,
+   "e": 428.01,
+   "p": 0.984,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "the",
+   "s": 428.01,
+   "e": 428.37,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "visual",
+   "s": 428.37,
+   "e": 428.63,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "information",
+   "s": 428.63,
+   "e": 429.19,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "that",
+   "s": 429.19,
+   "e": 429.43,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "we",
+   "s": 429.43,
+   "e": 429.55,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "process.",
+   "s": 429.55,
+   "e": 429.95,
+   "p": 0.998,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "But",
+   "s": 430.15,
+   "e": 430.25,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "one",
+   "s": 430.25,
+   "e": 430.55,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "critical",
+   "s": 430.55,
+   "e": 430.89,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "factor",
+   "s": 430.89,
+   "e": 431.33,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "is",
+   "s": 431.33,
+   "e": 431.71,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "the",
+   "s": 431.71,
+   "e": 431.85,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "vestibular",
+   "s": 431.85,
+   "e": 432.43,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "information.",
+   "s": 432.43,
+   "e": 433.05,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "And",
+   "s": 433.45,
+   "e": 433.81,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "so",
+   "s": 433.81,
+   "e": 434.01,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "the",
+   "s": 434.01,
+   "e": 434.21,
+   "p": 0.948,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "information",
+   "s": 434.21,
+   "e": 434.89,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "that",
+   "s": 434.89,
+   "e": 435.29,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "our",
+   "s": 435.29,
+   "e": 435.57,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "vestibular",
+   "s": 435.57,
+   "e": 436.21,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "system,",
+   "s": 436.21,
+   "e": 436.73,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "some",
+   "s": 436.99,
+   "e": 437.95,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "organs",
+   "s": 437.95,
+   "e": 438.43,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "that",
+   "s": 438.43,
+   "e": 438.63,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "are",
+   "s": 438.63,
+   "e": 438.81,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "in",
+   "s": 438.81,
+   "e": 438.99,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "our",
+   "s": 438.99,
+   "e": 439.19,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "inner",
+   "s": 439.19,
+   "e": 439.53,
+   "p": 0.998,
+   "spk": "SPEAKER_01",
+   "sc": 0.991
+  },
+  {
+   "w": "ears,",
+   "s": 439.53,
+   "e": 440.09,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.992
+  },
+  {
+   "w": "they",
+   "s": 440.27,
+   "e": 440.69,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "process",
+   "s": 440.69,
+   "e": 441.19,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "while",
+   "s": 441.19,
+   "e": 441.51,
+   "p": 0.996,
+   "spk": "SPEAKER_01",
+   "sc": 0.99
+  },
+  {
+   "w": "we",
+   "s": 441.51,
+   "e": 441.71,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.985
+  },
+  {
+   "w": "move,",
+   "s": 441.71,
+   "e": 442.15,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.985
+  },
+  {
+   "w": "while",
+   "s": 442.31,
+   "e": 442.45,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.983
+  },
+  {
+   "w": "we",
+   "s": 442.45,
+   "e": 442.63,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.983
+  },
+  {
+   "w": "accelerate,",
+   "s": 442.63,
+   "e": 443.21,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.988
+  },
+  {
+   "w": "while",
+   "s": 443.49,
+   "e": 443.59,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.992
+  },
+  {
+   "w": "we",
+   "s": 443.59,
+   "e": 443.73,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.991
+  },
+  {
+   "w": "turn",
+   "s": 443.73,
+   "e": 443.97,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.991
+  },
+  {
+   "w": "left,",
+   "s": 443.97,
+   "e": 444.27,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.991
+  },
+  {
+   "w": "we",
+   "s": 444.43,
+   "e": 444.57,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "turn",
+   "s": 444.57,
+   "e": 444.81,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "right.",
+   "s": 444.81,
+   "e": 445.11,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "And",
+   "s": 445.31,
+   "e": 445.69,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "guess",
+   "s": 445.69,
+   "e": 445.93,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "what?",
+   "s": 445.93,
+   "e": 446.25,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "This",
+   "s": 446.37,
+   "e": 446.65,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "information",
+   "s": 446.65,
+   "e": 447.19,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "is",
+   "s": 447.19,
+   "e": 447.45,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "provided",
+   "s": 447.45,
+   "e": 447.83,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "to",
+   "s": 447.83,
+   "e": 448.05,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "us",
+   "s": 448.05,
+   "e": 448.47,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "thanks",
+   "s": 448.47,
+   "e": 448.87,
+   "p": 0.998,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "to",
+   "s": 448.87,
+   "e": 449.15,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "gravity.",
+   "s": 449.15,
+   "e": 449.69,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 1.0
+  },
+  {
+   "w": "So",
+   "s": 450.39,
+   "e": 450.71,
+   "p": 0.967,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "that",
+   "s": 450.71,
+   "e": 451.57,
+   "p": 0.814,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "factor",
+   "s": 451.57,
+   "e": 452.23,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "is",
+   "s": 452.23,
+   "e": 453.65,
+   "p": 0.882,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "very,",
+   "s": 453.65,
+   "e": 453.91,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.992
+  },
+  {
+   "w": "very",
+   "s": 454.03,
+   "e": 454.13,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "hard",
+   "s": 454.13,
+   "e": 454.39,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "to",
+   "s": 454.39,
+   "e": 454.57,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "study",
+   "s": 454.57,
+   "e": 454.83,
+   "p": 0.991,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "in",
+   "s": 454.83,
+   "e": 455.01,
+   "p": 0.995,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "humans.",
+   "s": 455.01,
+   "e": 455.37,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "Very,",
+   "s": 456.41,
+   "e": 457.05,
+   "p": 0.991,
+   "spk": "SPEAKER_01",
+   "sc": 0.99
+  },
+  {
+   "w": "very",
+   "s": 457.15,
+   "e": 457.33,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "challenging",
+   "s": 457.33,
+   "e": 457.81,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "to",
+   "s": 457.81,
+   "e": 458.69,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "isolate",
+   "s": 458.69,
+   "e": 459.29,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "that",
+   "s": 459.29,
+   "e": 459.53,
+   "p": 0.89,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "factors",
+   "s": 459.53,
+   "e": 459.99,
+   "p": 0.961,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "in",
+   "s": 459.99,
+   "e": 460.21,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "humans",
+   "s": 460.21,
+   "e": 460.59,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "because",
+   "s": 460.59,
+   "e": 460.91,
+   "p": 0.886,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "we",
+   "s": 460.91,
+   "e": 461.33,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "can't",
+   "s": 461.33,
+   "e": 461.63,
+   "p": 0.998,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "really",
+   "s": 461.63,
+   "e": 461.77,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.99
+  },
+  {
+   "w": "take",
+   "s": 461.77,
+   "e": 461.99,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.989
+  },
+  {
+   "w": "away",
+   "s": 461.99,
+   "e": 462.21,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.989
+  },
+  {
+   "w": "gravity",
+   "s": 462.21,
+   "e": 462.63,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.991
+  },
+  {
+   "w": "unless",
+   "s": 462.63,
+   "e": 462.89,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "we",
+   "s": 462.89,
+   "e": 463.09,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "go",
+   "s": 463.09,
+   "e": 463.31,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "deep",
+   "s": 463.31,
+   "e": 463.57,
+   "p": 0.997,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "into",
+   "s": 463.57,
+   "e": 463.97,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "the",
+   "s": 463.97,
+   "e": 464.13,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "ocean",
+   "s": 464.13,
+   "e": 464.53,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "or",
+   "s": 464.53,
+   "e": 464.93,
+   "p": 0.989,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "we",
+   "s": 464.93,
+   "e": 465.15,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "do",
+   "s": 465.15,
+   "e": 465.33,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "some",
+   "s": 465.33,
+   "e": 465.65,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "other",
+   "s": 465.65,
+   "e": 466.07,
+   "p": 0.994,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "artifacts,",
+   "s": 466.07,
+   "e": 466.73,
+   "p": 0.991,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "but",
+   "s": 466.73,
+   "e": 467.17,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "they're",
+   "s": 467.17,
+   "e": 467.35,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "not",
+   "s": 467.35,
+   "e": 467.47,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "really",
+   "s": 467.47,
+   "e": 467.69,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "natural.",
+   "s": 467.69,
+   "e": 468.19,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "Or",
+   "s": 469.27,
+   "e": 469.91,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "we",
+   "s": 469.91,
+   "e": 470.13,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "can",
+   "s": 470.13,
+   "e": 470.31,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "study",
+   "s": 470.31,
+   "e": 470.85,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "that",
+   "s": 470.85,
+   "e": 471.53,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "factor",
+   "s": 471.53,
+   "e": 472.03,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "by",
+   "s": 472.03,
+   "e": 472.47,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "investigating",
+   "s": 472.47,
+   "e": 473.89,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "spatial",
+   "s": 473.89,
+   "e": 474.43,
+   "p": 0.957,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "orientation",
+   "s": 474.43,
+   "e": 474.75,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "skills",
+   "s": 474.75,
+   "e": 475.25,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "in",
+   "s": 475.25,
+   "e": 475.67,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "patients",
+   "s": 475.67,
+   "e": 476.13,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "who",
+   "s": 476.13,
+   "e": 476.39,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "actually",
+   "s": 476.39,
+   "e": 476.71,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "have",
+   "s": 476.71,
+   "e": 477.01,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "vestibular",
+   "s": 477.01,
+   "e": 477.49,
+   "p": 0.991,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "problems.",
+   "s": 477.49,
+   "e": 478.07,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "But",
+   "s": 478.07,
+   "e": 478.37,
+   "p": 0.82,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "with",
+   "s": 478.37,
+   "e": 478.95,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "vestibular",
+   "s": 478.95,
+   "e": 479.45,
+   "p": 0.997,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "problems,",
+   "s": 479.45,
+   "e": 479.99,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "they",
+   "s": 480.25,
+   "e": 480.45,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "create",
+   "s": 480.45,
+   "e": 482.23,
+   "p": 0.986,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "a",
+   "s": 482.23,
+   "e": 482.43,
+   "p": 0.997,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "lot",
+   "s": 482.43,
+   "e": 482.71,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "of,",
+   "s": 482.71,
+   "e": 482.93,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "you",
+   "s": 482.97,
+   "e": 483.09,
+   "p": 0.931,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "know,",
+   "s": 483.09,
+   "e": 483.21,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "like",
+   "s": 483.31,
+   "e": 483.49,
+   "p": 0.908,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "not",
+   "s": 483.49,
+   "e": 484.53,
+   "p": 0.782,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "just",
+   "s": 484.53,
+   "e": 484.75,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "navigational",
+   "s": 484.75,
+   "e": 485.31,
+   "p": 0.978,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "problem,",
+   "s": 485.31,
+   "e": 485.69,
+   "p": 0.361,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "but",
+   "s": 485.79,
+   "e": 485.89,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "a",
+   "s": 485.89,
+   "e": 486.01,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "lot",
+   "s": 486.01,
+   "e": 486.19,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "of",
+   "s": 486.19,
+   "e": 486.43,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "clinical",
+   "s": 486.43,
+   "e": 486.93,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "issues",
+   "s": 486.93,
+   "e": 487.75,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "that",
+   "s": 487.75,
+   "e": 487.95,
+   "p": 0.756,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "are",
+   "s": 487.95,
+   "e": 487.97,
+   "p": 0.355,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "very",
+   "s": 487.95,
+   "e": 488.11,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "hard",
+   "s": 488.11,
+   "e": 488.37,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "to,",
+   "s": 488.37,
+   "e": 488.63,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "makes",
+   "s": 488.79,
+   "e": 489.21,
+   "p": 0.992,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "very",
+   "s": 489.21,
+   "e": 489.45,
+   "p": 0.8,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "hard",
+   "s": 489.45,
+   "e": 489.67,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "to",
+   "s": 489.67,
+   "e": 489.83,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "investigate",
+   "s": 489.83,
+   "e": 490.33,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "these",
+   "s": 490.33,
+   "e": 490.65,
+   "p": 0.996,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "people.",
+   "s": 490.65,
+   "e": 490.97,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "And",
+   "s": 491.41,
+   "e": 491.97,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "so",
+   "s": 491.97,
+   "e": 492.43,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "the",
+   "s": 492.43,
+   "e": 492.91,
+   "p": 0.873,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "dream",
+   "s": 492.91,
+   "e": 493.37,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "story",
+   "s": 493.37,
+   "e": 493.85,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "was",
+   "s": 493.85,
+   "e": 494.37,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "maybe",
+   "s": 494.37,
+   "e": 494.89,
+   "p": 0.998,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "one",
+   "s": 494.89,
+   "e": 495.27,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "way",
+   "s": 495.27,
+   "e": 495.51,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "to",
+   "s": 495.51,
+   "e": 495.69,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "really",
+   "s": 495.69,
+   "e": 495.89,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "understand",
+   "s": 495.89,
+   "e": 496.35,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "what",
+   "s": 496.35,
+   "e": 496.61,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "is",
+   "s": 496.61,
+   "e": 496.79,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "the",
+   "s": 496.79,
+   "e": 496.99,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "contribution",
+   "s": 496.99,
+   "e": 497.65,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "of",
+   "s": 497.65,
+   "e": 498.51,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "the",
+   "s": 498.51,
+   "e": 498.79,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "vestibular",
+   "s": 498.79,
+   "e": 499.31,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "system",
+   "s": 499.31,
+   "e": 499.73,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "in",
+   "s": 499.73,
+   "e": 499.95,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "spatial",
+   "s": 499.95,
+   "e": 500.25,
+   "p": 0.957,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "orientation",
+   "s": 500.25,
+   "e": 500.63,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "and",
+   "s": 500.63,
+   "e": 500.91,
+   "p": 0.939,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "navigation",
+   "s": 500.91,
+   "e": 501.33,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "is",
+   "s": 501.33,
+   "e": 501.95,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "to",
+   "s": 501.95,
+   "e": 502.17,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "study",
+   "s": 502.17,
+   "e": 502.51,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.988
+  },
+  {
+   "w": "astronauts",
+   "s": 502.51,
+   "e": 503.09,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.987
+  },
+  {
+   "w": "while",
+   "s": 503.09,
+   "e": 503.37,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.992
+  },
+  {
+   "w": "they",
+   "s": 503.37,
+   "e": 503.51,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "are",
+   "s": 503.51,
+   "e": 503.61,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "exposed",
+   "s": 503.61,
+   "e": 503.95,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "to",
+   "s": 503.95,
+   "e": 504.13,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "microgravity.",
+   "s": 504.13,
+   "e": 504.87,
+   "p": 0.998,
+   "spk": "SPEAKER_01",
+   "sc": 0.999
+  },
+  {
+   "w": "And",
+   "s": 505.39,
+   "e": 505.95,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "that's",
+   "s": 505.95,
+   "e": 506.17,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "where",
+   "s": 506.17,
+   "e": 506.29,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "we",
+   "s": 506.29,
+   "e": 506.41,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "are",
+   "s": 506.41,
+   "e": 506.55,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "10",
+   "s": 506.55,
+   "e": 506.75,
+   "p": 0.99,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "years",
+   "s": 506.75,
+   "e": 507.01,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "later.",
+   "s": 507.01,
+   "e": 507.31,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "Well,",
+   "s": 508.23,
+   "e": 508.93,
+   "p": 0.983,
+   "spk": "SPEAKER_00",
+   "sc": 0.998
+  },
+  {
+   "w": "before",
+   "s": 509.01,
+   "e": 509.23,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.999
+  },
+  {
+   "w": "we",
+   "s": 509.23,
+   "e": 509.45,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.999
+  },
+  {
+   "w": "dive",
+   "s": 509.45,
+   "e": 509.75,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.999
+  },
+  {
+   "w": "into",
+   "s": 509.75,
+   "e": 509.99,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.999
+  },
+  {
+   "w": "the",
+   "s": 509.99,
+   "e": 510.23,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.999
+  },
+  {
+   "w": "outer",
+   "s": 510.23,
+   "e": 510.61,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.999
+  },
+  {
+   "w": "space",
+   "s": 510.61,
+   "e": 511.17,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.999
+  },
+  {
+   "w": "portion",
+   "s": 511.17,
+   "e": 511.75,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.999
+  },
+  {
+   "w": "of",
+   "s": 511.75,
+   "e": 512.17,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.998
+  },
+  {
+   "w": "that",
+   "s": 512.17,
+   "e": 512.37,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.997
+  },
+  {
+   "w": "research,",
+   "s": 512.37,
+   "e": 512.91,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.994
+  },
+  {
+   "w": "how",
+   "s": 513.13,
+   "e": 513.89,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.991
+  },
+  {
+   "w": "is",
+   "s": 513.89,
+   "e": 514.37,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.993
+  },
+  {
+   "w": "and",
+   "s": 514.37,
+   "e": 514.69,
+   "p": 0.974,
+   "spk": "SPEAKER_00",
+   "sc": 0.998
+  },
+  {
+   "w": "why",
+   "s": 514.69,
+   "e": 514.97,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.998
+  },
+  {
+   "w": "is",
+   "s": 514.97,
+   "e": 515.15,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.999
+  },
+  {
+   "w": "understanding",
+   "s": 515.15,
+   "e": 515.93,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.999
+  },
+  {
+   "w": "the",
+   "s": 515.93,
+   "e": 516.25,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.998
+  },
+  {
+   "w": "brain,",
+   "s": 516.25,
+   "e": 516.77,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.998
+  },
+  {
+   "w": "especially",
+   "s": 517.03,
+   "e": 517.67,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.999
+  },
+  {
+   "w": "in",
+   "s": 517.67,
+   "e": 518.07,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.999
+  },
+  {
+   "w": "this",
+   "s": 518.07,
+   "e": 518.27,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.999
+  },
+  {
+   "w": "extreme",
+   "s": 518.27,
+   "e": 518.63,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.999
+  },
+  {
+   "w": "environment,",
+   "s": 518.63,
+   "e": 519.21,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.999
+  },
+  {
+   "w": "so",
+   "s": 519.51,
+   "e": 520.09,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.997
+  },
+  {
+   "w": "important",
+   "s": 520.09,
+   "e": 520.55,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.998
+  },
+  {
+   "w": "for",
+   "s": 520.55,
+   "e": 520.95,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.998
+  },
+  {
+   "w": "humans",
+   "s": 520.95,
+   "e": 521.43,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.999
+  },
+  {
+   "w": "as",
+   "s": 521.43,
+   "e": 521.79,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.998
+  },
+  {
+   "w": "we",
+   "s": 521.79,
+   "e": 521.93,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.997
+  },
+  {
+   "w": "prepare",
+   "s": 521.93,
+   "e": 522.23,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.997
+  },
+  {
+   "w": "for",
+   "s": 522.23,
+   "e": 522.43,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.997
+  },
+  {
+   "w": "exploration?",
+   "s": 522.43,
+   "e": 522.97,
+   "p": 1.0,
+   "spk": "SPEAKER_00",
+   "sc": 0.996
+  },
+  {
+   "w": "Well,",
+   "s": 524.94,
+   "e": 525.33,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.943
+  },
+  {
+   "w": "it's",
+   "s": 525.59,
+   "e": 526.11,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.95
+  },
+  {
+   "w": "extremely",
+   "s": 526.11,
+   "e": 526.79,
+   "p": 0.963,
+   "spk": "SPEAKER_01",
+   "sc": 0.964
+  },
+  {
+   "w": "important",
+   "s": 526.79,
+   "e": 527.35,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.982
+  },
+  {
+   "w": "because",
+   "s": 527.35,
+   "e": 527.75,
+   "p": 0.989,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "the",
+   "s": 527.75,
+   "e": 528.45,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.992
+  },
+  {
+   "w": "brain",
+   "s": 528.45,
+   "e": 528.91,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.992
+  },
+  {
+   "w": "is",
+   "s": 528.91,
+   "e": 529.69,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.991
+  },
+  {
+   "w": "perhaps",
+   "s": 529.69,
+   "e": 530.75,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.988
+  },
+  {
+   "w": "one",
+   "s": 530.75,
+   "e": 531.07,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.992
+  },
+  {
+   "w": "of",
+   "s": 531.07,
+   "e": 531.17,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "the",
+   "s": 531.17,
+   "e": 531.25,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "most",
+   "s": 531.25,
+   "e": 531.47,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "plastic",
+   "s": 531.47,
+   "e": 531.99,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "organs",
+   "s": 531.99,
+   "e": 532.61,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "we",
+   "s": 532.61,
+   "e": 532.91,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "have",
+   "s": 532.91,
+   "e": 533.15,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "in",
+   "s": 533.15,
+   "e": 533.29,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "our",
+   "s": 533.29,
+   "e": 533.51,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "body.",
+   "s": 533.51,
+   "e": 533.83,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "So",
+   "s": 533.91,
+   "e": 534.59,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "it",
+   "s": 534.59,
+   "e": 534.89,
+   "p": 0.819,
+   "spk": "SPEAKER_01",
+   "sc": 0.992
+  },
+  {
+   "w": "changes",
+   "s": 534.89,
+   "e": 535.41,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.991
+  },
+  {
+   "w": "and",
+   "s": 535.41,
+   "e": 535.93,
+   "p": 0.997,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "it",
+   "s": 535.93,
+   "e": 536.35,
+   "p": 0.946,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "adapts",
+   "s": 536.35,
+   "e": 536.95,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  },
+  {
+   "w": "very",
+   "s": 536.95,
+   "e": 537.39,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.987
+  },
+  {
+   "w": "quickly.",
+   "s": 537.39,
+   "e": 537.79,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.976
+  },
+  {
+   "w": "But",
+   "s": 537.79,
+   "e": 538.79,
+   "p": 0.82,
+   "spk": "SPEAKER_01",
+   "sc": 0.956
+  },
+  {
+   "w": "the",
+   "s": 538.88,
+   "e": 539.0,
+   "p": 0.998,
+   "spk": "SPEAKER_01",
+   "sc": 0.959
+  },
+  {
+   "w": "problem",
+   "s": 539.0,
+   "e": 539.36,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.979
+  },
+  {
+   "w": "is",
+   "s": 539.36,
+   "e": 539.92,
+   "p": 0.996,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "that",
+   "s": 539.92,
+   "e": 540.34,
+   "p": 0.994,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "our",
+   "s": 540.34,
+   "e": 540.88,
+   "p": 0.948,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "cognition",
+   "s": 540.88,
+   "e": 541.6,
+   "p": 0.994,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "and",
+   "s": 541.6,
+   "e": 542.48,
+   "p": 0.992,
+   "spk": "SPEAKER_01",
+   "sc": 0.983
+  },
+  {
+   "w": "our",
+   "s": 542.48,
+   "e": 542.66,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.971
+  },
+  {
+   "w": "habits,",
+   "s": 542.66,
+   "e": 543.4,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.97
+  },
+  {
+   "w": "they",
+   "s": 543.42,
+   "e": 544.22,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.979
+  },
+  {
+   "w": "do",
+   "s": 544.22,
+   "e": 544.38,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.983
+  },
+  {
+   "w": "not",
+   "s": 544.38,
+   "e": 544.68,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.983
+  },
+  {
+   "w": "follow",
+   "s": 544.68,
+   "e": 545.18,
+   "p": 0.999,
+   "spk": "SPEAKER_01",
+   "sc": 0.983
+  },
+  {
+   "w": "that",
+   "s": 545.18,
+   "e": 545.56,
+   "p": 0.997,
+   "spk": "SPEAKER_01",
+   "sc": 0.984
+  },
+  {
+   "w": "timeline.",
+   "s": 545.56,
+   "e": 546.06,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.986
+  },
+  {
+   "w": "And",
+   "s": 546.56,
+   "e": 546.94,
+   "p": 0.997,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "so",
+   "s": 546.94,
+   "e": 547.18,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.998
+  },
+  {
+   "w": "while",
+   "s": 547.18,
+   "e": 547.58,
+   "p": 0.926,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "the",
+   "s": 547.58,
+   "e": 547.76,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "brain",
+   "s": 547.76,
+   "e": 548.02,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "is",
+   "s": 548.02,
+   "e": 548.22,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.996
+  },
+  {
+   "w": "changing,",
+   "s": 548.22,
+   "e": 548.76,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "our",
+   "s": 549.28,
+   "e": 549.76,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "habits,",
+   "s": 549.76,
+   "e": 550.36,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "our",
+   "s": 550.58,
+   "e": 550.78,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "memory",
+   "s": 550.78,
+   "e": 551.26,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "of",
+   "s": 551.26,
+   "e": 551.46,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "things",
+   "s": 551.46,
+   "e": 551.72,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "are",
+   "s": 551.72,
+   "e": 552.1,
+   "p": 0.957,
+   "spk": "SPEAKER_01",
+   "sc": 0.997
+  },
+  {
+   "w": "shaping",
+   "s": 552.1,
+   "e": 552.58,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.995
+  },
+  {
+   "w": "our",
+   "s": 552.58,
+   "e": 552.9,
+   "p": 1.0,
+   "spk": "SPEAKER_01",
+   "sc": 0.994
+  },
+  {
+   "w": "behaviors.",
+   "s": 552.9,
+   "e": 553.44,
+   "p": 0.988,
+   "spk": "SPEAKER_01",
+   "sc": 0.993
+  }
+ ]
+}

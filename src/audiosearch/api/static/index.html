@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AudioSearch</title>
+  <meta name="description" content="Conversation-aware hybrid search over two-speaker audio: find the exact moment, speaker and file.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%233d5afe'/%3E%3Cpath d='M7 18v-4M11 22V10M15 25V7M19 21v-10M23 18v-4' stroke='white' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/static/styles.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7"/><path d="M7 18v-4M11 22V10M15 25V7M19 21v-10M23 18v-4"/></svg>
+      <div>
+        <h1>AudioSearch</h1>
+        <p class="tagline">Find the moment. Who said it, when, and where.</p>
+      </div>
+    </div>
+    <a class="docs-link" href="/api/docs">API</a>
+  </header>
+
+  <main>
+    <section class="search-panel" aria-label="Search">
+      <form id="search-form" role="search" autocomplete="off">
+        <label class="visually-hidden" for="q">Search the recordings</label>
+        <input id="q" name="q" type="search" maxlength="512" placeholder='Try: "firing room one", why do clocks tick faster on Mars?, Zubaire…' autofocus>
+        <button type="submit" class="primary">Search</button>
+      </form>
+      <div class="controls">
+        <div class="segmented" role="radiogroup" aria-label="Retrieval mode">
+          <button type="button" data-mode="hybrid" aria-checked="true" role="radio" title="Keyword + semantic, fused">Hybrid</button>
+          <button type="button" data-mode="lexical" aria-checked="false" role="radio" title="BM25 keyword search (+ sounds-like)">Keyword</button>
+          <button type="button" data-mode="semantic" aria-checked="false" role="radio" title="Embedding similarity only">Semantic</button>
+        </div>
+        <label class="select">Speaker
+          <select id="role">
+            <option value="">Anyone</option>
+            <option value="host">Host</option>
+            <option value="guest">Guest</option>
+          </select>
+        </label>
+        <label class="select">Recording
+          <select id="file"><option value="">All recordings</option></select>
+        </label>
+        <label class="check" title="Second-stage cross-encoder (slower, sometimes more precise)">
+          <input type="checkbox" id="rerank"> Rerank
+        </label>
+      </div>
+      <div class="examples" aria-label="Example queries"></div>
+    </section>
+
+    <div class="layout">
+      <section class="results-panel" aria-live="polite">
+        <div id="status" class="status"></div>
+        <ol id="results" class="results"></ol>
+        <div id="empty" class="empty" hidden>
+          <p>No moments matched. Try the <strong>Semantic</strong> mode, fewer words, or remove filters.</p>
+        </div>
+      </section>
+
+      <aside class="player-panel" aria-label="Player">
+        <div class="now-playing">
+          <div id="np-title" class="np-title">Nothing playing</div>
+          <div id="np-meta" class="np-meta">Pick a result to jump straight to that moment.</div>
+          <audio id="audio" controls preload="none"></audio>
+        </div>
+        <div class="transcript-head">
+          <span>Transcript</span>
+          <label class="check"><input type="checkbox" id="follow" checked> Follow audio</label>
+        </div>
+        <ol id="transcript" class="transcript"></ol>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="foot">
+    Local ASR (faster-whisper) · ECAPA diarization · BM25 + pgvector hybrid retrieval · <a href="/metrics">metrics</a>
+  </footer>
+</body>
+</html>
