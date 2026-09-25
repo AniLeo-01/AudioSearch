@@ -22,7 +22,7 @@ cp -r ../../data .                         # manifest, audio, golden queries (tr
 rm -rf data/transcripts data/reference
 docker compose up -d db                    # stop any other Postgres on port 5432 first
 uv venv --python 3.11 && uv pip install --index-url https://download.pytorch.org/whl/cpu torch==2.5.1 torchaudio==2.5.1
-uv pip install -e ".[pipeline,api,dev]"
+uv pip install -c ../../requirements.lock -e ".[pipeline,api,dev]"   # tested versions
 .venv/bin/audiosearch init-db
 .venv/bin/audiosearch ingest --asr-only    # ~11 min on 4 vCPU (large-v3-turbo)
 .venv/bin/audiosearch ingest               # diarization + utterances + roles, ~7 min
