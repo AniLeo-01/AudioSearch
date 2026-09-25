@@ -96,4 +96,8 @@ def load_golden(path: Path) -> GoldenSet:
                 tags=list(item.get("tags", [])),
             )
         )
-    return GoldenSet(version=int(raw.get("version", 1)), tolerance_sec=float(raw.get("tolerance_sec", 5.0)), queries=queries)
+    return GoldenSet(
+        version=int(raw.get("version", 1)),
+        tolerance_sec=float(raw.get("tolerance_sec", 5.0)),
+        queries=queries,
+    )

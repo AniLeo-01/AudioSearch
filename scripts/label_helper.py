@@ -27,6 +27,24 @@ from audiosearch.domain import Transcript  # noqa: E402
 REF_RE = re.compile(r"^(?P<file>[a-z_]+):(?P<a>\d+)(?:-(?P<b>\d+))?(?:@(?P<grade>[12]))?$")
 
 
+def merge_close(rel: list[dict], gap: float) -> list[dict]:
+    """Merge same-file moments whose +/-tolerance windows overlap (gap < 2 x tolerance).
+
+    Two mentions a few seconds apart are one place in the audio for a listener; keeping them separate
+    would demand two near-identical results.  Applied uniformly to every query.
+    """
+    out: list[dict] = []
+    for r in sorted(rel, key=lambda x: (x["file"], x["start"])):
+        prev = out[-1] if out else None
+        if prev and prev["file"] == r["file"] and r["start"] - prev["end"] < gap:
+            prev["end"] = max(prev["end"], r["end"])
+            prev["grade"] = max(prev["grade"], r["grade"])
+            prev["quote"] = (prev["quote"] + " [...] " + r["quote"])[:240]
+        else:
+            out.append(dict(r))
+    return out
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--transcripts", default=str(ROOT / "data/transcripts/large-v3-turbo"))
@@ -61,6 +79,7 @@ def main() -> int:
                     "quote": quote if len(quote) <= 240 else quote[:237] + "...",
                 }
             )
+        rel = merge_close(rel, 2 * float(src.get("tolerance_sec", 5.0)))
         item = {k: q[k] for k in ("id", "query", "category", "split") if k in q}
         if q.get("role"):
             item["role"] = q["role"]

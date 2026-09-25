@@ -105,9 +105,7 @@ class Transcript:
             "duration": round(self.duration, 3),
             "meta": self.meta,
             "speakers": [asdict(s) for s in self.speakers],
-            "utterances": [
-                {**asdict(u), "start": round(u.start, 3), "end": round(u.end, 3)} for u in self.utterances
-            ],
+            "utterances": [{**asdict(u), "start": round(u.start, 3), "end": round(u.end, 3)} for u in self.utterances],
             "turns": [{**asdict(t), "start": round(t.start, 3), "end": round(t.end, 3)} for t in self.turns],
             "words": [w.to_json() for w in self.words],
         }

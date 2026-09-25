@@ -78,13 +78,34 @@ def parse_nasa_transcript(html: str) -> list[dict[str, str]]:
 def cut_excerpt(src: Path, dst: Path, start: float, end: float, file_id: str) -> None:
     dur = end - start
     cmd = [
-        "ffmpeg", "-v", "error", "-y", "-ss", f"{start}", "-t", f"{dur:.2f}", "-i", str(src),
-        "-ac", "1", "-ar", "44100", "-b:a", "80k",
-        "-af", f"afade=t=in:d=0.08,afade=t=out:st={dur - 0.3:.2f}:d=0.3",
-        "-map_metadata", "-1", "-id3v2_version", "3", "-metadata", f"title={file_id}",
-        "-metadata", "comment=Excerpt of a NASA Houston We Have a Podcast episode (US Government work)",
+        "ffmpeg",
+        "-v",
+        "error",
+        "-y",
+        "-ss",
+        f"{start}",
+        "-t",
+        f"{dur:.2f}",
+        "-i",
+        str(src),
+        "-ac",
+        "1",
+        "-ar",
+        "44100",
+        "-b:a",
+        "80k",
+        "-af",
+        f"afade=t=in:d=0.08,afade=t=out:st={dur - 0.3:.2f}:d=0.3",
+        "-map_metadata",
+        "-1",
+        "-id3v2_version",
+        "3",
+        "-metadata",
+        f"title={file_id}",
+        "-metadata",
+        "comment=Excerpt of a NASA Houston We Have a Podcast episode (US Government work)",
         str(dst),
-    ]  # fmt: skip
+    ]
     subprocess.run(cmd, check=True)
 
 

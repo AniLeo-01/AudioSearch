@@ -46,10 +46,14 @@ def index_signature(transcript: Transcript, settings: Settings, embedding_model:
         "v": INDEX_FORMAT_VERSION,
         "transcript": transcript.meta.get("signature"),
         "n_utts": len(transcript.utterances),
-        "chunking": [settings.chunk_target_words, settings.chunk_stride_words, settings.chunk_context,
-                     settings.chunk_context_max_words],
+        "chunking": [
+            settings.chunk_target_words,
+            settings.chunk_stride_words,
+            settings.chunk_context,
+            settings.chunk_context_max_words,
+        ],
         "embedding_model": embedding_model,
-    }  # fmt: skip
+    }
     return hashlib.sha256(json.dumps(payload, sort_keys=True).encode()).hexdigest()[:24]
 
 
@@ -90,49 +94,86 @@ class Indexer:
                        channels, metadata, transcript_meta, index_signature)
                    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)""",
                 (
-                    fid, entry.title, entry.audio_path.name, transcript.meta.get("audio", {}).get("sha256", ""),
-                    transcript.duration, transcript.meta.get("audio", {}).get("sample_rate"),
+                    fid,
+                    entry.title,
+                    entry.audio_path.name,
+                    transcript.meta.get("audio", {}).get("sha256", ""),
+                    transcript.duration,
+                    transcript.meta.get("audio", {}).get("sample_rate"),
                     transcript.meta.get("audio", {}).get("channels"),
-                    Jsonb(_entry_metadata(entry)), Jsonb(_transcript_meta(transcript)), sig,
+                    Jsonb(_entry_metadata(entry)),
+                    Jsonb(_transcript_meta(transcript)),
+                    sig,
                 ),
-            )  # fmt: skip
+            )
             with conn.cursor() as cur:
                 cur.executemany(
                     """INSERT INTO speakers (file_id, label, role, role_confidence, display_name, talk_time,
                            n_words, question_rate) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)""",
                     [
-                        (fid, p.label, p.role, p.role_confidence, p.display_name, p.talk_time, p.n_words,
-                         p.question_rate)
+                        (
+                            fid,
+                            p.label,
+                            p.role,
+                            p.role_confidence,
+                            p.display_name,
+                            p.talk_time,
+                            p.n_words,
+                            p.question_rate,
+                        )
                         for p in transcript.speakers
                     ],
-                )  # fmt: skip
+                )
                 cur.executemany(
                     """INSERT INTO utterances (id, file_id, idx, speaker, start_sec, end_sec, text, words, embedding)
                        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)""",
                     [
                         (
-                            u.id, fid, u.idx, u.speaker, u.start, u.end, u.text,
+                            u.id,
+                            fid,
+                            u.idx,
+                            u.speaker,
+                            u.start,
+                            u.end,
+                            u.text,
                             Jsonb([[w.text, w.start, w.end] for w in transcript.words[u.word_start : u.word_end]]),
                             utt_vecs[i],
                         )
                         for i, u in enumerate(transcript.utterances)
                     ],
-                )  # fmt: skip
+                )
                 cur.executemany(
                     """INSERT INTO chunks (id, file_id, idx, start_sec, end_sec, utt_start, utt_end, speakers,
                            text, embed_text, n_words, embedding)
                        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)""",
                     [
-                        (c.id, fid, c.idx, c.start, c.end, c.utterance_start, c.utterance_end, c.speakers,
-                         c.text, c.embed_text, c.n_words, chunk_vecs[i])
+                        (
+                            c.id,
+                            fid,
+                            c.idx,
+                            c.start,
+                            c.end,
+                            c.utterance_start,
+                            c.utterance_end,
+                            c.speakers,
+                            c.text,
+                            c.embed_text,
+                            c.n_words,
+                            chunk_vecs[i],
+                        )
                         for i, c in enumerate(chunks)
                     ],
-                )  # fmt: skip
+                )
             _add_postings(conn, fid)
             _update_vocabulary(conn, _vocab_counts([c.text for c in chunks]), sign=+1)
         report = IndexReport(fid, False, len(transcript.utterances), len(chunks), time.perf_counter() - t0)
-        log.info("indexed %s: %d utterances, %d chunks in %.1fs", fid, report.n_utterances, report.n_chunks,
-                 report.seconds)  # fmt: skip
+        log.info(
+            "indexed %s: %d utterances, %d chunks in %.1fs",
+            fid,
+            report.n_utterances,
+            report.n_chunks,
+            report.seconds,
+        )
         return report
 
     def delete(self, conn: psycopg.Connection, file_id: str) -> bool:

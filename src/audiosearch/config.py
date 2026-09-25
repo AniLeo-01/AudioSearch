@@ -42,13 +42,14 @@ class Settings(BaseSettings):
     diar_boundary_discount: float = 0.15  # multiplier on that cost at sentence ends / long pauses
 
     # --- chunking ----------------------------------------------------------------------------------
-    chunk_target_words: int = 70
-    chunk_stride_words: int = 35
-    chunk_context: Literal["none", "question", "question+title"] = "question"
+    # Chosen on the dev split (docs/EVALUATION.md, index-time study): 50/25-word windows, no dialogue context.
+    chunk_target_words: int = 50
+    chunk_stride_words: int = 25
+    chunk_context: Literal["none", "question", "question+title"] = "none"
     chunk_context_max_words: int = 40
 
     # --- embeddings / reranker -----------------------------------------------------------------------
-    embedding_model: str = "BAAI/bge-small-en-v1.5"
+    embedding_model: str = "BAAI/bge-base-en-v1.5"
     embedding_device: str = "cpu"
     embedding_batch_size: int = 32
     reranker_model: str = "cross-encoder/ms-marco-MiniLM-L-6-v2"
@@ -57,8 +58,9 @@ class Settings(BaseSettings):
 
     # --- retrieval ---------------------------------------------------------------------------------
     candidates_per_channel: int = 50
-    rrf_k: int = 60
-    adaptive_fusion: bool = True
+    rrf_k: int = 10  # tuned on the dev split (k=60 -> 10 raised dev MRR 0.78 -> 0.84); see docs/EVALUATION.md
+    adaptive_fusion: bool = False  # surface-form intent weights: no dev gain once coverage weighting is on
+    lexical_coverage: bool = True  # scale lexical RRF contributions by query IDF coverage
     phonetic_expansion: bool = True
     hnsw_ef_search: int = 100
     nms_gap_sec: float = 10.0

@@ -19,7 +19,7 @@ from audiosearch.embeddings import CrossEncoderReranker, Embedder
 from audiosearch.search.dense import dense_search
 from audiosearch.search.filters import SearchFilters
 from audiosearch.search.fusion import Fused, convex_combination, weighted_rrf
-from audiosearch.search.lexical import WeightedLexeme, analyze, analyze_terms, bm25_search
+from audiosearch.search.lexical import LexicalHit, WeightedLexeme, analyze, analyze_terms, bm25_search
 from audiosearch.search.moments import Moment, fetch_chunks, fetch_utterances, snap, temporal_nms
 from audiosearch.search.phonetic import EXPANSION_WEIGHT, Expansion, expand_terms
 from audiosearch.search.query import QueryError, fusion_weights, parse_query
@@ -70,6 +70,7 @@ class SearchOptions:
 
     mode: Mode = "hybrid"
     adaptive: bool | None = None
+    coverage: bool | None = None
     phonetic: bool | None = None
     rerank: bool | None = None
     fusion: Literal["rrf", "cc"] = "rrf"
@@ -102,6 +103,7 @@ class SearchEngine:
         self.pool = pool
         self.embedder = embedder
         self.reranker = reranker
+        self.lexicon = embedder.lexicon()
         with pool.connection() as conn:
             self.iterative_scan = pgvector_version(conn) >= (0, 8, 0)
 
@@ -122,6 +124,7 @@ class SearchEngine:
             raise QueryError(f"unknown mode '{opt.mode}'")
         k = max(1, min(k or s.default_k, s.max_k))
         adaptive = s.adaptive_fusion if opt.adaptive is None else opt.adaptive
+        use_coverage = s.lexical_coverage if opt.coverage is None else opt.coverage
         phonetic = s.phonetic_expansion if opt.phonetic is None else opt.phonetic
         use_rerank = (s.rerank if opt.rerank is None else opt.rerank) and self.reranker is not None
         timer = _Timer()
@@ -140,33 +143,36 @@ class SearchEngine:
         channels: dict[str, list[tuple[str, float]]] = {}
         expansions: list[Expansion] = []
         lexemes: list[WeightedLexeme] = []
+        lex_hits: list[LexicalHit] = []
         qvec: np.ndarray | None = None
 
         with self.pool.connection() as conn:
             if opt.mode in ("hybrid", "lexical"):
                 with timer("lexical"):
-                    lexemes = [WeightedLexeme(lx, 1.0, "query") for lx in analyze(conn, parsed.text)]
+                    lexemes = [WeightedLexeme(lx, 1.0, lx) for lx in analyze(conn, parsed.text)]
                     if phonetic:
-                        expansions = expand_terms(conn, parsed.content_tokens)
+                        expansions = expand_terms(conn, parsed.content_tokens, self.lexicon)
                         lexemes += self._expansion_lexemes(conn, expansions, {w.lexeme for w in lexemes})
-                    channels["lexical"] = bm25_search(conn, lexemes, filters, n)
+                    lex_hits = bm25_search(conn, lexemes, filters, n)
+                    channels["lexical"] = [(h.id, h.score) for h in lex_hits]
             if opt.mode in ("hybrid", "semantic"):
                 with timer("embed"):
                     qvec = self.embedder.embed_query(parsed.text)
                 with timer("dense"):
-                    channels["dense"] = dense_search(
-                        conn, qvec, filters, n, s.hnsw_ef_search, self.iterative_scan
-                    )
-            weights = (
-                fusion_weights(parsed.intent, adaptive) if opt.mode == "hybrid" else {opt.mode: 1.0}
+                    channels["dense"] = dense_search(conn, qvec, filters, n, s.hnsw_ef_search, self.iterative_scan)
+            weights: dict[str, float] = (
+                fusion_weights(parsed.intent, adaptive) if opt.mode == "hybrid" else {str(opt.mode): 1.0}
             )
             if opt.mode == "semantic":
                 weights = {"dense": 1.0}
             with timer("fusion"):
+                multipliers = None
+                if use_coverage and opt.mode == "hybrid" and lex_hits:
+                    multipliers = {"lexical": self._coverage(conn, lexemes, lex_hits)}
                 if opt.fusion == "cc":
                     fused = convex_combination(channels, weights)
                 else:
-                    fused = weighted_rrf(channels, weights, k=s.rrf_k)
+                    fused = weighted_rrf(channels, weights, k=s.rrf_k, doc_multipliers=multipliers)
             if use_rerank and fused:
                 with timer("rerank"):
                     fused = self._rerank(conn, parsed.text, fused)
@@ -199,15 +205,52 @@ class SearchEngine:
     def _expansion_lexemes(
         conn: psycopg.Connection, expansions: list[Expansion], existing: set[str]
     ) -> list[WeightedLexeme]:
-        term_lex = analyze_terms(conn, sorted({e.term for e in expansions}))
+        """Lexemes of expansion terms; ``source`` is the query lexeme each one stands in for."""
+        analyzed = analyze_terms(conn, sorted({e.term for e in expansions} | {e.source for e in expansions}))
         out: list[WeightedLexeme] = []
         seen = set(existing)
         for e in expansions:
-            for lx in term_lex.get(e.term, []):
+            unit = (analyzed.get(e.source) or [e.source])[0]
+            for lx in analyzed.get(e.term, []):
                 if lx not in seen:
                     seen.add(lx)
-                    out.append(WeightedLexeme(lx, EXPANSION_WEIGHT * e.score, e.term))
+                    out.append(WeightedLexeme(lx, EXPANSION_WEIGHT * e.score, unit))
         return out
+
+    @staticmethod
+    def _coverage(conn: psycopg.Connection, lexemes: list[WeightedLexeme], hits: list[LexicalHit]) -> dict[str, float]:
+        """IDF coverage per lexical hit: the share of the query's information content it matched.
+
+        Each distinct query lexeme is a unit weighted by its IDF; lexemes that never occur in the corpus
+        get the maximum IDF (they are maximally specific *and* unmatched).  A hit earns full credit for
+        units it contains and partial credit (the expansion weight) for units matched only through a
+        sounds-like expansion.  Coverage is in [0, 1] and comparable across queries, unlike raw BM25.
+        """
+        units = {w.lexeme for w in lexemes if w.source == w.lexeme}
+        if not units:
+            return {}
+        n_docs = conn.execute("SELECT n_docs FROM corpus_stats WHERE id = 1").fetchone()
+        n = float(n_docs[0]) if n_docs else 1.0
+        idf_max = float(np.log(1 + (n + 0.5) / 0.5))
+        rows = conn.execute(
+            "SELECT lexeme, ln(1 + (%s - df + 0.5) / (df + 0.5)) FROM term_stats WHERE lexeme = ANY(%s)",
+            (n, sorted(units)),
+        ).fetchall()
+        idf = {lx: float(v) for lx, v in rows}
+        unit_w = {u: idf.get(u, idf_max) for u in units}
+        total = sum(unit_w.values()) or 1.0
+        stand_in = {w.lexeme: (w.source, w.weight) for w in lexemes if w.source != w.lexeme}
+        cov: dict[str, float] = {}
+        for h in hits:
+            credit: dict[str, float] = {}
+            for m in h.matched:
+                if m in unit_w:
+                    credit[m] = 1.0
+                elif m in stand_in and stand_in[m][0] in unit_w:
+                    u, wt = stand_in[m]
+                    credit[u] = max(credit.get(u, 0.0), wt)
+            cov[h.id] = sum(unit_w[u] * c for u, c in credit.items()) / total
+        return cov
 
     def _rerank(self, conn: psycopg.Connection, text: str, fused: list[Fused]) -> list[Fused]:
         assert self.reranker is not None
@@ -216,7 +259,10 @@ class SearchEngine:
         scores = self.reranker.score(text, [rows[f.id].text for f in top])
         order = np.argsort(-scores, kind="stable")
         reranked = weighted_rrf(
-            {"fused": [(f.id, f.score) for f in top], "rerank": [(top[i].id, float(scores[i])) for i in order]},
+            {
+                "fused": [(f.id, f.score) for f in top],
+                "rerank": [(top[i].id, float(scores[i])) for i in order],
+            },
             {"fused": 1.0, "rerank": 1.0},
             k=self.settings.rrf_k,
         )
@@ -260,7 +306,7 @@ class SearchEngine:
     def _idf(conn: psycopg.Connection, lexemes: list[WeightedLexeme]) -> dict[str, float]:
         if not lexemes:
             return {}
-        weight = {}
+        weight: dict[str, float] = {}
         for w in lexemes:
             weight[w.lexeme] = max(weight.get(w.lexeme, 0.0), w.weight)
         rows = conn.execute(
@@ -295,7 +341,9 @@ class SearchEngine:
         if not moments:
             return []
         fids = sorted({m.chunk.file_id for m in moments})
-        titles = dict(conn.execute("SELECT file_id, title FROM audio_files WHERE file_id = ANY(%s)", (fids,)).fetchall())
+        titles: dict[str, str] = dict(
+            conn.execute("SELECT file_id, title FROM audio_files WHERE file_id = ANY(%s)", (fids,)).fetchall()
+        )
         spk = {
             (r[0], r[1]): (r[2], r[3])
             for r in conn.execute(

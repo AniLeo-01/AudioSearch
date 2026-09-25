@@ -116,7 +116,22 @@ def fetch_utterances(
             "lexemes": lexemes or [],
         },
     ).fetchall()
-    return {(r[1], r[2]): UtteranceRow(*r[:8], None if r[8] is None else float(r[8]), list(r[9] or []), r[10]) for r in rows}
+    return {
+        (r[1], r[2]): UtteranceRow(
+            id=r[0],
+            file_id=r[1],
+            idx=r[2],
+            speaker=r[3],
+            start=r[4],
+            end=r[5],
+            text=r[6],
+            words=r[7],
+            dsim=None if r[8] is None else float(r[8]),
+            matched=list(r[9] or []),
+            headline=r[10],
+        )
+        for r in rows
+    }
 
 
 def parse_headline(headline: str) -> tuple[str, list[tuple[int, int]]]:

@@ -54,7 +54,9 @@ class IngestPipeline:
     def asr(self) -> FasterWhisperAsr:
         if self._asr is None:
             s = self.settings
-            self._asr = FasterWhisperAsr(s.asr_model, s.asr_device, s.asr_compute_type, s.asr_beam_size, s.asr_cpu_threads)
+            self._asr = FasterWhisperAsr(
+                s.asr_model, s.asr_device, s.asr_compute_type, s.asr_beam_size, s.asr_cpu_threads
+            )
         return self._asr
 
     @property
@@ -83,7 +85,9 @@ class IngestPipeline:
         }
 
     # stages ---------------------------------------------------------------------------------------
-    def run_asr(self, entry: ManifestEntry, info: AudioInfo, audio_loader: Callable[[], Any], force: bool) -> tuple[AsrResult, bool]:
+    def run_asr(
+        self, entry: ManifestEntry, info: AudioInfo, audio_loader: Callable[[], Any], force: bool
+    ) -> tuple[AsrResult, bool]:
         path = self.settings.transcripts_dir / f"{entry.file_id}.asr.json"
         if path.exists() and not force:
             cached = AsrResult.load(path)
@@ -107,7 +111,12 @@ class IngestPipeline:
         asr, asr_cached = self.run_asr(entry, info, load_audio, force)
         diar_params = self.diarization_params()
         signature = _digest(
-            {"asr": asr.meta, "n_words": len(asr.words), "diar": diar_params, "norm": WORD_NORMALIZATION_VERSION}
+            {
+                "asr": asr.meta,
+                "n_words": len(asr.words),
+                "diar": diar_params,
+                "norm": WORD_NORMALIZATION_VERSION,
+            }
         )
         out = self.settings.transcripts_dir / f"{entry.file_id}.json"
         if out.exists() and not force:
@@ -133,12 +142,17 @@ class IngestPipeline:
             speakers=speakers,
             meta={
                 "signature": signature,
-                "audio": {"sha256": info.sha256, "duration": round(info.duration, 3), "sample_rate": info.sample_rate,
-                          "channels": info.channels, "codec": info.codec},
+                "audio": {
+                    "sha256": info.sha256,
+                    "duration": round(info.duration, 3),
+                    "sample_rate": info.sample_rate,
+                    "channels": info.channels,
+                    "codec": info.codec,
+                },
                 "asr": asr.meta,
                 "diarization": diar.meta,
             },
-        )  # fmt: skip
+        )
         transcript.save(out)
         return transcript, self._report(transcript, asr_cached, False)
 

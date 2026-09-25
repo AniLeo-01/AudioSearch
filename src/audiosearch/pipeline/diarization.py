@@ -96,9 +96,11 @@ def spectral_two_way(emb: np.ndarray, n_clusters: int = 2, prune: float = 0.3, s
     # Refine: re-assign every window to the nearest centroid (a few spherical k-means steps).
     for _ in range(5):
         cents = np.stack(
-            [x[labels == k].mean(0) if np.any(labels == k) else x[np.random.default_rng(seed).integers(n)]
-             for k in range(n_clusters)]
-        )  # fmt: skip
+            [
+                x[labels == k].mean(0) if np.any(labels == k) else x[np.random.default_rng(seed).integers(n)]
+                for k in range(n_clusters)
+            ]
+        )
         cents /= np.linalg.norm(cents, axis=1, keepdims=True).clip(min=1e-8)
         new = np.argmax(x @ cents.T, axis=1)
         if np.array_equal(new, labels):
@@ -147,11 +149,7 @@ def is_boundary(words: list[Word], i: int, segment_ends: set[int], pause: float 
     if i == 0:
         return True
     prev = words[i - 1]
-    return (
-        prev.text.endswith(SENTENCE_END)
-        or (i - 1) in segment_ends
-        or (words[i].start - prev.end) >= pause
-    )
+    return prev.text.endswith(SENTENCE_END) or (i - 1) in segment_ends or (words[i].start - prev.end) >= pause
 
 
 def viterbi_smooth(
@@ -228,7 +226,7 @@ class EcapaDiarizer:
     def embed_windows(self, audio: np.ndarray, windows: list[tuple[float, float]], batch: int = 64) -> np.ndarray:
         import torch
 
-        max_len = int(round(self.window_sec * SR))
+        max_len = round(self.window_sec * SR)
         embs = []
         for b in range(0, len(windows), batch):
             chunk = windows[b : b + batch]

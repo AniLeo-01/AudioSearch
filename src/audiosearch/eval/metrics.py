@@ -33,11 +33,7 @@ class Returned:
 
 
 def hits(result: Returned, gold: RelevantMoment, tolerance: float) -> bool:
-    return (
-        result.file == gold.file
-        and result.start <= gold.end + tolerance
-        and result.end >= gold.start - tolerance
-    )
+    return result.file == gold.file and result.start <= gold.end + tolerance and result.end >= gold.start - tolerance
 
 
 def credit(results: Sequence[Returned], gold: Sequence[RelevantMoment], tolerance: float) -> list[int | None]:
@@ -87,9 +83,7 @@ def query_metrics(
         precision[k] = sum(any_hits[:k]) / k
     first = next((i for i, h in enumerate(any_hits[:10]) if h), None)
     mrr = 1.0 / (first + 1) if first is not None else 0.0
-    dcg = sum(
-        (2 ** gold[g].grade - 1) / math.log2(i + 2) for i, g in enumerate(assignment[:10]) if g is not None
-    )
+    dcg = sum((2 ** gold[g].grade - 1) / math.log2(i + 2) for i, g in enumerate(assignment[:10]) if g is not None)
     ideal = sorted((g.grade for g in gold), reverse=True)[:10]
     idcg = sum((2**gr - 1) / math.log2(i + 2) for i, gr in enumerate(ideal))
     offset = None

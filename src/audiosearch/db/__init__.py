@@ -25,9 +25,7 @@ class SchemaMismatchError(RuntimeError):
 
 
 def _session_setup(conn: psycopg.Connection, settings: Settings) -> None:
-    conn.execute(
-        sql.SQL("SET search_path TO {}, public").format(sql.Identifier(settings.db_schema))
-    )
+    conn.execute(sql.SQL("SET search_path TO {}, public").format(sql.Identifier(settings.db_schema)))
     conn.execute(sql.SQL("SET statement_timeout = {}").format(sql.Literal(settings.db_statement_timeout_ms)))
     register_vector(conn)
 
@@ -108,7 +106,7 @@ def migrate(settings: Settings, embedding_model: str, embedding_dim: int) -> lis
                 continue
             rendered = body.replace("__EMBEDDING_DIM__", str(int(embedding_dim)))
             with conn.transaction():
-                conn.execute(rendered)  # type: ignore[arg-type]  # trusted, packaged SQL
+                conn.execute(rendered)  # trusted, packaged SQL (no user input)
                 conn.execute("INSERT INTO schema_migrations (version) VALUES (%s)", (version,))
             applied.append(version)
             log.info("applied migration %s", version)
@@ -123,7 +121,7 @@ def migrate(settings: Settings, embedding_model: str, embedding_dim: int) -> lis
 
 
 def verify_index_meta(conn: psycopg.Connection, embedding_model: str, embedding_dim: int) -> None:
-    rows = dict(conn.execute("SELECT key, value FROM index_meta").fetchall())
+    rows: dict[str, str] = dict(conn.execute("SELECT key, value FROM index_meta").fetchall())
     if rows.get("embedding_model") not in (None, embedding_model) or rows.get("embedding_dim") not in (
         None,
         str(embedding_dim),
@@ -140,9 +138,17 @@ def reset_schema(settings: Settings) -> None:
     with psycopg.connect(settings.database_url, autocommit=True) as conn:
         if settings.db_schema == "public":
             for table in (
-                "vocabulary", "corpus_stats", "term_stats", "chunk_terms", "chunks", "utterances",
-                "speakers", "audio_files", "index_meta", "schema_migrations",
-            ):  # fmt: skip
+                "vocabulary",
+                "corpus_stats",
+                "term_stats",
+                "chunk_terms",
+                "chunks",
+                "utterances",
+                "speakers",
+                "audio_files",
+                "index_meta",
+                "schema_migrations",
+            ):
                 conn.execute(sql.SQL("DROP TABLE IF EXISTS {} CASCADE").format(sql.Identifier("public", table)))
         else:
             conn.execute(sql.SQL("DROP SCHEMA IF EXISTS {} CASCADE").format(sql.Identifier(settings.db_schema)))

@@ -211,17 +211,11 @@ queries:
   relevant:
   - file: runway
     start: 384.42
-    end: 389.64
-    grade: 2
-    quote: so when we're not flying that aircraft, we house it out at El Paso, where we have a forward operating
-      location.
-  - file: runway
-    start: 393.22
     end: 407.02
     grade: 2
-    quote: Yeah, we tend to fly out there a fair amount, and we did a lot of operations out at the FOL in El Paso,
-      especially during the shuttle era. Our shuttle training aircraft would go out there to practice up on the
-      White Sands Missile Range.
+    quote: 'so when we''re not flying that aircraft, we house it out at El Paso, where we have a forward operating
+      location. [...] Yeah, we tend to fly out there a fair amount, and we did a lot of operations out at the FOL
+      in El Paso, especially during '
   - file: runway
     start: 433.68
     end: 437.08
@@ -252,14 +246,10 @@ queries:
       in West Africa. I went to high school, medical school in Nigeria.
   - file: stem_cells
     start: 107.49
-    end: 113.63
-    grade: 2
-    quote: Whether you're in Nigeria or in Florida, wherever you are, some of us are curious.
-  - file: stem_cells
-    start: 123.25
     end: 128.49
     grade: 2
-    quote: And obviously, being in Nigeria, that chances are very limited.
+    quote: Whether you're in Nigeria or in Florida, wherever you are, some of us are curious. [...] And obviously,
+      being in Nigeria, that chances are very limited.
 - id: p01
   query: '"firing room one"'
   category: phrase
@@ -759,19 +749,19 @@ queries:
   split: test
   relevant:
   - file: stem_cells
-    start: 429.54
-    end: 476.22
-    grade: 2
-    quote: Yeah, so transfusion medicine, I can tell you, it's one of those field that not many people in healthcare
-      may not know it as a speciality because, again, we are hidden in The lab medicine, which is traditionally
-      not a place where patient...
-  - file: stem_cells
     start: 253.62
     end: 276.48
     grade: 1
     quote: Went into lab medicine and pathology because I've done a lot of lab work and I figured that would be
       a field that would bridge my basic research experience and patient care. But then I ended up really involved
       in transfusion medicine, wh...
+  - file: stem_cells
+    start: 429.54
+    end: 476.22
+    grade: 2
+    quote: Yeah, so transfusion medicine, I can tell you, it's one of those field that not many people in healthcare
+      may not know it as a speciality because, again, we are hidden in The lab medicine, which is traditionally
+      not a place where patient...
 - id: q10
   query: Why can't doctors simply grow more stem cells in the lab?
   category: question
@@ -855,13 +845,6 @@ queries:
   category: cross_file
   split: dev
   relevant:
-  - file: stem_cells
-    start: 77.59
-    end: 128.49
-    grade: 2
-    quote: But I have been fascinated by space. You know, in the global world, electricity is not always available,
-      so that could be some kind of limitation, but at night, the sky becomes alive. You know, the stars are visible,
-      you look out, you ki...
   - file: artemis_launch
     start: 32.96
     end: 82.17
@@ -876,18 +859,18 @@ queries:
     quote: And as far as how I kind of initially got into flying, my father was a pilot in the Air Force. so I was
       kind of always around airplanes, and I can remember seeing an F-15 at an air show go straight up, and I remember
       watching that thinki...
+  - file: stem_cells
+    start: 77.59
+    end: 128.49
+    grade: 2
+    quote: But I have been fascinated by space. You know, in the global world, electricity is not always available,
+      so that could be some kind of limitation, but at night, the sky becomes alive. You know, the stars are visible,
+      you look out, you ki...
 - id: c02
   query: mentors who shaped their career
   category: cross_file
   split: test
   relevant:
-  - file: runway
-    start: 260.8
-    end: 296.16
-    grade: 2
-    quote: And then have there been any mentors or key influences who helped shape your career path? You know, early
-      on, like I mentioned before, my father was a pilot in the Air Force. So he was a mentor early on, especially
-      being able to help gui...
   - file: artemis_launch
     start: 95.25
     end: 139.69
@@ -902,6 +885,13 @@ queries:
     quote: I absolutely did. I've been really blessed in my life to have a ton of influences along the way. I mean,
       they start at home with my family. I grew up and my parents taught me the value of hard work and that if you
       were willing to work ha...
+  - file: runway
+    start: 260.8
+    end: 296.16
+    grade: 2
+    quote: And then have there been any mentors or key influences who helped shape your career path? You know, early
+      on, like I mentioned before, my father was a pilot in the Air Force. So he was a mentor early on, especially
+      being able to help gui...
   - file: wayfinding
     start: 94.85
     end: 107.57
@@ -927,19 +917,6 @@ queries:
     quote: So I then start thinking out of the box. I link my dream of space and say, well, how about if we take
       out gravity, maybe it will, you know, affect the biology of stem cells and make them to grow. And so that's
       how I end up, you know, stu...
-  - file: wayfinding
-    start: 445.31
-    end: 468.19
-    grade: 2
-    quote: And guess what? This information is provided to us thanks to gravity. So that factor is very, very hard
-      to study in humans. Very, very challenging to isolate that factors in humans because we can't really take
-      away gravity unless we go d...
-  - file: wayfinding
-    start: 491.41
-    end: 504.87
-    grade: 1
-    quote: And so the dream story was maybe one way to really understand what is the contribution of the vestibular
-      system in spatial orientation and navigation is to study astronauts while they are exposed to microgravity.
   - file: telling_time
     start: 191.71
     end: 209.46
@@ -960,17 +937,24 @@ queries:
     grade: 1
     quote: And so, you know, like on Mars, clocks will tick an average of 477 millionth of a second faster than
       clocks on earth because of gravity. The gravity is different.
+  - file: wayfinding
+    start: 445.31
+    end: 468.19
+    grade: 2
+    quote: And guess what? This information is provided to us thanks to gravity. So that factor is very, very hard
+      to study in humans. Very, very challenging to isolate that factors in humans because we can't really take
+      away gravity unless we go d...
+  - file: wayfinding
+    start: 491.41
+    end: 504.87
+    grade: 1
+    quote: And so the dream story was maybe one way to really understand what is the contribution of the vestibular
+      system in spatial orientation and navigation is to study astronauts while they are exposed to microgravity.
 - id: c04
   query: military service before joining NASA
   category: cross_file
   split: dev
   relevant:
-  - file: telling_time
-    start: 15.04
-    end: 26.1
-    grade: 2
-    quote: Joined the Marine Corps at 17. I'm an electrical engineer. Worked in the defense and aerospace industry
-      for many years. Found myself doing position navigation and timing for the Department of War.
   - file: runway
     start: 20.4
     end: 57.0
@@ -978,11 +962,23 @@ queries:
     quote: So I'm retired from the Air Force, retired in 2009. I was a pilot there. And as far as how I kind of
       initially got into flying, my father was a pilot in the Air Force. so I was kind of always around airplanes,
       and I can remember seeing a...
+  - file: telling_time
+    start: 15.04
+    end: 26.1
+    grade: 2
+    quote: Joined the Marine Corps at 17. I'm an electrical engineer. Worked in the defense and aerospace industry
+      for many years. Found myself doing position navigation and timing for the Department of War.
 - id: c05
   query: going back to the Moon
   category: cross_file
   split: test
   relevant:
+  - file: ai_at_nasa
+    start: 191.05
+    end: 199.53
+    grade: 1
+    quote: How do we go explore a distant planet or how do we develop systems to be resilient on the moon, keep
+      astronauts safe?
   - file: artemis_launch
     start: 233.54
     end: 264.0
@@ -997,24 +993,11 @@ queries:
     quote: We're putting right now GPS around the moon in a program that's got one of these weird NASA acronyms.
       We have a ton of acronyms here. This one's LCORNS, L-C-R-N-S. Lunar Communications and Navigation Relay System,
       and it's going to inclu...
-  - file: ai_at_nasa
-    start: 191.05
-    end: 199.53
-    grade: 1
-    quote: How do we go explore a distant planet or how do we develop systems to be resilient on the moon, keep
-      astronauts safe?
 - id: c06
   query: safety reviews before a new mission or use
   category: cross_file
   split: test
   relevant:
-  - file: runway
-    start: 151.21
-    end: 177.27
-    grade: 2
-    quote: If we're going to deploy and go do a mission somewhere, we have what's called an operational readiness
-      review. So we review all aspects of that mission to make sure that we can accomplish that safely and effectively.
-      If we're going to pu...
   - file: ai_at_nasa
     start: 423.65
     end: 471.19
@@ -1022,6 +1005,13 @@ queries:
     quote: Where we kind of pay a lot more attention is when we're using these technologies in ways that have kind
       of a material impact on resources, safety, or some significant decisions. And when we see those types of use
       cases, we do have some a...
+  - file: runway
+    start: 151.21
+    end: 177.27
+    grade: 2
+    quote: If we're going to deploy and go do a mission somewhere, we have what's called an operational readiness
+      review. So we review all aspects of that mission to make sure that we can accomplish that safely and effectively.
+      If we're going to pu...
 - id: c07
   query: studying abroad for graduate school
   category: cross_file
@@ -1032,6 +1022,11 @@ queries:
     end: 206.24
     grade: 2
     quote: So that journey took me through England where I did a PhD in cancer immunology.
+  - file: stem_cells
+    start: 223.76
+    end: 229.36
+    grade: 1
+    quote: But then in the U.S., I started at the University of Pennsylvania working as a researcher.
   - file: wayfinding
     start: 156.83
     end: 174.53
@@ -1039,11 +1034,6 @@ queries:
     quote: still my mentor Gino Pizzamilio had this idea of giving me the opportunity to go to Montreal so I went
       to the Montreal Neurological Institute where I studied like a memory and I learned about neuroimaging and
       and I learned how to do neur...
-  - file: stem_cells
-    start: 223.76
-    end: 229.36
-    grade: 1
-    quote: But then in the U.S., I started at the University of Pennsylvania working as a researcher.
 - id: m01
   query: apheresis
   category: misspelled
@@ -1106,17 +1096,6 @@ queries:
   split: dev
   relevant:
   - file: runway
-    start: 377.22
-    end: 379.54
-    grade: 2
-    quote: We have three of those, and we have our Gulfstream 5.
-  - file: runway
-    start: 424.72
-    end: 433.0
-    grade: 2
-    quote: We have one Gulfstream V aircraft that is used for our astronaut direct return missions in addition to
-      other scientific research.
-  - file: runway
     start: 104.07
     end: 110.99
     grade: 1
@@ -1127,6 +1106,17 @@ queries:
     grade: 1
     quote: I get to still fly all three, the T-38, the WB-57, and the G-5, which is, it's a really diverse group
       of aircraft and really a lot of fun to be able to have the opportunity to fly all three.
+  - file: runway
+    start: 377.22
+    end: 379.54
+    grade: 2
+    quote: We have three of those, and we have our Gulfstream 5.
+  - file: runway
+    start: 424.72
+    end: 433.0
+    grade: 2
+    quote: We have one Gulfstream V aircraft that is used for our astronaut direct return missions in addition to
+      other scientific research.
 - id: m05
   query: vestibuler system
   category: misspelled
@@ -1192,23 +1182,11 @@ queries:
     quote: We also fly the Guppy, but we don't have a hangar big enough for it.
   - file: runway
     start: 433.68
-    end: 437.08
-    grade: 2
-    quote: And then our Super Guppy aircraft that, like I said, is out at El Paso.
-  - file: runway
-    start: 441.63
-    end: 480.02
-    grade: 2
-    quote: I think of the Guppy when I think of something like that, but is that what you would consider specialized?
-      Yeah, absolutely. The Guppy is one of one. It is the only one flying in the world, and it's there for us to
-      be able to carry outsi...
-  - file: runway
-    start: 483.51
     end: 515.38
     grade: 2
-    quote: Can you try to put into perspective how big the Guppy is? Do you have the measurements for it, or can
-      you compare it to something similar in size? The Guppy is actually based on what was a KC-97 tanker, which
-      was essentially, and there w...
+    quote: And then our Super Guppy aircraft that, like I said, is out at El Paso. [...] I think of the Guppy when
+      I think of something like that, but is that what you would consider specialized? Yeah, absolutely. The Guppy
+      is one of one. It is the on
   - file: runway
     start: 525.44
     end: 549.1
@@ -1223,17 +1201,11 @@ queries:
   relevant:
   - file: runway
     start: 384.42
-    end: 389.64
-    grade: 2
-    quote: so when we're not flying that aircraft, we house it out at El Paso, where we have a forward operating
-      location.
-  - file: runway
-    start: 393.22
     end: 407.02
     grade: 2
-    quote: Yeah, we tend to fly out there a fair amount, and we did a lot of operations out at the FOL in El Paso,
-      especially during the shuttle era. Our shuttle training aircraft would go out there to practice up on the
-      White Sands Missile Range.
+    quote: 'so when we''re not flying that aircraft, we house it out at El Paso, where we have a forward operating
+      location. [...] Yeah, we tend to fly out there a fair amount, and we did a lot of operations out at the FOL
+      in El Paso, especially during '
   - file: runway
     start: 433.68
     end: 437.08
@@ -1252,16 +1224,9 @@ queries:
       a field that would bridge my basic research experience and patient care. But then I ended up really involved
       in transfusion medicine, wh...
   - file: stem_cells
-    start: 429.54
+    start: 407.94
     end: 476.22
     grade: 2
-    quote: Yeah, so transfusion medicine, I can tell you, it's one of those field that not many people in healthcare
-      may not know it as a speciality because, again, we are hidden in The lab medicine, which is traditionally
-      not a place where patient...
-  - file: stem_cells
-    start: 407.94
-    end: 429.0
-    grade: 1
     quote: One of the things you talked about is the clinical aspect of it is this transfusion medicine and something
       that may be may be a little bit foreign to to certainly myself. but our audience as well, you know, take us
       through exactly what t...
@@ -1312,30 +1277,18 @@ queries:
     quote: We also fly the Guppy, but we don't have a hangar big enough for it.
   - file: runway
     start: 433.68
-    end: 437.08
-    grade: 2
-    quote: And then our Super Guppy aircraft that, like I said, is out at El Paso.
-  - file: runway
-    start: 446.65
     end: 480.02
     grade: 2
-    quote: Yeah, absolutely. The Guppy is one of one. It is the only one flying in the world, and it's there for
-      us to be able to carry outside space hardware. Its cross-sectional area is actually the biggest of any aircraft
-      in the world, so it can...
+    quote: And then our Super Guppy aircraft that, like I said, is out at El Paso. [...] Yeah, absolutely. The Guppy
+      is one of one. It is the only one flying in the world, and it's there for us to be able to carry outside space
+      hardware. Its cross-sec
   - file: runway
     start: 493.22
-    end: 515.38
+    end: 549.1
     grade: 2
     quote: The Guppy is actually based on what was a KC-97 tanker, which was essentially, and there was a version
       of that that was actually an airliner at the time. So if you think kind of Boeing 707, although that's a jet,
       it's about that size, on...
-  - file: runway
-    start: 521.4
-    end: 549.1
-    grade: 2
-    quote: You don't have to have a specialized pilot's license for that in particular. In fact, it's kind of interesting,
-      like, say, to fly the T-38 or to fly an aircraft like the Guppy, you actually don't have to have a pilot's
-      license. We are ab...
 - id: s03
   query: tell us about your background
   category: speaker
@@ -1348,30 +1301,6 @@ queries:
     grade: 2
     quote: Before we go ahead and get started, can you tell us a little bit about yourself and what you do here
       at NASA?
-  - file: stem_cells
-    start: 25.74
-    end: 43.54
-    grade: 2
-    quote: Take us through who is Dr. Abizubair. If you don't mind, maybe starting very briefly with where you grew
-      up and then how you got to the profession of where you are today, including perhaps maybe inspiration for
-      pursuing medical degrees a...
-  - file: wayfinding
-    start: 7.09
-    end: 20.89
-    grade: 2
-    quote: I'm really excited to talk about the wayfinding experiment, but I want to dive in first to a little bit
-      more about you. So tell me about yourself, where you grew up, what your background is, and really how you
-      first developed any interes...
-  - file: telling_time
-    start: 5.8
-    end: 8.86
-    grade: 2
-    quote: Can you tell us a little bit about your background and how you got started at NASA?
-  - file: runway
-    start: 14.08
-    end: 18.52
-    grade: 2
-    quote: So can you start by telling us a little bit about your background and how you first got into aviation?
   - file: artemis_launch
     start: 14.1
     end: 32.14
@@ -1379,6 +1308,30 @@ queries:
     quote: But for you and a chance to really get to catch up with you, let's start at the beginning of your journey
       and how you became the launch director for Artemis 2 and Artemis 1 as we kind of dive back into your past.
       Where did your passion f...
+  - file: runway
+    start: 14.08
+    end: 18.52
+    grade: 2
+    quote: So can you start by telling us a little bit about your background and how you first got into aviation?
+  - file: stem_cells
+    start: 25.74
+    end: 43.54
+    grade: 2
+    quote: Take us through who is Dr. Abizubair. If you don't mind, maybe starting very briefly with where you grew
+      up and then how you got to the profession of where you are today, including perhaps maybe inspiration for
+      pursuing medical degrees a...
+  - file: telling_time
+    start: 5.8
+    end: 8.86
+    grade: 2
+    quote: Can you tell us a little bit about your background and how you got started at NASA?
+  - file: wayfinding
+    start: 7.09
+    end: 20.89
+    grade: 2
+    quote: I'm really excited to talk about the wayfinding experiment, but I want to dive in first to a little bit
+      more about you. So tell me about yourself, where you grew up, what your background is, and really how you
+      first developed any interes...
 - id: s04
   query: thanks for having me
   category: speaker
@@ -1386,36 +1339,36 @@ queries:
   role: guest
   notes: runway:2 is the guest per NASA's transcript; our diarization assigns it to the host
   relevant:
-  - file: runway
-    start: 4.54
-    end: 5.48
-    grade: 2
-    quote: Thanks for having me.
-  - file: wayfinding
-    start: 5.65
-    end: 6.75
-    grade: 2
-    quote: Thank you for having me.
-  - file: telling_time
-    start: 4.26
-    end: 5.1
-    grade: 2
-    quote: Hey, thanks for having me.
-  - file: artemis_launch
-    start: 5.58
-    end: 6.92
-    grade: 2
-    quote: Hey, it's great to be here.
   - file: ai_at_nasa
     start: 25.02
     end: 28.6
     grade: 2
     quote: Sure. Thanks. Really happy to be here and on the podcast.
+  - file: artemis_launch
+    start: 5.58
+    end: 6.92
+    grade: 2
+    quote: Hey, it's great to be here.
+  - file: runway
+    start: 4.54
+    end: 5.48
+    grade: 2
+    quote: Thanks for having me.
   - file: stem_cells
     start: 5.86
     end: 6.42
     grade: 1
     quote: Thank you.
+  - file: telling_time
+    start: 4.26
+    end: 5.1
+    grade: 2
+    quote: Hey, thanks for having me.
+  - file: wayfinding
+    start: 5.65
+    end: 6.75
+    grade: 2
+    quote: Thank you for having me.
 - id: s05
   query: atomic clocks
   category: speaker

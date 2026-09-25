@@ -34,26 +34,49 @@ class SystemSpec:
     description: str
 
 
-FULL = SearchOptions(mode="hybrid", adaptive=True, phonetic=True, rerank=False)
+FULL = SearchOptions(mode="hybrid", adaptive=False, coverage=True, phonetic=True, rerank=False)
 
 QUERY_SYSTEMS: tuple[SystemSpec, ...] = (
     SystemSpec("bm25", SearchOptions(mode="lexical", phonetic=False), "Lexical only: BM25 over passages"),
     SystemSpec("bm25+soundslike", SearchOptions(mode="lexical", phonetic=True), "BM25 + sounds-like expansion"),
     SystemSpec("dense", SearchOptions(mode="semantic"), "Semantic only: pgvector HNSW"),
-    SystemSpec("hybrid-cc", SearchOptions(mode="hybrid", adaptive=False, phonetic=False, fusion="cc"),
-               "BM25 + dense, min-max convex combination"),
-    SystemSpec("hybrid-rrf", SearchOptions(mode="hybrid", adaptive=False, phonetic=False),
-               "BM25 + dense, reciprocal rank fusion"),
-    SystemSpec("hybrid-rrf+adaptive", SearchOptions(mode="hybrid", adaptive=True, phonetic=False),
-               "+ query-intent adaptive fusion weights"),
+    SystemSpec(
+        "hybrid-cc",
+        SearchOptions(mode="hybrid", coverage=False, phonetic=False, fusion="cc"),
+        "BM25 + dense, min-max convex combination",
+    ),
+    SystemSpec(
+        "hybrid-rrf",
+        SearchOptions(mode="hybrid", coverage=False, phonetic=False),
+        "BM25 + dense, reciprocal rank fusion",
+    ),
+    SystemSpec(
+        "hybrid-rrf+intent",
+        SearchOptions(mode="hybrid", adaptive=True, coverage=False, phonetic=False),
+        "+ query-intent (surface form) fusion weights",
+    ),
+    SystemSpec(
+        "hybrid-rrf+coverage",
+        SearchOptions(mode="hybrid", coverage=True, phonetic=False),
+        "+ IDF-coverage-weighted lexical contributions",
+    ),
     SystemSpec("full", FULL, "+ sounds-like expansion (default system)"),
-    SystemSpec("full+rerank", SearchOptions(mode="hybrid", adaptive=True, phonetic=True, rerank=True),
-               "+ cross-encoder reranking"),
-    SystemSpec("full-no-snap", SearchOptions(mode="hybrid", adaptive=True, phonetic=True, snap=False),
-               "full, but report passage start instead of the snapped moment"),
-    SystemSpec("full-no-nms", SearchOptions(mode="hybrid", adaptive=True, phonetic=True, nms=False),
-               "full, without temporal non-maximum suppression"),
-)  # fmt: skip
+    SystemSpec(
+        "full+rerank",
+        SearchOptions(mode="hybrid", coverage=True, phonetic=True, rerank=True),
+        "+ cross-encoder reranking",
+    ),
+    SystemSpec(
+        "full-no-snap",
+        SearchOptions(mode="hybrid", coverage=True, phonetic=True, snap=False),
+        "full, but report passage start instead of the snapped moment",
+    ),
+    SystemSpec(
+        "full-no-nms",
+        SearchOptions(mode="hybrid", coverage=True, phonetic=True, nms=False),
+        "full, without temporal non-maximum suppression",
+    ),
+)
 
 
 @dataclass
@@ -106,13 +129,16 @@ class SystemResult:
             "mrr_ci95": bootstrap_ci(mrr),
             "median_offset_sec": statistics.median(offsets) if offsets else None,
             "latency_p50_ms": statistics.median(lat) if lat else None,
-            "latency_p95_ms": sorted(lat)[max(0, int(round(0.95 * len(lat))) - 1)] if lat else None,
+            "latency_p95_ms": sorted(lat)[max(0, round(0.95 * len(lat)) - 1)] if lat else None,
             "by_category": cats,
         }
 
 
 def run_system(engine: SearchEngine, queries: list[GoldenQuery], spec: SystemSpec, tolerance: float) -> SystemResult:
     res = SystemResult(spec.name, spec.description)
+    clear = getattr(engine.embedder, "clear_cache", None)
+    if clear is not None:  # every system pays the query-embedding cost -> honest latency numbers
+        clear()
     for q in queries:
         resp = engine.search(q.query, k=10, role=q.role, options=spec.options)
         returned = [Returned(h.file_id, h.start, h.end) for h in resp.hits]
@@ -122,10 +148,16 @@ def run_system(engine: SearchEngine, queries: list[GoldenQuery], spec: SystemSpe
                 metrics=query_metrics(returned, q.relevant, tolerance),
                 latency_ms=resp.timings_ms.get("total", 0.0),
                 top=[
-                    {"file": h.file_id, "start": h.start, "end": h.end, "speaker": h.speaker, "text": h.text[:160],
-                     "channels": h.channels}
+                    {
+                        "file": h.file_id,
+                        "start": h.start,
+                        "end": h.end,
+                        "speaker": h.speaker,
+                        "text": h.text[:160],
+                        "channels": h.channels,
+                    }
                     for h in resp.hits[:5]
-                ],  # fmt: skip
+                ],
             )
         )
     return res
@@ -147,15 +179,39 @@ class IndexVariant:
 
 
 INDEX_VARIANTS: tuple[IndexVariant, ...] = (
-    IndexVariant("chunk-35w", "35-word windows (stride 18)", (("chunk_target_words", 35), ("chunk_stride_words", 18))),
-    IndexVariant("chunk-140w", "140-word windows (stride 70)", (("chunk_target_words", 140), ("chunk_stride_words", 70))),
-    IndexVariant("context-none", "no dialogue-context augmentation", (("chunk_context", "none"),)),
-    IndexVariant("context-question+title", "question + episode title context", (("chunk_context", "question+title"),)),
-    IndexVariant("embed-minilm", "all-MiniLM-L6-v2 embeddings", (("embedding_model", "sentence-transformers/all-MiniLM-L6-v2"),)),
-    IndexVariant("embed-bge-base", "bge-base-en-v1.5 embeddings", (("embedding_model", "BAAI/bge-base-en-v1.5"),)),
-    IndexVariant("embed-e5-base", "e5-base-v2 embeddings", (("embedding_model", "intfloat/e5-base-v2"),)),
-    IndexVariant("asr-base.en", "whisper base.en transcripts (higher WER)", (("transcript_set", "base.en"), ("asr_model", "base.en"))),
-)  # fmt: skip
+    IndexVariant("chunk-25w", "25-word windows (stride 12)", (("chunk_target_words", 25), ("chunk_stride_words", 12))),
+    IndexVariant(
+        "chunk-100w",
+        "100-word windows (stride 50)",
+        (("chunk_target_words", 100), ("chunk_stride_words", 50)),
+    ),
+    IndexVariant(
+        "context-question",
+        "+ dialogue-context augmentation (interviewer question)",
+        (("chunk_context", "question"),),
+    ),
+    IndexVariant(
+        "context-question+title",
+        "+ question and episode-title context",
+        (("chunk_context", "question+title"),),
+    ),
+    IndexVariant(
+        "embed-minilm",
+        "all-MiniLM-L6-v2 embeddings (22M)",
+        (("embedding_model", "sentence-transformers/all-MiniLM-L6-v2"),),
+    ),
+    IndexVariant(
+        "embed-bge-small",
+        "bge-small-en-v1.5 embeddings (33M)",
+        (("embedding_model", "BAAI/bge-small-en-v1.5"),),
+    ),
+    IndexVariant("embed-e5-base", "e5-base-v2 embeddings (110M)", (("embedding_model", "intfloat/e5-base-v2"),)),
+    IndexVariant(
+        "asr-base.en",
+        "whisper base.en transcripts instead of large-v3-turbo",
+        (("transcript_set", "base.en"), ("asr_model", "base.en")),
+    ),
+)
 
 
 def build_index(settings: Settings, embedder: Embedder) -> None:
@@ -228,7 +284,9 @@ def run_evaluation(
     return results
 
 
-def per_query_table(results: dict[str, SystemResult], metric: str = "recall", k: int = 5) -> dict[str, dict[str, float]]:
+def per_query_table(
+    results: dict[str, SystemResult], metric: str = "recall", k: int = 5
+) -> dict[str, dict[str, float]]:
     table: dict[str, dict[str, float]] = defaultdict(dict)
     for name, res in results.items():
         for o in res.outcomes:

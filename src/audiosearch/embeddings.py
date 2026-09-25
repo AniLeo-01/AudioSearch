@@ -53,25 +53,45 @@ class Embedder:
         if self.profile.max_seq_length:
             self._model.max_seq_length = self.profile.max_seq_length
         self.dim = int(self._model.get_sentence_embedding_dimension() or 0)
-        self._lock = threading.Lock()
+        self._lock = threading.Lock()  # guards the query cache
+        self._model_lock = threading.Lock()  # HF fast tokenizers are not safe under concurrent calls
         self._cache: OrderedDict[str, np.ndarray] = OrderedDict()
         self._cache_size = cache_size
         log.info("loaded embedding model %s (dim=%d) in %.1fs", model, self.dim, time.perf_counter() - t0)
 
+    def lexicon(self, min_len: int = 3) -> frozenset[str]:
+        """Whole-word entries of the model's tokenizer vocabulary - a cheap proxy for "common English
+        word" (WordPiece keeps ~20k frequent words intact; rare names and typos are split)."""
+        try:
+            vocab = self._model.tokenizer.get_vocab()
+        except AttributeError:  # pragma: no cover - tokenizer without a vocab
+            return frozenset()
+        words = set()
+        for tok in vocab:
+            w = tok.lstrip("▁Ġ")  # SentencePiece / byte-level BPE word-start markers
+            if not tok.startswith("##") and w.isalpha() and w.islower() and len(w) >= min_len:
+                words.add(w)
+        return frozenset(words)
+
     def _encode(self, texts: list[str]) -> np.ndarray:
-        vecs = self._model.encode(
-            texts,
-            batch_size=self.batch_size,
-            normalize_embeddings=True,
-            convert_to_numpy=True,
-            show_progress_bar=False,
-        )
+        with self._model_lock:
+            vecs = self._model.encode(
+                texts,
+                batch_size=self.batch_size,
+                normalize_embeddings=True,
+                convert_to_numpy=True,
+                show_progress_bar=False,
+            )
         return np.asarray(vecs, dtype=np.float32)
 
     def embed_documents(self, texts: list[str]) -> np.ndarray:
         if not texts:
             return np.zeros((0, self.dim), dtype=np.float32)
         return self._encode([self.profile.doc_prefix + t for t in texts])
+
+    def clear_cache(self) -> None:
+        with self._lock:
+            self._cache.clear()
 
     def embed_query(self, text: str) -> np.ndarray:
         key = text.strip()
@@ -97,9 +117,12 @@ class CrossEncoderReranker:
         self.model_name = model
         t0 = time.perf_counter()
         self._model = CrossEncoder(model, device=device, max_length=384)
+        self._lock = threading.Lock()
         log.info("loaded reranker %s in %.1fs", model, time.perf_counter() - t0)
 
     def score(self, query: str, passages: list[str]) -> np.ndarray:
         if not passages:
             return np.zeros(0, dtype=np.float32)
-        return np.asarray(self._model.predict([(query, p) for p in passages], batch_size=32), dtype=np.float32)
+        with self._lock:
+            scores = self._model.predict([(query, p) for p in passages], batch_size=32, show_progress_bar=False)
+        return np.asarray(scores, dtype=np.float32)

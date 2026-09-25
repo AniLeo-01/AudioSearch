@@ -17,8 +17,8 @@ from audiosearch.textutil import content_tokens, tokens
 PHRASE_RE = re.compile(r'"([^"]{1,200})"')
 FILTER_RE = re.compile(r"\b(role|speaker|file):([A-Za-z0-9_\-]+)", re.IGNORECASE)
 QUESTION_STARTERS = frozenset(
-    "what how why when where who which whose whom is are was were do does did can could should would will "
-    "has have had tell explain describe".split()
+    """what how why when where who which whose whom is are was were do does did can could should would
+    will has have had tell explain describe""".split()  # noqa: SIM905 - compact word list
 )
 ROLES = frozenset({"host", "guest"})
 

@@ -12,7 +12,9 @@ from audiosearch.search.engine import SearchEngine
 log = logging.getLogger(__name__)
 
 
-def build_engine(settings: Settings, with_reranker: bool | None = None, embedder: Embedder | None = None) -> SearchEngine:
+def build_engine(
+    settings: Settings, with_reranker: bool | None = None, embedder: Embedder | None = None
+) -> SearchEngine:
     """Load models, verify the schema matches the embedding model, and return a ready engine."""
     embedder = embedder or Embedder(settings.embedding_model, settings.embedding_device, settings.embedding_batch_size)
     migrate(settings, settings.embedding_model, embedder.dim)  # idempotent; verifies index_meta

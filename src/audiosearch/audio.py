@@ -49,10 +49,17 @@ def probe(path: Path) -> AudioInfo:
     if not path.is_file():
         raise AudioError(f"audio file not found: {path}")
     cmd = [
-        _require("ffprobe"), "-v", "error", "-select_streams", "a:0",
-        "-show_entries", "stream=sample_rate,channels,codec_name:format=duration",
-        "-of", "json", str(path),
-    ]  # fmt: skip
+        _require("ffprobe"),
+        "-v",
+        "error",
+        "-select_streams",
+        "a:0",
+        "-show_entries",
+        "stream=sample_rate,channels,codec_name:format=duration",
+        "-of",
+        "json",
+        str(path),
+    ]
     proc = subprocess.run(cmd, capture_output=True, text=True, check=False)
     if proc.returncode != 0:
         raise AudioError(f"ffprobe failed for {path}: {proc.stderr.strip()}")
@@ -77,9 +84,20 @@ def probe(path: Path) -> AudioInfo:
 def decode(path: Path, sample_rate: int = SAMPLE_RATE) -> np.ndarray:
     """Decode any ffmpeg-readable file to a mono float32 waveform in [-1, 1]."""
     cmd = [
-        _require("ffmpeg"), "-nostdin", "-v", "error", "-i", str(path),
-        "-f", "s16le", "-ac", "1", "-ar", str(sample_rate), "-",
-    ]  # fmt: skip
+        _require("ffmpeg"),
+        "-nostdin",
+        "-v",
+        "error",
+        "-i",
+        str(path),
+        "-f",
+        "s16le",
+        "-ac",
+        "1",
+        "-ar",
+        str(sample_rate),
+        "-",
+    ]
     proc = subprocess.run(cmd, capture_output=True, check=False)
     if proc.returncode != 0:
         raise AudioError(f"ffmpeg decode failed for {path}: {proc.stderr.decode(errors='ignore').strip()}")

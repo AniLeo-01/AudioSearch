@@ -140,10 +140,14 @@ def write_report(
         md += [
             "## Index-time variants (each vs the default `full` system)",
             "",
-            systems_table({reference_system: results[reference_system], **variants} if reference_system in results else variants),
+            systems_table(
+                {reference_system: results[reference_system], **variants} if reference_system in results else variants
+            ),
             "",
         ]
-    key = [s for s in ("bm25", "bm25+soundslike", "dense", "hybrid-rrf", "full", "full+rerank") if s in results]
+    key: list[str] = [
+        s for s in ("bm25", "bm25+soundslike", "dense", "hybrid-rrf", "full", "full+rerank") if s in results
+    ]
     md += ["## Recall@5 by query category", "", category_table(results, key), ""]
     md += ["## MRR by query category", "", category_table(results, key, "mrr"), ""]
     if reference_system in results:
@@ -175,13 +179,20 @@ def write_report(
         "systems": {k: v.summary() for k, v in results.items()},
         "per_query": {
             k: [
-                {"id": o.query.id, "category": o.query.category, "recall@5": o.metrics.recall[5],
-                 "recall@10": o.metrics.recall[10], "mrr": o.metrics.mrr, "first_hit_rank": o.metrics.first_hit_rank,
-                 "latency_ms": o.latency_ms, "top": o.top}
+                {
+                    "id": o.query.id,
+                    "category": o.query.category,
+                    "recall@5": o.metrics.recall[5],
+                    "recall@10": o.metrics.recall[10],
+                    "mrr": o.metrics.mrr,
+                    "first_hit_rank": o.metrics.first_hit_rank,
+                    "latency_ms": o.latency_ms,
+                    "top": o.top,
+                }
                 for o in v.outcomes
             ]
             for k, v in results.items()
-        },  # fmt: skip
+        },
         "stages": [asdict(r) for r in stage_reports or []],
     }
     json_path = out_dir / f"evaluation_{split}.json"

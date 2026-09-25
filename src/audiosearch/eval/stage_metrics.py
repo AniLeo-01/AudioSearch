@@ -21,9 +21,18 @@ from pathlib import Path
 from audiosearch.domain import Transcript
 
 _NUM_WORDS = {
-    "zero": "0", "one": "1", "two": "2", "three": "3", "four": "4", "five": "5", "six": "6", "seven": "7",
-    "eight": "8", "nine": "9", "ten": "10",
-}  # fmt: skip
+    "zero": "0",
+    "one": "1",
+    "two": "2",
+    "three": "3",
+    "four": "4",
+    "five": "5",
+    "six": "6",
+    "seven": "7",
+    "eight": "8",
+    "nine": "9",
+    "ten": "10",
+}
 _FILLERS = {"um", "uh", "hmm", "mm", "mhm", "ah", "er"}
 
 
@@ -95,7 +104,11 @@ def evaluate_file(transcript: Transcript, reference: dict, host_name: str | None
     for chunk in out.alignments[0]:
         if chunk.type in ("equal", "substitute"):
             pairs += list(
-                zip(range(chunk.ref_start_idx, chunk.ref_end_idx), range(chunk.hyp_start_idx, chunk.hyp_end_idx), strict=True)
+                zip(
+                    range(chunk.ref_start_idx, chunk.ref_end_idx),
+                    range(chunk.hyp_start_idx, chunk.hyp_end_idx),
+                    strict=True,
+                )
             )
     labels = sorted({hyp_spk[h] for _, h in pairs})
     names = sorted({spk_win[r] for r, _ in pairs})

@@ -141,7 +141,13 @@ class FasterWhisperAsr:
         cleaned = clean_words(words)
         if len(cleaned) != len(words):  # re-index segments only if tokens were dropped
             segments = _reindex_segments(segments, words)
-        log.info("ASR %.1fs audio in %.1fs (RTF %.2f), %d words", duration, elapsed, elapsed / duration, len(cleaned))
+        log.info(
+            "ASR %.1fs audio in %.1fs (RTF %.2f), %d words",
+            duration,
+            elapsed,
+            elapsed / duration,
+            len(cleaned),
+        )
         return AsrResult(
             words=cleaned,
             segments=segments,

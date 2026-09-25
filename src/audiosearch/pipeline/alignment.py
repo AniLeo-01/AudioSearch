@@ -8,9 +8,31 @@ from audiosearch.domain import Turn, Utterance, Word
 
 # Tokens ending in "." that do not end a sentence.
 ABBREVIATIONS = {
-    "dr.", "mr.", "mrs.", "ms.", "st.", "jr.", "sr.", "prof.", "vs.", "etc.", "e.g.", "i.e.",
-    "u.s.", "u.k.", "a.m.", "p.m.", "no.", "approx.", "inc.", "co.", "lt.", "col.", "gen.", "sgt.",
-}  # fmt: skip
+    "dr.",
+    "mr.",
+    "mrs.",
+    "ms.",
+    "st.",
+    "jr.",
+    "sr.",
+    "prof.",
+    "vs.",
+    "etc.",
+    "e.g.",
+    "i.e.",
+    "u.s.",
+    "u.k.",
+    "a.m.",
+    "p.m.",
+    "no.",
+    "approx.",
+    "inc.",
+    "co.",
+    "lt.",
+    "col.",
+    "gen.",
+    "sgt.",
+}
 SENTENCE_END_RE = re.compile(r"[.?!][\"')\]]*$")
 
 
@@ -69,9 +91,7 @@ def build_utterances(
             flush()
         elif len(cur) >= max_words:
             # split at the last comma in the second half of the utterance, else hard split
-            comma = next(
-                (k for k in range(len(cur) - 1, len(cur) // 2, -1) if words[cur[k]].text.endswith(",")), None
-            )
+            comma = next((k for k in range(len(cur) - 1, len(cur) // 2, -1) if words[cur[k]].text.endswith(",")), None)
             if comma is None:
                 flush()
             else:

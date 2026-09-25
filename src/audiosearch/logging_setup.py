@@ -34,6 +34,14 @@ def setup_logging(level: str = "INFO", fmt: str = "console") -> None:
     root = logging.getLogger()
     root.handlers[:] = [handler]
     root.setLevel(level.upper())
-    for noisy in ("httpx", "urllib3", "huggingface_hub", "filelock", "sentence_transformers", "faster_whisper",
-                  "speechbrain", "psycopg.pool"):  # fmt: skip
+    for noisy in (
+        "httpx",
+        "urllib3",
+        "huggingface_hub",
+        "filelock",
+        "sentence_transformers",
+        "faster_whisper",
+        "speechbrain",
+        "psycopg.pool",
+    ):
         logging.getLogger(noisy).setLevel(max(logging.WARNING, root.level))

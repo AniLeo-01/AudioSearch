@@ -1,0 +1,61 @@
+# One command to a working system:   docker compose up --build   ->   http://localhost:8000
+#
+#   db       PostgreSQL 16 + pgvector (the only stateful service)
+#   indexer  one-shot: applies migrations and indexes the committed transcripts (idempotent)
+#   api      search API + web UI
+#   pipeline (profile "pipeline") re-runs ASR + diarization from the audio:
+#            docker compose --profile pipeline run --rm pipeline audiosearch ingest --force
+x-app-env: &app-env
+  AUDIOSEARCH_DATABASE_URL: postgresql://audiosearch:${POSTGRES_PASSWORD:-audiosearch}@db:5432/audiosearch
+  AUDIOSEARCH_LOG_FORMAT: json
+
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_USER: audiosearch
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-audiosearch}
+      POSTGRES_DB: audiosearch
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "127.0.0.1:5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U audiosearch -d audiosearch"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  indexer:
+    build: { context: ., target: api }
+    image: audiosearch-api:latest
+    command: ["audiosearch", "index"]
+    environment: *app-env
+    depends_on:
+      db: { condition: service_healthy }
+    restart: "no"
+
+  api:
+    image: audiosearch-api:latest
+    environment: *app-env
+    ports:
+      - "8000:8000"
+    depends_on:
+      indexer: { condition: service_completed_successfully }
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits: { cpus: "2", memory: 3g }
+
+  pipeline:
+    profiles: ["pipeline"]
+    build: { context: ., target: pipeline }
+    image: audiosearch-pipeline:latest
+    environment: *app-env
+    volumes:
+      - ./data:/app/data
+    depends_on:
+      db: { condition: service_healthy }
+
+volumes:
+  pgdata:

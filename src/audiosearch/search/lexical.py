@@ -20,6 +20,13 @@ B = 0.75
 
 
 @dataclass(frozen=True)
+class LexicalHit:
+    id: str
+    score: float
+    matched: tuple[str, ...]  # query lexemes present in the chunk
+
+
+@dataclass(frozen=True)
 class WeightedLexeme:
     lexeme: str
     weight: float
@@ -59,7 +66,7 @@ def bm25_search(
     limit: int,
     k1: float = K1,
     b: float = B,
-) -> list[tuple[str, float]]:
+) -> list[LexicalHit]:
     """Top chunks by BM25; each query lexeme contributes weight * idf * tf-saturation."""
     if not lexemes:
         return []
@@ -75,7 +82,8 @@ def bm25_search(
         SELECT c.id,
                sum(q.w * ln(1 + (cs.n - ts.df + 0.5) / (ts.df + 0.5))
                    * (ct.tf * (%(k1)s + 1)) / (ct.tf + %(k1)s * (1 - %(b)s + %(b)s * c.doc_len / cs.avgdl)))
-                   AS score
+                   AS score,
+               array_agg(q.lexeme) AS matched
         FROM q
         JOIN term_stats ts ON ts.lexeme = q.lexeme
         JOIN chunk_terms ct ON ct.lexeme = q.lexeme
@@ -87,7 +95,5 @@ def bm25_search(
         LIMIT %(limit)s
         """
     ).format(where=where)
-    params.update(
-        lexemes=list(merged), weights=list(merged.values()), k1=k1, b=b, limit=limit
-    )
-    return [(r[0], float(r[1])) for r in conn.execute(query, params).fetchall()]
+    params.update(lexemes=list(merged), weights=list(merged.values()), k1=k1, b=b, limit=limit)
+    return [LexicalHit(r[0], float(r[1]), tuple(r[2])) for r in conn.execute(query, params).fetchall()]

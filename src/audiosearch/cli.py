@@ -6,7 +6,7 @@ import json
 import logging
 import sys
 from dataclasses import asdict
-from typing import Annotated
+from typing import Annotated, Any
 
 import typer
 from rich.console import Console
@@ -14,6 +14,7 @@ from rich.table import Table
 from rich.text import Text
 
 from audiosearch.config import Settings, get_settings
+from audiosearch.dataset import ManifestEntry
 from audiosearch.logging_setup import setup_logging
 
 app = typer.Typer(add_completion=False, no_args_is_help=True, help="Conversation-aware hybrid audio search.")
@@ -33,7 +34,7 @@ def _settings() -> Settings:
     return s
 
 
-def _entries(s: Settings, only: list[str] | None):  # type: ignore[no-untyped-def]
+def _entries(s: Settings, only: list[str] | None) -> list[ManifestEntry]:
     from audiosearch.dataset import load_manifest
 
     entries = load_manifest(s.manifest_path, s.audio_dir)
@@ -86,8 +87,14 @@ def ingest(files: FileOpt = None, force: bool = typer.Option(False, help="Ignore
     table = Table("file_id", "ASR", "transcript", "words", "utterances", "speakers")
     for e in _entries(s, files):
         _, rep = pipe.process(e, force=force)
-        table.add_row(e.file_id, "cached" if rep.asr_cached else "new", "cached" if rep.transcript_cached else "new",
-                      str(rep.n_words), str(rep.n_utterances), ", ".join(f"{k}={v}" for k, v in rep.speakers.items()))  # fmt: skip
+        table.add_row(
+            e.file_id,
+            "cached" if rep.asr_cached else "new",
+            "cached" if rep.transcript_cached else "new",
+            str(rep.n_words),
+            str(rep.n_utterances),
+            ", ".join(f"{k}={v}" for k, v in rep.speakers.items()),
+        )
     console.print(table)
 
 
@@ -111,8 +118,13 @@ def index(files: FileOpt = None, force: bool = typer.Option(False, help="Re-inde
                 console.print(f"[red]missing transcript {path}; run `audiosearch ingest` first[/]")
                 raise typer.Exit(1)
             rep = indexer.index(conn, Transcript.load(path), e, force=force)
-            table.add_row(e.file_id, "unchanged" if rep.skipped else "indexed", str(rep.n_utterances),
-                          str(rep.n_chunks), f"{rep.seconds:.1f}")  # fmt: skip
+            table.add_row(
+                e.file_id,
+                "unchanged" if rep.skipped else "indexed",
+                str(rep.n_utterances),
+                str(rep.n_chunks),
+                f"{rep.seconds:.1f}",
+            )
     console.print(table)
 
 
@@ -165,8 +177,10 @@ def search(
         body.append(h.text[pos:] + "”")
         console.print(body)
         if explain:
-            console.print(f"    [dim]score={h.score:.4f} channels={h.channels} match@{fmt_ts(h.match_time)} "
-                          f"passage {fmt_ts(h.passage_start)}–{fmt_ts(h.passage_end)} chunk={h.chunk_id}[/]")  # fmt: skip
+            console.print(
+                f"    [dim]score={h.score:.4f} channels={h.channels} match@{fmt_ts(h.match_time)} "
+                f"passage {fmt_ts(h.passage_start)}–{fmt_ts(h.passage_end)} chunk={h.chunk_id}[/]"
+            )
     if explain:
         console.print(f"[dim]weights={resp.weights} timings_ms={resp.timings_ms}[/]")
 
@@ -225,7 +239,7 @@ def eval_run(
     s = _settings()
     golden = load_golden(s.golden_queries_path)
 
-    def pick(spec: str, pool: tuple, label: str) -> tuple:  # type: ignore[type-arg]
+    def pick(spec: str, pool: tuple[Any, ...], label: str) -> tuple[Any, ...]:
         if spec == "all":
             return pool
         if spec == "none":
@@ -240,7 +254,9 @@ def eval_run(
     sys_specs = pick(systems, QUERY_SYSTEMS, "systems")
     if not any(sp.name == "full" for sp in sys_specs):
         sys_specs = (*sys_specs, next(sp for sp in QUERY_SYSTEMS if sp.name == "full"))
-    results = run_evaluation(s, golden, None if split == "all" else split, sys_specs, pick(variants, INDEX_VARIANTS, "variants"))
+    results = run_evaluation(
+        s, golden, None if split == "all" else split, sys_specs, pick(variants, INDEX_VARIANTS, "variants")
+    )
     stage_reports = None
     if stages:
         hosts = {e.file_id: e.host for e in load_manifest(s.manifest_path, s.audio_dir)}
@@ -249,8 +265,15 @@ def eval_run(
     table = Table("system", "R@1", "R@5", "R@10", "MRR", "nDCG@10", "p50 ms")
     for name, res in results.items():
         sm = res.summary()
-        table.add_row(name, f"{sm['recall@1']:.3f}", f"{sm['recall@5']:.3f}", f"{sm['recall@10']:.3f}",
-                      f"{sm['mrr']:.3f}", f"{sm['ndcg@10']:.3f}", f"{sm['latency_p50_ms']:.0f}")  # fmt: skip
+        table.add_row(
+            name,
+            f"{sm['recall@1']:.3f}",
+            f"{sm['recall@5']:.3f}",
+            f"{sm['recall@10']:.3f}",
+            f"{sm['mrr']:.3f}",
+            f"{sm['ndcg@10']:.3f}",
+            f"{sm['latency_p50_ms']:.0f}",
+        )
     console.print(table)
     console.print(f"wrote {md} and {js}")
 
@@ -265,14 +288,26 @@ def serve(
     import uvicorn
 
     s = _settings()
-    uvicorn.run("audiosearch.api.app:create_app", factory=True, host=host, port=port, workers=workers,
-                log_level=s.log_level.lower())  # fmt: skip
+    uvicorn.run(
+        "audiosearch.api.app:create_app",
+        factory=True,
+        host=host,
+        port=port,
+        workers=workers,
+        log_level=s.log_level.lower(),
+    )
 
 
 def main() -> None:  # pragma: no cover
-    app()
+    from audiosearch.db import SchemaMismatchError
+    from audiosearch.search.query import QueryError
+
+    try:
+        app()
+    except (SchemaMismatchError, QueryError) as e:
+        console.print(f"[red]error:[/] {e}")
+        raise SystemExit(2) from None
 
 
 if __name__ == "__main__":  # pragma: no cover
     main()
-
